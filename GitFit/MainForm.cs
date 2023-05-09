@@ -17,7 +17,7 @@ namespace GitFit
         {
             InitializeComponent();
         }
-
+        //comment sadaf
         private void showPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (showPasswordCheckBox.Checked)
