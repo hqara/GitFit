@@ -15,6 +15,7 @@ namespace GitFit
         public LoginForm()
         {
             InitializeComponent();
+            //test delete later
         }
 
         private void backToRegister_Click(object sender, EventArgs e)
