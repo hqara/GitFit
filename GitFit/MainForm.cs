@@ -39,5 +39,11 @@ namespace GitFit
             login.Show();
             Visible = false;
         }
+
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.GetCurrentProcess().Kill();
+            Application.Exit();
+        }
     }
 }

@@ -15,7 +15,7 @@ namespace GitFit
         public LoginForm()
         {
             InitializeComponent();
-            //test delete later
+            
         }
 
         private void backToRegister_Click(object sender, EventArgs e)
@@ -34,6 +34,24 @@ namespace GitFit
             else { 
                 passwordLoginTxt.UseSystemPasswordChar = true;
             }
+        }
+
+        private void usernameLoginTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (usernameLoginTxt.Text.Length > 0)
+            {
+                passwordLabel.Visible= true;
+                passwordLoginTxt.Visible = true;
+                showPasswordLoginCheckBox.Visible = true;
+                loginBtn.Visible = true;
+            }
+        }
+
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+
+            System.Diagnostics.Process.GetCurrentProcess().Kill();
+            Application.Exit();
         }
     }
 }

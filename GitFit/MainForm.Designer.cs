@@ -42,6 +42,7 @@
             this.registerBtn = new System.Windows.Forms.Button();
             this.showPasswordCheckBox = new System.Windows.Forms.CheckBox();
             this.backToLogin = new System.Windows.Forms.Label();
+            this.exitBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -92,7 +93,7 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(474, 108);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 32);
+            this.label3.Size = new System.Drawing.Size(112, 32);
             this.label3.TabIndex = 2;
             this.label3.Text = "Username";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -103,7 +104,7 @@
             this.usernameTxt.ForeColor = System.Drawing.Color.Black;
             this.usernameTxt.Location = new System.Drawing.Point(474, 143);
             this.usernameTxt.Name = "usernameTxt";
-            this.usernameTxt.Size = new System.Drawing.Size(306, 24);
+            this.usernameTxt.Size = new System.Drawing.Size(306, 28);
             this.usernameTxt.TabIndex = 3;
             // 
             // passwordTxt
@@ -112,7 +113,7 @@
             this.passwordTxt.ForeColor = System.Drawing.Color.Black;
             this.passwordTxt.Location = new System.Drawing.Point(474, 227);
             this.passwordTxt.Name = "passwordTxt";
-            this.passwordTxt.Size = new System.Drawing.Size(306, 24);
+            this.passwordTxt.Size = new System.Drawing.Size(306, 28);
             this.passwordTxt.TabIndex = 5;
             this.passwordTxt.UseSystemPasswordChar = true;
             // 
@@ -121,7 +122,7 @@
             this.password.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.password.Location = new System.Drawing.Point(474, 197);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(82, 27);
+            this.password.Size = new System.Drawing.Size(112, 27);
             this.password.TabIndex = 4;
             this.password.Text = "Password";
             this.password.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -132,7 +133,7 @@
             this.confirmPasswordTxt.ForeColor = System.Drawing.Color.Black;
             this.confirmPasswordTxt.Location = new System.Drawing.Point(474, 318);
             this.confirmPasswordTxt.Name = "confirmPasswordTxt";
-            this.confirmPasswordTxt.Size = new System.Drawing.Size(306, 24);
+            this.confirmPasswordTxt.Size = new System.Drawing.Size(306, 28);
             this.confirmPasswordTxt.TabIndex = 7;
             this.confirmPasswordTxt.UseSystemPasswordChar = true;
             // 
@@ -141,7 +142,7 @@
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(474, 282);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(148, 33);
+            this.label4.Size = new System.Drawing.Size(187, 33);
             this.label4.TabIndex = 6;
             this.label4.Text = "Confirm Password";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -155,7 +156,7 @@
             this.registerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registerBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registerBtn.ForeColor = System.Drawing.Color.White;
-            this.registerBtn.Location = new System.Drawing.Point(543, 444);
+            this.registerBtn.Location = new System.Drawing.Point(474, 448);
             this.registerBtn.Name = "registerBtn";
             this.registerBtn.Size = new System.Drawing.Size(123, 48);
             this.registerBtn.TabIndex = 8;
@@ -168,7 +169,7 @@
             this.showPasswordCheckBox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showPasswordCheckBox.Location = new System.Drawing.Point(474, 366);
             this.showPasswordCheckBox.Name = "showPasswordCheckBox";
-            this.showPasswordCheckBox.Size = new System.Drawing.Size(110, 20);
+            this.showPasswordCheckBox.Size = new System.Drawing.Size(135, 23);
             this.showPasswordCheckBox.TabIndex = 9;
             this.showPasswordCheckBox.Text = "Show Password";
             this.showPasswordCheckBox.UseVisualStyleBackColor = true;
@@ -179,19 +180,37 @@
             this.backToLogin.AutoSize = true;
             this.backToLogin.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backToLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.backToLogin.Location = new System.Drawing.Point(510, 403);
+            this.backToLogin.Location = new System.Drawing.Point(495, 403);
             this.backToLogin.Name = "backToLogin";
-            this.backToLogin.Size = new System.Drawing.Size(213, 17);
+            this.backToLogin.Size = new System.Drawing.Size(267, 20);
             this.backToLogin.TabIndex = 10;
             this.backToLogin.Text = "Already Have an Account? LOG IN";
             this.backToLogin.Click += new System.EventHandler(this.backToLogin_Click);
             // 
+            // exitBtn
+            // 
+            this.exitBtn.BackColor = System.Drawing.Color.LightSlateGray;
+            this.exitBtn.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray;
+            this.exitBtn.FlatAppearance.BorderSize = 5;
+            this.exitBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
+            this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitBtn.ForeColor = System.Drawing.Color.White;
+            this.exitBtn.Location = new System.Drawing.Point(657, 448);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(123, 48);
+            this.exitBtn.TabIndex = 11;
+            this.exitBtn.Text = "Exit";
+            this.exitBtn.UseVisualStyleBackColor = false;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(854, 537);
+            this.ClientSize = new System.Drawing.Size(854, 539);
+            this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.backToLogin);
             this.Controls.Add(this.showPasswordCheckBox);
             this.Controls.Add(this.registerBtn);
@@ -229,6 +248,7 @@
         private System.Windows.Forms.Button registerBtn;
         private System.Windows.Forms.CheckBox showPasswordCheckBox;
         private System.Windows.Forms.Label backToLogin;
+        private System.Windows.Forms.Button exitBtn;
     }
 }
 
