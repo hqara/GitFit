@@ -190,7 +190,7 @@
             this.exitLoginBtn.TabIndex = 10;
             this.exitLoginBtn.Text = "Exit";
             this.exitLoginBtn.UseVisualStyleBackColor = false;
-            this.exitLoginBtn.Visible = false;
+            this.exitLoginBtn.Click += new System.EventHandler(this.exitLoginBtn_Click);
             // 
             // LoginForm
             // 

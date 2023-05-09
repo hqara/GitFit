@@ -18,6 +18,12 @@ namespace GitFit
             
         }
 
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            base.OnFormClosing(e);
+        }
+
         private void backToRegister_Click(object sender, EventArgs e)
         {
             MainForm m = new MainForm();
@@ -47,9 +53,8 @@ namespace GitFit
             }
         }
 
-        private void exitBtn_Click(object sender, EventArgs e)
+        private void exitLoginBtn_Click(object sender, EventArgs e)
         {
-
             System.Diagnostics.Process.GetCurrentProcess().Kill();
             Application.Exit();
         }

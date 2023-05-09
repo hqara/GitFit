@@ -17,8 +17,13 @@ namespace GitFit
         {
             InitializeComponent();
         }
-        
-        //sarah
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            base.OnFormClosing(e);
+        }
+
         private void showPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (showPasswordCheckBox.Checked)
