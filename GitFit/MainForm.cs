@@ -17,9 +17,8 @@ namespace GitFit
         {
             InitializeComponent();
         }
-        //comment sadaf
-        //second test comment
-        //comment 
+        
+        
         private void showPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (showPasswordCheckBox.Checked)
@@ -28,7 +27,7 @@ namespace GitFit
                 confirmPasswordTxt.UseSystemPasswordChar = false;
             }
             else {
-                //
+                
                 passwordTxt.UseSystemPasswordChar = true;
                 confirmPasswordTxt.UseSystemPasswordChar = true;
             }
