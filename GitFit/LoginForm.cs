@@ -17,7 +17,22 @@ namespace GitFit
             InitializeComponent();
         }
 
-      
+        private void backToRegister_Click(object sender, EventArgs e)
+        {
+            MainForm m = new MainForm();
+            m.Show();
+            Visible = false;
+        }
 
+        private void showPasswordLoginCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (showPasswordLoginCheckBox.Checked)
+            {
+                passwordLoginTxt.UseSystemPasswordChar = false;
+            }
+            else { 
+                passwordLoginTxt.UseSystemPasswordChar = true;
+            }
+        }
     }
 }
