@@ -7,9 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GitFit;
 
-namespace GitFitNutrition
+namespace GitFit
 {
     public enum FoodChoices
     {
@@ -27,15 +26,23 @@ namespace GitFitNutrition
             InitializeComponent();
         }
 
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            base.OnFormClosing(e);
+        }
+
         private void resultsButton_Click(object sender, EventArgs e)
         {
-            //NutritionReport nutrition_form = new NutritionReport(2300, choices);
+            NutritionReport nutrition_form = new NutritionReport(2300, choices);
             nutrition_form.Show();
             Visible = false;
         }
 
-        private void nutritionReportLabel_Click(object sender, EventArgs e)
+        private void exitBtn_Click_1(object sender, EventArgs e)
         {
+            System.Diagnostics.Process.GetCurrentProcess().Kill();
+            Application.Exit();
 
         }
     }

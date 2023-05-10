@@ -57,5 +57,12 @@ namespace GitFit
             fill.Show();
             Visible = false;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NutritionQuestionnaire r = new NutritionQuestionnaire();
+            r.Show();
+            Visible= false;
+        }
     }
 }

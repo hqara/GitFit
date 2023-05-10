@@ -1,4 +1,4 @@
-﻿namespace GitFitNutrition
+﻿namespace GitFit
 {
     partial class NutritionQuestionnaire
     {
@@ -71,6 +71,7 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.snackLabel = new System.Windows.Forms.Label();
             this.dinnerLabel = new System.Windows.Forms.Label();
+            this.exitBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.dinnerGrouping.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -387,10 +388,10 @@
             // resultsButton
             // 
             this.resultsButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resultsButton.Location = new System.Drawing.Point(758, 976);
+            this.resultsButton.Location = new System.Drawing.Point(759, 983);
             this.resultsButton.Margin = new System.Windows.Forms.Padding(4);
             this.resultsButton.Name = "resultsButton";
-            this.resultsButton.Size = new System.Drawing.Size(140, 42);
+            this.resultsButton.Size = new System.Drawing.Size(140, 59);
             this.resultsButton.TabIndex = 57;
             this.resultsButton.Text = "Results";
             this.resultsButton.UseVisualStyleBackColor = true;
@@ -416,7 +417,6 @@
             this.nutritionReportLabel.TabIndex = 55;
             this.nutritionReportLabel.Text = "NUTRITION QUESTIONNAIRE";
             this.nutritionReportLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.nutritionReportLabel.Click += new System.EventHandler(this.nutritionReportLabel_Click);
             // 
             // breakfastGrouping
             // 
@@ -587,12 +587,30 @@
             this.dinnerLabel.Text = "What do you eat for dinner?";
             this.dinnerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // exitBtn
+            // 
+            this.exitBtn.BackColor = System.Drawing.Color.LightSlateGray;
+            this.exitBtn.FlatAppearance.BorderSize = 5;
+            this.exitBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSlateGray;
+            this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitBtn.ForeColor = System.Drawing.Color.White;
+            this.exitBtn.Location = new System.Drawing.Point(620, 983);
+            this.exitBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(112, 59);
+            this.exitBtn.TabIndex = 66;
+            this.exitBtn.Text = "Exit";
+            this.exitBtn.UseVisualStyleBackColor = false;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click_1);
+            // 
             // NutritionQuestionnaire
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(936, 1055);
+            this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.dinnerGrouping);
             this.Controls.Add(this.snackGrouping);
             this.Controls.Add(this.lunchLabel);
@@ -679,5 +697,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label snackLabel;
         private System.Windows.Forms.Label dinnerLabel;
+        private System.Windows.Forms.Button exitBtn;
     }
 }
