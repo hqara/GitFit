@@ -44,6 +44,7 @@
             this.backToLogin = new System.Windows.Forms.Label();
             this.exitBtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -105,7 +106,7 @@
             this.usernameTxt.ForeColor = System.Drawing.Color.Black;
             this.usernameTxt.Location = new System.Drawing.Point(474, 143);
             this.usernameTxt.Name = "usernameTxt";
-            this.usernameTxt.Size = new System.Drawing.Size(306, 28);
+            this.usernameTxt.Size = new System.Drawing.Size(306, 24);
             this.usernameTxt.TabIndex = 3;
             // 
             // passwordTxt
@@ -114,7 +115,7 @@
             this.passwordTxt.ForeColor = System.Drawing.Color.Black;
             this.passwordTxt.Location = new System.Drawing.Point(474, 227);
             this.passwordTxt.Name = "passwordTxt";
-            this.passwordTxt.Size = new System.Drawing.Size(306, 28);
+            this.passwordTxt.Size = new System.Drawing.Size(306, 24);
             this.passwordTxt.TabIndex = 5;
             this.passwordTxt.UseSystemPasswordChar = true;
             // 
@@ -134,7 +135,7 @@
             this.confirmPasswordTxt.ForeColor = System.Drawing.Color.Black;
             this.confirmPasswordTxt.Location = new System.Drawing.Point(474, 318);
             this.confirmPasswordTxt.Name = "confirmPasswordTxt";
-            this.confirmPasswordTxt.Size = new System.Drawing.Size(306, 28);
+            this.confirmPasswordTxt.Size = new System.Drawing.Size(306, 24);
             this.confirmPasswordTxt.TabIndex = 7;
             this.confirmPasswordTxt.UseSystemPasswordChar = true;
             // 
@@ -171,7 +172,7 @@
             this.showPasswordCheckBox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showPasswordCheckBox.Location = new System.Drawing.Point(474, 366);
             this.showPasswordCheckBox.Name = "showPasswordCheckBox";
-            this.showPasswordCheckBox.Size = new System.Drawing.Size(135, 23);
+            this.showPasswordCheckBox.Size = new System.Drawing.Size(110, 20);
             this.showPasswordCheckBox.TabIndex = 9;
             this.showPasswordCheckBox.Text = "Show Password";
             this.showPasswordCheckBox.UseVisualStyleBackColor = true;
@@ -184,7 +185,7 @@
             this.backToLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.backToLogin.Location = new System.Drawing.Point(495, 403);
             this.backToLogin.Name = "backToLogin";
-            this.backToLogin.Size = new System.Drawing.Size(267, 20);
+            this.backToLogin.Size = new System.Drawing.Size(213, 17);
             this.backToLogin.TabIndex = 10;
             this.backToLogin.Text = "Already Have an Account? LOG IN";
             this.backToLogin.Click += new System.EventHandler(this.backToLogin_Click);
@@ -217,12 +218,24 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(657, 95);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(155, 25);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Active Questionnaire";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Signup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(854, 539);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.backToLogin);
@@ -264,6 +277,7 @@
         private System.Windows.Forms.Label backToLogin;
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
