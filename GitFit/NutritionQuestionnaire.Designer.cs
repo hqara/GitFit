@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NutritionQuestionnaire));
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
@@ -622,6 +623,7 @@
             this.Controls.Add(this.lunchGrouping);
             this.Controls.Add(this.snackLabel);
             this.Controls.Add(this.dinnerLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NutritionQuestionnaire";
             this.Text = "Gitfit - Nutrition Questionnaire";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

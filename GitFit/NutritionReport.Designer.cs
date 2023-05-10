@@ -374,6 +374,7 @@
             this.Controls.Add(this.addWaterButton);
             this.Controls.Add(this.waterIntakeLabel);
             this.Controls.Add(this.waterIntakeBar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NutritionReport";
             this.Text = "GitFit - Nutrition Report";
             ((System.ComponentModel.ISupportInitialize)(this.snackPicture)).EndInit();
