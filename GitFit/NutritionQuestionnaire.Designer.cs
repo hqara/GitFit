@@ -33,15 +33,6 @@
             this.breakfastLabel = new System.Windows.Forms.Label();
             this.familiarityLabel = new System.Windows.Forms.Label();
             this.nutritionReportLabel = new System.Windows.Forms.Label();
-            this.breakfastPanel = new System.Windows.Forms.Panel();
-            this.breakfastRadioButton2 = new System.Windows.Forms.RadioButton();
-            this.breakFastPicture2 = new System.Windows.Forms.PictureBox();
-            this.breakfastRadioButton4 = new System.Windows.Forms.RadioButton();
-            this.breakfastRadioButton3 = new System.Windows.Forms.RadioButton();
-            this.breakfastRadioButton1 = new System.Windows.Forms.RadioButton();
-            this.breakFastPicture1 = new System.Windows.Forms.PictureBox();
-            this.breakFastPicture3 = new System.Windows.Forms.PictureBox();
-            this.breakFastPicture4 = new System.Windows.Forms.PictureBox();
             this.snackLabel = new System.Windows.Forms.Label();
             this.dinnerLabel = new System.Windows.Forms.Label();
             this.exitBtn = new System.Windows.Forms.Button();
@@ -73,11 +64,15 @@
             this.snackPicture3 = new System.Windows.Forms.PictureBox();
             this.snackPicture4 = new System.Windows.Forms.PictureBox();
             this.nextButton = new System.Windows.Forms.Button();
-            this.breakfastPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.breakFastPicture2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.breakFastPicture1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.breakFastPicture3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.breakFastPicture4)).BeginInit();
+            this.breakFastPicture4 = new System.Windows.Forms.PictureBox();
+            this.breakFastPicture3 = new System.Windows.Forms.PictureBox();
+            this.breakFastPicture1 = new System.Windows.Forms.PictureBox();
+            this.breakfastRadioButton1 = new System.Windows.Forms.RadioButton();
+            this.breakfastRadioButton3 = new System.Windows.Forms.RadioButton();
+            this.breakfastRadioButton4 = new System.Windows.Forms.RadioButton();
+            this.breakFastPicture2 = new System.Windows.Forms.PictureBox();
+            this.breakfastRadioButton2 = new System.Windows.Forms.RadioButton();
+            this.breakfastPanel = new System.Windows.Forms.Panel();
             this.lunchPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lunchPicture2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lunchPicture1)).BeginInit();
@@ -93,6 +88,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.snackPicture1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.snackPicture3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.snackPicture4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.breakFastPicture4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.breakFastPicture3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.breakFastPicture1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.breakFastPicture2)).BeginInit();
+            this.breakfastPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // lunchLabel
@@ -139,110 +139,6 @@
             this.nutritionReportLabel.Text = "NUTRITION QUESTIONNAIRE";
             this.nutritionReportLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // breakfastPanel
-            // 
-            this.breakfastPanel.Controls.Add(this.breakfastRadioButton2);
-            this.breakfastPanel.Controls.Add(this.breakFastPicture2);
-            this.breakfastPanel.Controls.Add(this.breakfastRadioButton4);
-            this.breakfastPanel.Controls.Add(this.breakfastRadioButton3);
-            this.breakfastPanel.Controls.Add(this.breakfastRadioButton1);
-            this.breakfastPanel.Controls.Add(this.breakFastPicture1);
-            this.breakfastPanel.Controls.Add(this.breakFastPicture3);
-            this.breakfastPanel.Controls.Add(this.breakFastPicture4);
-            this.breakfastPanel.Location = new System.Drawing.Point(52, 110);
-            this.breakfastPanel.Margin = new System.Windows.Forms.Padding(4);
-            this.breakfastPanel.Name = "breakfastPanel";
-            this.breakfastPanel.Size = new System.Drawing.Size(595, 137);
-            this.breakfastPanel.TabIndex = 62;
-            // 
-            // breakfastRadioButton2
-            // 
-            this.breakfastRadioButton2.AutoSize = true;
-            this.breakfastRadioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.breakfastRadioButton2.Location = new System.Drawing.Point(160, 108);
-            this.breakfastRadioButton2.Margin = new System.Windows.Forms.Padding(4);
-            this.breakfastRadioButton2.Name = "breakfastRadioButton2";
-            this.breakfastRadioButton2.Size = new System.Drawing.Size(100, 20);
-            this.breakfastRadioButton2.TabIndex = 42;
-            this.breakfastRadioButton2.TabStop = true;
-            this.breakfastRadioButton2.Text = "radioButton1";
-            this.breakfastRadioButton2.UseVisualStyleBackColor = true;
-            // 
-            // breakFastPicture2
-            // 
-            this.breakFastPicture2.Location = new System.Drawing.Point(160, 10);
-            this.breakFastPicture2.Margin = new System.Windows.Forms.Padding(4);
-            this.breakFastPicture2.Name = "breakFastPicture2";
-            this.breakFastPicture2.Size = new System.Drawing.Size(124, 90);
-            this.breakFastPicture2.TabIndex = 41;
-            this.breakFastPicture2.TabStop = false;
-            // 
-            // breakfastRadioButton4
-            // 
-            this.breakfastRadioButton4.AutoSize = true;
-            this.breakfastRadioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.breakfastRadioButton4.Location = new System.Drawing.Point(464, 108);
-            this.breakfastRadioButton4.Margin = new System.Windows.Forms.Padding(4);
-            this.breakfastRadioButton4.Name = "breakfastRadioButton4";
-            this.breakfastRadioButton4.Size = new System.Drawing.Size(100, 20);
-            this.breakfastRadioButton4.TabIndex = 40;
-            this.breakfastRadioButton4.TabStop = true;
-            this.breakfastRadioButton4.Text = "radioButton3";
-            this.breakfastRadioButton4.UseVisualStyleBackColor = true;
-            // 
-            // breakfastRadioButton3
-            // 
-            this.breakfastRadioButton3.AutoSize = true;
-            this.breakfastRadioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.breakfastRadioButton3.Location = new System.Drawing.Point(313, 108);
-            this.breakfastRadioButton3.Margin = new System.Windows.Forms.Padding(4);
-            this.breakfastRadioButton3.Name = "breakfastRadioButton3";
-            this.breakfastRadioButton3.Size = new System.Drawing.Size(100, 20);
-            this.breakfastRadioButton3.TabIndex = 39;
-            this.breakfastRadioButton3.TabStop = true;
-            this.breakfastRadioButton3.Text = "radioButton2";
-            this.breakfastRadioButton3.UseVisualStyleBackColor = true;
-            // 
-            // breakfastRadioButton1
-            // 
-            this.breakfastRadioButton1.AutoSize = true;
-            this.breakfastRadioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.breakfastRadioButton1.Location = new System.Drawing.Point(8, 108);
-            this.breakfastRadioButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.breakfastRadioButton1.Name = "breakfastRadioButton1";
-            this.breakfastRadioButton1.Size = new System.Drawing.Size(100, 20);
-            this.breakfastRadioButton1.TabIndex = 38;
-            this.breakfastRadioButton1.TabStop = true;
-            this.breakfastRadioButton1.Text = "radioButton1";
-            this.breakfastRadioButton1.UseVisualStyleBackColor = true;
-            // 
-            // breakFastPicture1
-            // 
-            this.breakFastPicture1.Location = new System.Drawing.Point(8, 10);
-            this.breakFastPicture1.Margin = new System.Windows.Forms.Padding(4);
-            this.breakFastPicture1.Name = "breakFastPicture1";
-            this.breakFastPicture1.Size = new System.Drawing.Size(124, 90);
-            this.breakFastPicture1.TabIndex = 35;
-            this.breakFastPicture1.TabStop = false;
-            // 
-            // breakFastPicture3
-            // 
-            this.breakFastPicture3.Location = new System.Drawing.Point(313, 10);
-            this.breakFastPicture3.Margin = new System.Windows.Forms.Padding(4);
-            this.breakFastPicture3.Name = "breakFastPicture3";
-            this.breakFastPicture3.Size = new System.Drawing.Size(124, 90);
-            this.breakFastPicture3.TabIndex = 37;
-            this.breakFastPicture3.TabStop = false;
-            // 
-            // breakFastPicture4
-            // 
-            this.breakFastPicture4.Location = new System.Drawing.Point(464, 10);
-            this.breakFastPicture4.Margin = new System.Windows.Forms.Padding(4);
-            this.breakFastPicture4.Name = "breakFastPicture4";
-            this.breakFastPicture4.Size = new System.Drawing.Size(124, 90);
-            this.breakFastPicture4.TabIndex = 36;
-            this.breakFastPicture4.TabStop = false;
-            // 
             // snackLabel
             // 
             this.snackLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -285,24 +181,20 @@
             // lunchPanel
             // 
             this.lunchPanel.Controls.Add(this.lunchRadioButton2);
-            this.lunchPanel.Controls.Add(this.lunchPicture2);
             this.lunchPanel.Controls.Add(this.lunchRadioButton4);
             this.lunchPanel.Controls.Add(this.lunchRadioButton3);
             this.lunchPanel.Controls.Add(this.lunchRadioButton1);
-            this.lunchPanel.Controls.Add(this.lunchPicture1);
-            this.lunchPanel.Controls.Add(this.lunchPicture3);
-            this.lunchPanel.Controls.Add(this.lunchPicture4);
-            this.lunchPanel.Location = new System.Drawing.Point(52, 286);
+            this.lunchPanel.Location = new System.Drawing.Point(52, 381);
             this.lunchPanel.Margin = new System.Windows.Forms.Padding(4);
             this.lunchPanel.Name = "lunchPanel";
-            this.lunchPanel.Size = new System.Drawing.Size(595, 137);
+            this.lunchPanel.Size = new System.Drawing.Size(595, 42);
             this.lunchPanel.TabIndex = 67;
             // 
             // lunchRadioButton2
             // 
             this.lunchRadioButton2.AutoSize = true;
             this.lunchRadioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lunchRadioButton2.Location = new System.Drawing.Point(160, 108);
+            this.lunchRadioButton2.Location = new System.Drawing.Point(160, 14);
             this.lunchRadioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.lunchRadioButton2.Name = "lunchRadioButton2";
             this.lunchRadioButton2.Size = new System.Drawing.Size(100, 20);
@@ -313,7 +205,7 @@
             // 
             // lunchPicture2
             // 
-            this.lunchPicture2.Location = new System.Drawing.Point(160, 10);
+            this.lunchPicture2.Location = new System.Drawing.Point(212, 283);
             this.lunchPicture2.Margin = new System.Windows.Forms.Padding(4);
             this.lunchPicture2.Name = "lunchPicture2";
             this.lunchPicture2.Size = new System.Drawing.Size(124, 90);
@@ -324,7 +216,7 @@
             // 
             this.lunchRadioButton4.AutoSize = true;
             this.lunchRadioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lunchRadioButton4.Location = new System.Drawing.Point(464, 108);
+            this.lunchRadioButton4.Location = new System.Drawing.Point(464, 14);
             this.lunchRadioButton4.Margin = new System.Windows.Forms.Padding(4);
             this.lunchRadioButton4.Name = "lunchRadioButton4";
             this.lunchRadioButton4.Size = new System.Drawing.Size(100, 20);
@@ -337,7 +229,7 @@
             // 
             this.lunchRadioButton3.AutoSize = true;
             this.lunchRadioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lunchRadioButton3.Location = new System.Drawing.Point(313, 108);
+            this.lunchRadioButton3.Location = new System.Drawing.Point(313, 14);
             this.lunchRadioButton3.Margin = new System.Windows.Forms.Padding(4);
             this.lunchRadioButton3.Name = "lunchRadioButton3";
             this.lunchRadioButton3.Size = new System.Drawing.Size(100, 20);
@@ -350,7 +242,7 @@
             // 
             this.lunchRadioButton1.AutoSize = true;
             this.lunchRadioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lunchRadioButton1.Location = new System.Drawing.Point(8, 108);
+            this.lunchRadioButton1.Location = new System.Drawing.Point(8, 14);
             this.lunchRadioButton1.Margin = new System.Windows.Forms.Padding(4);
             this.lunchRadioButton1.Name = "lunchRadioButton1";
             this.lunchRadioButton1.Size = new System.Drawing.Size(100, 20);
@@ -361,7 +253,7 @@
             // 
             // lunchPicture1
             // 
-            this.lunchPicture1.Location = new System.Drawing.Point(8, 10);
+            this.lunchPicture1.Location = new System.Drawing.Point(60, 283);
             this.lunchPicture1.Margin = new System.Windows.Forms.Padding(4);
             this.lunchPicture1.Name = "lunchPicture1";
             this.lunchPicture1.Size = new System.Drawing.Size(124, 90);
@@ -370,7 +262,7 @@
             // 
             // lunchPicture3
             // 
-            this.lunchPicture3.Location = new System.Drawing.Point(313, 10);
+            this.lunchPicture3.Location = new System.Drawing.Point(365, 283);
             this.lunchPicture3.Margin = new System.Windows.Forms.Padding(4);
             this.lunchPicture3.Name = "lunchPicture3";
             this.lunchPicture3.Size = new System.Drawing.Size(124, 90);
@@ -379,7 +271,7 @@
             // 
             // lunchPicture4
             // 
-            this.lunchPicture4.Location = new System.Drawing.Point(464, 10);
+            this.lunchPicture4.Location = new System.Drawing.Point(516, 283);
             this.lunchPicture4.Margin = new System.Windows.Forms.Padding(4);
             this.lunchPicture4.Name = "lunchPicture4";
             this.lunchPicture4.Size = new System.Drawing.Size(124, 90);
@@ -389,24 +281,20 @@
             // dinnerPanel
             // 
             this.dinnerPanel.Controls.Add(this.dinnerRadioButton2);
-            this.dinnerPanel.Controls.Add(this.dinnerPicture2);
             this.dinnerPanel.Controls.Add(this.dinnerRadioButton4);
             this.dinnerPanel.Controls.Add(this.dinnerRadioButton3);
             this.dinnerPanel.Controls.Add(this.dinnerRadioButton1);
-            this.dinnerPanel.Controls.Add(this.dinnerPicture1);
-            this.dinnerPanel.Controls.Add(this.dinnerPicture3);
-            this.dinnerPanel.Controls.Add(this.dinnerPicture4);
-            this.dinnerPanel.Location = new System.Drawing.Point(52, 458);
+            this.dinnerPanel.Location = new System.Drawing.Point(52, 555);
             this.dinnerPanel.Margin = new System.Windows.Forms.Padding(4);
             this.dinnerPanel.Name = "dinnerPanel";
-            this.dinnerPanel.Size = new System.Drawing.Size(595, 137);
+            this.dinnerPanel.Size = new System.Drawing.Size(595, 40);
             this.dinnerPanel.TabIndex = 63;
             // 
             // dinnerRadioButton2
             // 
             this.dinnerRadioButton2.AutoSize = true;
             this.dinnerRadioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dinnerRadioButton2.Location = new System.Drawing.Point(160, 108);
+            this.dinnerRadioButton2.Location = new System.Drawing.Point(160, 13);
             this.dinnerRadioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.dinnerRadioButton2.Name = "dinnerRadioButton2";
             this.dinnerRadioButton2.Size = new System.Drawing.Size(100, 20);
@@ -417,7 +305,7 @@
             // 
             // dinnerPicture2
             // 
-            this.dinnerPicture2.Location = new System.Drawing.Point(160, 10);
+            this.dinnerPicture2.Location = new System.Drawing.Point(212, 457);
             this.dinnerPicture2.Margin = new System.Windows.Forms.Padding(4);
             this.dinnerPicture2.Name = "dinnerPicture2";
             this.dinnerPicture2.Size = new System.Drawing.Size(124, 90);
@@ -428,7 +316,7 @@
             // 
             this.dinnerRadioButton4.AutoSize = true;
             this.dinnerRadioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dinnerRadioButton4.Location = new System.Drawing.Point(464, 108);
+            this.dinnerRadioButton4.Location = new System.Drawing.Point(464, 13);
             this.dinnerRadioButton4.Margin = new System.Windows.Forms.Padding(4);
             this.dinnerRadioButton4.Name = "dinnerRadioButton4";
             this.dinnerRadioButton4.Size = new System.Drawing.Size(100, 20);
@@ -441,7 +329,7 @@
             // 
             this.dinnerRadioButton3.AutoSize = true;
             this.dinnerRadioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dinnerRadioButton3.Location = new System.Drawing.Point(313, 108);
+            this.dinnerRadioButton3.Location = new System.Drawing.Point(313, 13);
             this.dinnerRadioButton3.Margin = new System.Windows.Forms.Padding(4);
             this.dinnerRadioButton3.Name = "dinnerRadioButton3";
             this.dinnerRadioButton3.Size = new System.Drawing.Size(100, 20);
@@ -454,7 +342,7 @@
             // 
             this.dinnerRadioButton1.AutoSize = true;
             this.dinnerRadioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dinnerRadioButton1.Location = new System.Drawing.Point(8, 108);
+            this.dinnerRadioButton1.Location = new System.Drawing.Point(8, 13);
             this.dinnerRadioButton1.Margin = new System.Windows.Forms.Padding(4);
             this.dinnerRadioButton1.Name = "dinnerRadioButton1";
             this.dinnerRadioButton1.Size = new System.Drawing.Size(100, 20);
@@ -465,7 +353,7 @@
             // 
             // dinnerPicture1
             // 
-            this.dinnerPicture1.Location = new System.Drawing.Point(8, 10);
+            this.dinnerPicture1.Location = new System.Drawing.Point(60, 457);
             this.dinnerPicture1.Margin = new System.Windows.Forms.Padding(4);
             this.dinnerPicture1.Name = "dinnerPicture1";
             this.dinnerPicture1.Size = new System.Drawing.Size(124, 90);
@@ -474,7 +362,7 @@
             // 
             // dinnerPicture3
             // 
-            this.dinnerPicture3.Location = new System.Drawing.Point(313, 10);
+            this.dinnerPicture3.Location = new System.Drawing.Point(365, 457);
             this.dinnerPicture3.Margin = new System.Windows.Forms.Padding(4);
             this.dinnerPicture3.Name = "dinnerPicture3";
             this.dinnerPicture3.Size = new System.Drawing.Size(124, 90);
@@ -483,7 +371,7 @@
             // 
             // dinnerPicture4
             // 
-            this.dinnerPicture4.Location = new System.Drawing.Point(464, 10);
+            this.dinnerPicture4.Location = new System.Drawing.Point(516, 457);
             this.dinnerPicture4.Margin = new System.Windows.Forms.Padding(4);
             this.dinnerPicture4.Name = "dinnerPicture4";
             this.dinnerPicture4.Size = new System.Drawing.Size(124, 90);
@@ -493,24 +381,20 @@
             // snackPannel
             // 
             this.snackPannel.Controls.Add(this.snackRadioButton2);
-            this.snackPannel.Controls.Add(this.snackPicture2);
             this.snackPannel.Controls.Add(this.snackRadioButton4);
             this.snackPannel.Controls.Add(this.snackRadioButton3);
             this.snackPannel.Controls.Add(this.snackRadioButton1);
-            this.snackPannel.Controls.Add(this.snackPicture1);
-            this.snackPannel.Controls.Add(this.snackPicture3);
-            this.snackPannel.Controls.Add(this.snackPicture4);
-            this.snackPannel.Location = new System.Drawing.Point(52, 629);
+            this.snackPannel.Location = new System.Drawing.Point(52, 725);
             this.snackPannel.Margin = new System.Windows.Forms.Padding(4);
             this.snackPannel.Name = "snackPannel";
-            this.snackPannel.Size = new System.Drawing.Size(595, 137);
+            this.snackPannel.Size = new System.Drawing.Size(595, 41);
             this.snackPannel.TabIndex = 63;
             // 
             // snackRadioButton2
             // 
             this.snackRadioButton2.AutoSize = true;
             this.snackRadioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.snackRadioButton2.Location = new System.Drawing.Point(160, 108);
+            this.snackRadioButton2.Location = new System.Drawing.Point(160, 14);
             this.snackRadioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.snackRadioButton2.Name = "snackRadioButton2";
             this.snackRadioButton2.Size = new System.Drawing.Size(107, 20);
@@ -521,7 +405,7 @@
             // 
             // snackPicture2
             // 
-            this.snackPicture2.Location = new System.Drawing.Point(160, 10);
+            this.snackPicture2.Location = new System.Drawing.Point(212, 627);
             this.snackPicture2.Margin = new System.Windows.Forms.Padding(4);
             this.snackPicture2.Name = "snackPicture2";
             this.snackPicture2.Size = new System.Drawing.Size(124, 90);
@@ -532,7 +416,7 @@
             // 
             this.snackRadioButton4.AutoSize = true;
             this.snackRadioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.snackRadioButton4.Location = new System.Drawing.Point(464, 108);
+            this.snackRadioButton4.Location = new System.Drawing.Point(464, 14);
             this.snackRadioButton4.Margin = new System.Windows.Forms.Padding(4);
             this.snackRadioButton4.Name = "snackRadioButton4";
             this.snackRadioButton4.Size = new System.Drawing.Size(100, 20);
@@ -545,7 +429,7 @@
             // 
             this.snackRadioButton3.AutoSize = true;
             this.snackRadioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.snackRadioButton3.Location = new System.Drawing.Point(313, 108);
+            this.snackRadioButton3.Location = new System.Drawing.Point(313, 14);
             this.snackRadioButton3.Margin = new System.Windows.Forms.Padding(4);
             this.snackRadioButton3.Name = "snackRadioButton3";
             this.snackRadioButton3.Size = new System.Drawing.Size(100, 20);
@@ -558,7 +442,7 @@
             // 
             this.snackRadioButton1.AutoSize = true;
             this.snackRadioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.snackRadioButton1.Location = new System.Drawing.Point(8, 108);
+            this.snackRadioButton1.Location = new System.Drawing.Point(8, 14);
             this.snackRadioButton1.Margin = new System.Windows.Forms.Padding(4);
             this.snackRadioButton1.Name = "snackRadioButton1";
             this.snackRadioButton1.Size = new System.Drawing.Size(100, 20);
@@ -569,7 +453,7 @@
             // 
             // snackPicture1
             // 
-            this.snackPicture1.Location = new System.Drawing.Point(8, 10);
+            this.snackPicture1.Location = new System.Drawing.Point(60, 627);
             this.snackPicture1.Margin = new System.Windows.Forms.Padding(4);
             this.snackPicture1.Name = "snackPicture1";
             this.snackPicture1.Size = new System.Drawing.Size(124, 90);
@@ -578,7 +462,7 @@
             // 
             // snackPicture3
             // 
-            this.snackPicture3.Location = new System.Drawing.Point(313, 10);
+            this.snackPicture3.Location = new System.Drawing.Point(365, 627);
             this.snackPicture3.Margin = new System.Windows.Forms.Padding(4);
             this.snackPicture3.Name = "snackPicture3";
             this.snackPicture3.Size = new System.Drawing.Size(124, 90);
@@ -587,7 +471,7 @@
             // 
             // snackPicture4
             // 
-            this.snackPicture4.Location = new System.Drawing.Point(464, 10);
+            this.snackPicture4.Location = new System.Drawing.Point(516, 627);
             this.snackPicture4.Margin = new System.Windows.Forms.Padding(4);
             this.snackPicture4.Name = "snackPicture4";
             this.snackPicture4.Size = new System.Drawing.Size(124, 90);
@@ -611,6 +495,106 @@
             this.nextButton.UseVisualStyleBackColor = false;
             this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
+            // breakFastPicture4
+            // 
+            this.breakFastPicture4.Location = new System.Drawing.Point(516, 117);
+            this.breakFastPicture4.Margin = new System.Windows.Forms.Padding(4);
+            this.breakFastPicture4.Name = "breakFastPicture4";
+            this.breakFastPicture4.Size = new System.Drawing.Size(124, 90);
+            this.breakFastPicture4.TabIndex = 36;
+            this.breakFastPicture4.TabStop = false;
+            // 
+            // breakFastPicture3
+            // 
+            this.breakFastPicture3.Location = new System.Drawing.Point(365, 117);
+            this.breakFastPicture3.Margin = new System.Windows.Forms.Padding(4);
+            this.breakFastPicture3.Name = "breakFastPicture3";
+            this.breakFastPicture3.Size = new System.Drawing.Size(124, 90);
+            this.breakFastPicture3.TabIndex = 37;
+            this.breakFastPicture3.TabStop = false;
+            // 
+            // breakFastPicture1
+            // 
+            this.breakFastPicture1.Location = new System.Drawing.Point(60, 117);
+            this.breakFastPicture1.Margin = new System.Windows.Forms.Padding(4);
+            this.breakFastPicture1.Name = "breakFastPicture1";
+            this.breakFastPicture1.Size = new System.Drawing.Size(124, 90);
+            this.breakFastPicture1.TabIndex = 35;
+            this.breakFastPicture1.TabStop = false;
+            // 
+            // breakfastRadioButton1
+            // 
+            this.breakfastRadioButton1.AutoSize = true;
+            this.breakfastRadioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.breakfastRadioButton1.Location = new System.Drawing.Point(8, 10);
+            this.breakfastRadioButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.breakfastRadioButton1.Name = "breakfastRadioButton1";
+            this.breakfastRadioButton1.Size = new System.Drawing.Size(100, 20);
+            this.breakfastRadioButton1.TabIndex = 38;
+            this.breakfastRadioButton1.TabStop = true;
+            this.breakfastRadioButton1.Text = "radioButton1";
+            this.breakfastRadioButton1.UseVisualStyleBackColor = true;
+            // 
+            // breakfastRadioButton3
+            // 
+            this.breakfastRadioButton3.AutoSize = true;
+            this.breakfastRadioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.breakfastRadioButton3.Location = new System.Drawing.Point(313, 10);
+            this.breakfastRadioButton3.Margin = new System.Windows.Forms.Padding(4);
+            this.breakfastRadioButton3.Name = "breakfastRadioButton3";
+            this.breakfastRadioButton3.Size = new System.Drawing.Size(100, 20);
+            this.breakfastRadioButton3.TabIndex = 39;
+            this.breakfastRadioButton3.TabStop = true;
+            this.breakfastRadioButton3.Text = "radioButton2";
+            this.breakfastRadioButton3.UseVisualStyleBackColor = true;
+            // 
+            // breakfastRadioButton4
+            // 
+            this.breakfastRadioButton4.AutoSize = true;
+            this.breakfastRadioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.breakfastRadioButton4.Location = new System.Drawing.Point(464, 10);
+            this.breakfastRadioButton4.Margin = new System.Windows.Forms.Padding(4);
+            this.breakfastRadioButton4.Name = "breakfastRadioButton4";
+            this.breakfastRadioButton4.Size = new System.Drawing.Size(100, 20);
+            this.breakfastRadioButton4.TabIndex = 40;
+            this.breakfastRadioButton4.TabStop = true;
+            this.breakfastRadioButton4.Text = "radioButton3";
+            this.breakfastRadioButton4.UseVisualStyleBackColor = true;
+            // 
+            // breakFastPicture2
+            // 
+            this.breakFastPicture2.Location = new System.Drawing.Point(212, 117);
+            this.breakFastPicture2.Margin = new System.Windows.Forms.Padding(4);
+            this.breakFastPicture2.Name = "breakFastPicture2";
+            this.breakFastPicture2.Size = new System.Drawing.Size(124, 90);
+            this.breakFastPicture2.TabIndex = 41;
+            this.breakFastPicture2.TabStop = false;
+            // 
+            // breakfastRadioButton2
+            // 
+            this.breakfastRadioButton2.AutoSize = true;
+            this.breakfastRadioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.breakfastRadioButton2.Location = new System.Drawing.Point(160, 10);
+            this.breakfastRadioButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.breakfastRadioButton2.Name = "breakfastRadioButton2";
+            this.breakfastRadioButton2.Size = new System.Drawing.Size(100, 20);
+            this.breakfastRadioButton2.TabIndex = 42;
+            this.breakfastRadioButton2.TabStop = true;
+            this.breakfastRadioButton2.Text = "radioButton1";
+            this.breakfastRadioButton2.UseVisualStyleBackColor = true;
+            // 
+            // breakfastPanel
+            // 
+            this.breakfastPanel.Controls.Add(this.breakfastRadioButton2);
+            this.breakfastPanel.Controls.Add(this.breakfastRadioButton4);
+            this.breakfastPanel.Controls.Add(this.breakfastRadioButton3);
+            this.breakfastPanel.Controls.Add(this.breakfastRadioButton1);
+            this.breakfastPanel.Location = new System.Drawing.Point(52, 215);
+            this.breakfastPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.breakfastPanel.Name = "breakfastPanel";
+            this.breakfastPanel.Size = new System.Drawing.Size(595, 35);
+            this.breakfastPanel.TabIndex = 62;
+            // 
             // NutritionQuestionnaire
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -618,26 +602,36 @@
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(699, 853);
             this.Controls.Add(this.nextButton);
+            this.Controls.Add(this.snackPicture2);
+            this.Controls.Add(this.dinnerPicture2);
+            this.Controls.Add(this.lunchPicture2);
+            this.Controls.Add(this.snackPicture1);
+            this.Controls.Add(this.breakFastPicture2);
+            this.Controls.Add(this.dinnerPicture1);
             this.Controls.Add(this.snackPannel);
+            this.Controls.Add(this.snackPicture3);
+            this.Controls.Add(this.lunchPicture4);
+            this.Controls.Add(this.snackPicture4);
+            this.Controls.Add(this.lunchPicture3);
+            this.Controls.Add(this.dinnerPicture3);
             this.Controls.Add(this.dinnerPanel);
+            this.Controls.Add(this.dinnerPicture4);
+            this.Controls.Add(this.breakFastPicture1);
+            this.Controls.Add(this.lunchPicture1);
             this.Controls.Add(this.lunchPanel);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.lunchLabel);
+            this.Controls.Add(this.breakFastPicture3);
             this.Controls.Add(this.breakfastLabel);
+            this.Controls.Add(this.breakFastPicture4);
             this.Controls.Add(this.familiarityLabel);
             this.Controls.Add(this.nutritionReportLabel);
-            this.Controls.Add(this.breakfastPanel);
             this.Controls.Add(this.snackLabel);
             this.Controls.Add(this.dinnerLabel);
+            this.Controls.Add(this.breakfastPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NutritionQuestionnaire";
             this.Text = "Gitfit - Nutrition Questionnaire";
-            this.breakfastPanel.ResumeLayout(false);
-            this.breakfastPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.breakFastPicture2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.breakFastPicture1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.breakFastPicture3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.breakFastPicture4)).EndInit();
             this.lunchPanel.ResumeLayout(false);
             this.lunchPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lunchPicture2)).EndInit();
@@ -656,6 +650,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.snackPicture1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.snackPicture3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.snackPicture4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.breakFastPicture4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.breakFastPicture3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.breakFastPicture1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.breakFastPicture2)).EndInit();
+            this.breakfastPanel.ResumeLayout(false);
+            this.breakfastPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -665,15 +665,6 @@
         private System.Windows.Forms.Label breakfastLabel;
         private System.Windows.Forms.Label familiarityLabel;
         private System.Windows.Forms.Label nutritionReportLabel;
-        private System.Windows.Forms.Panel breakfastPanel;
-        private System.Windows.Forms.RadioButton breakfastRadioButton2;
-        private System.Windows.Forms.PictureBox breakFastPicture2;
-        private System.Windows.Forms.RadioButton breakfastRadioButton4;
-        private System.Windows.Forms.RadioButton breakfastRadioButton3;
-        private System.Windows.Forms.RadioButton breakfastRadioButton1;
-        private System.Windows.Forms.PictureBox breakFastPicture1;
-        private System.Windows.Forms.PictureBox breakFastPicture3;
-        private System.Windows.Forms.PictureBox breakFastPicture4;
         private System.Windows.Forms.Label snackLabel;
         private System.Windows.Forms.Label dinnerLabel;
         private System.Windows.Forms.Button exitBtn;
@@ -705,5 +696,14 @@
         private System.Windows.Forms.PictureBox snackPicture3;
         private System.Windows.Forms.PictureBox snackPicture4;
         private System.Windows.Forms.Button nextButton;
+        private System.Windows.Forms.PictureBox breakFastPicture4;
+        private System.Windows.Forms.PictureBox breakFastPicture3;
+        private System.Windows.Forms.PictureBox breakFastPicture1;
+        private System.Windows.Forms.RadioButton breakfastRadioButton1;
+        private System.Windows.Forms.RadioButton breakfastRadioButton3;
+        private System.Windows.Forms.RadioButton breakfastRadioButton4;
+        private System.Windows.Forms.PictureBox breakFastPicture2;
+        private System.Windows.Forms.RadioButton breakfastRadioButton2;
+        private System.Windows.Forms.Panel breakfastPanel;
     }
 }

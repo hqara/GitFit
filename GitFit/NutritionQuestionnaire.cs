@@ -40,7 +40,7 @@ namespace GitFit
             choices[2] = getValue(dinnerPanel);
             choices[3] = getValue(snackPannel);
 
-            NutritionReport nutrition_form = new NutritionReport(2300, choices);
+            NutritionReport nutrition_form = new NutritionReport(2300, choices); // change to nutrition follow up
             nutrition_form.Show();
             Visible = false;
         }
@@ -60,7 +60,7 @@ namespace GitFit
                         case '3':
                             return FoodChoices.Moderate;
                         case '4':
-                            return FoodChoices.Moderate;
+                            return FoodChoices.VeryUnhealthy;
                     }
                 }
             }
