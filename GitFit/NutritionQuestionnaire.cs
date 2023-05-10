@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GitFit;
 
 namespace GitFitNutrition
 {
@@ -28,9 +29,14 @@ namespace GitFitNutrition
 
         private void resultsButton_Click(object sender, EventArgs e)
         {
-            NutritionReport nutrition_form = new NutritionReport(2300, choices);
+            //NutritionReport nutrition_form = new NutritionReport(2300, choices);
             nutrition_form.Show();
             Visible = false;
+        }
+
+        private void nutritionReportLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
