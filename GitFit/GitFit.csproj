@@ -52,6 +52,18 @@
     <Compile Include="FillInForm.Designer.cs">
       <DependentUpon>FillInForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NutritionReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NutritionReport.Designer.cs">
+      <DependentUpon>NutritionReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NutritionQuestionnaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NutritionQuestionnaire.Designer.cs">
+      <DependentUpon>NutritionQuestionnaire.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +80,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FillInForm.resx">
       <DependentUpon>FillInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NutritionReport.resx">
+      <DependentUpon>NutritionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NutritionQuestionnaire.resx">
+      <DependentUpon>NutritionQuestionnaire.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
