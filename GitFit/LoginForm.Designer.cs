@@ -95,7 +95,7 @@
             this.label3.Location = new System.Drawing.Point(462, 133);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 27);
+            this.label3.Size = new System.Drawing.Size(178, 27);
             this.label3.TabIndex = 2;
             this.label3.Text = "Username";
             // 
@@ -105,7 +105,7 @@
             this.passwordLabel.Location = new System.Drawing.Point(462, 242);
             this.passwordLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(116, 27);
+            this.passwordLabel.Size = new System.Drawing.Size(178, 27);
             this.passwordLabel.TabIndex = 3;
             this.passwordLabel.Text = "Password";
             this.passwordLabel.Visible = false;
@@ -197,7 +197,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(854, 592);
+            this.ClientSize = new System.Drawing.Size(854, 539);
             this.Controls.Add(this.exitLoginBtn);
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.backToRegister);
@@ -211,7 +211,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginForm";
-            this.Text = "LoginForm";
+            this.Text = "Git Fit Application";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace GitFit
 {
-    public partial class MainForm : Form
+    public partial class Signup : Form
     {
-        public MainForm()
+        public Signup()
         {
             InitializeComponent();
         }
