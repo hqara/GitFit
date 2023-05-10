@@ -26,7 +26,7 @@ namespace GitFit
 
         private void backToRegister_Click(object sender, EventArgs e)
         {
-            MainForm m = new MainForm();
+            Signup m = new Signup();
             m.Show();
             Visible = false;
         }
