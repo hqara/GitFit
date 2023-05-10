@@ -10,32 +10,34 @@ using System.Windows.Forms;
 
 namespace GitFit
 {
-    public partial class FillInForm : Form
+    public partial class ActivityQuesionnaire : Form
     {
-        public FillInForm()
+        public ActivityQuesionnaire()
         {
             InitializeComponent();
         }
-
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             e.Cancel = true;
             base.OnFormClosing(e);
         }
-
-        private void exitFillBtn_Click(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you certain that you want to \nlose your registration information?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+        }
+
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you certain that you want to \nlose your current information?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
                 // User clicked the OK button, exit the program
                 System.Diagnostics.Process.GetCurrentProcess().Kill();
                 Application.Exit();
             }
-
         }
 
-        private void submitBtn_Click(object sender, EventArgs e)
+        private void nutritionReportLabel_Click(object sender, EventArgs e)
         {
 
         }

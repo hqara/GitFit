@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivityQuesionnaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActivityQuesionnaire.Designer.cs">
+      <DependentUpon>ActivityQuesionnaire.cs</DependentUpon>
+    </Compile>
     <Compile Include="FillInForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FillInForm.Designer.cs">
       <DependentUpon>FillInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NutritionFollowUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NutritionFollowUp.Designer.cs">
+      <DependentUpon>NutritionFollowUp.cs</DependentUpon>
     </Compile>
     <Compile Include="NutritionReport.cs">
       <SubType>Form</SubType>
@@ -78,8 +90,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ActivityQuesionnaire.resx">
+      <DependentUpon>ActivityQuesionnaire.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FillInForm.resx">
       <DependentUpon>FillInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NutritionFollowUp.resx">
+      <DependentUpon>NutritionFollowUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NutritionReport.resx">
       <DependentUpon>NutritionReport.cs</DependentUpon>
