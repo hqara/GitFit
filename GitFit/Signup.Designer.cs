@@ -162,6 +162,7 @@
             this.registerBtn.TabIndex = 8;
             this.registerBtn.Text = "Register";
             this.registerBtn.UseVisualStyleBackColor = false;
+            this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
             // 
             // showPasswordCheckBox
             // 
@@ -204,7 +205,7 @@
             this.exitBtn.UseVisualStyleBackColor = false;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
-            // MainForm
+            // Signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -224,7 +225,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "MainForm";
+            this.Name = "Signup";
             this.Text = "Git Fit Application";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

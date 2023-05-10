@@ -50,5 +50,12 @@ namespace GitFit
             System.Diagnostics.Process.GetCurrentProcess().Kill();
             Application.Exit();
         }
+
+        private void registerBtn_Click(object sender, EventArgs e)
+        {
+            FillInForm fill = new FillInForm();
+            fill.Show();
+            Visible = false;
+        }
     }
 }

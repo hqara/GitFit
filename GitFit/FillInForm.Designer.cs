@@ -48,6 +48,7 @@
             this.femaleRadioButton = new System.Windows.Forms.RadioButton();
             this.heightNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.weightNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.exitFillBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.heightNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.weightNumericUpDown)).BeginInit();
             this.SuspendLayout();
@@ -118,9 +119,9 @@
             this.heightLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.heightLabel.Location = new System.Drawing.Point(68, 405);
             this.heightLabel.Name = "heightLabel";
-            this.heightLabel.Size = new System.Drawing.Size(77, 23);
+            this.heightLabel.Size = new System.Drawing.Size(129, 23);
             this.heightLabel.TabIndex = 7;
-            this.heightLabel.Text = "Height:";
+            this.heightLabel.Text = "Height (cm):";
             // 
             // weightLabel
             // 
@@ -128,15 +129,15 @@
             this.weightLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weightLabel.Location = new System.Drawing.Point(68, 459);
             this.weightLabel.Name = "weightLabel";
-            this.weightLabel.Size = new System.Drawing.Size(80, 23);
+            this.weightLabel.Size = new System.Drawing.Size(119, 23);
             this.weightLabel.TabIndex = 8;
-            this.weightLabel.Text = "Weight:";
+            this.weightLabel.Text = "Weight (lb):";
             // 
             // createAccountLabel
             // 
             this.createAccountLabel.AutoSize = true;
             this.createAccountLabel.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createAccountLabel.Location = new System.Drawing.Point(292, 23);
+            this.createAccountLabel.Location = new System.Drawing.Point(271, 23);
             this.createAccountLabel.Name = "createAccountLabel";
             this.createAccountLabel.Size = new System.Drawing.Size(251, 37);
             this.createAccountLabel.TabIndex = 9;
@@ -148,7 +149,7 @@
             this.submitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submitBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitBtn.ForeColor = System.Drawing.Color.White;
-            this.submitBtn.Location = new System.Drawing.Point(339, 523);
+            this.submitBtn.Location = new System.Drawing.Point(581, 526);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(144, 64);
             this.submitBtn.TabIndex = 10;
@@ -222,8 +223,14 @@
             // 
             // heightNumericUpDown
             // 
+            this.heightNumericUpDown.DecimalPlaces = 2;
             this.heightNumericUpDown.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.heightNumericUpDown.Location = new System.Drawing.Point(240, 403);
+            this.heightNumericUpDown.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
             this.heightNumericUpDown.Name = "heightNumericUpDown";
             this.heightNumericUpDown.Size = new System.Drawing.Size(95, 32);
             this.heightNumericUpDown.TabIndex = 18;
@@ -233,17 +240,37 @@
             // 
             this.weightNumericUpDown.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weightNumericUpDown.Location = new System.Drawing.Point(240, 457);
+            this.weightNumericUpDown.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
             this.weightNumericUpDown.Name = "weightNumericUpDown";
             this.weightNumericUpDown.Size = new System.Drawing.Size(95, 32);
             this.weightNumericUpDown.TabIndex = 19;
             this.weightNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // exitFillBtn
+            // 
+            this.exitFillBtn.BackColor = System.Drawing.Color.LightSlateGray;
+            this.exitFillBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitFillBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitFillBtn.ForeColor = System.Drawing.Color.White;
+            this.exitFillBtn.Location = new System.Drawing.Point(72, 526);
+            this.exitFillBtn.Name = "exitFillBtn";
+            this.exitFillBtn.Size = new System.Drawing.Size(144, 64);
+            this.exitFillBtn.TabIndex = 20;
+            this.exitFillBtn.Text = "Exit";
+            this.exitFillBtn.UseVisualStyleBackColor = false;
+            this.exitFillBtn.Click += new System.EventHandler(this.exitFillBtn_Click);
             // 
             // FillInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(810, 611);
+            this.ClientSize = new System.Drawing.Size(793, 611);
+            this.Controls.Add(this.exitFillBtn);
             this.Controls.Add(this.weightNumericUpDown);
             this.Controls.Add(this.heightNumericUpDown);
             this.Controls.Add(this.femaleRadioButton);
@@ -294,5 +321,6 @@
         private System.Windows.Forms.RadioButton femaleRadioButton;
         private System.Windows.Forms.NumericUpDown heightNumericUpDown;
         private System.Windows.Forms.NumericUpDown weightNumericUpDown;
+        private System.Windows.Forms.Button exitFillBtn;
     }
 }
