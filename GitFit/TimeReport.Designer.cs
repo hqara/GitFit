@@ -56,7 +56,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TimeReport";
-            this.Text = "Time Management Report";
+            this.Text = "GitFit -  Time Management Report";
             this.ResumeLayout(false);
 
         }

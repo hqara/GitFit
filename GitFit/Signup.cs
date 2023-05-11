@@ -1,9 +1,11 @@
-﻿using System;
+﻿using GitFit.UserDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +15,10 @@ namespace GitFit
 {
     public partial class Signup : Form
     {
+        Signup signup;
+
+        public string Username { get; set; } 
+        public string Password { get; set; } 
         public Signup()
         {
             InitializeComponent();
@@ -28,18 +34,21 @@ namespace GitFit
         {
             if (showPasswordCheckBox.Checked)
             {
-                passwordTxt.UseSystemPasswordChar = false;
-                confirmPasswordTxt.UseSystemPasswordChar = false;
+                passwordTextBox.UseSystemPasswordChar = false;
+                confirmPasswordTextBox.UseSystemPasswordChar = false;
             }
             else {
                 
-                passwordTxt.UseSystemPasswordChar = true;
-                confirmPasswordTxt.UseSystemPasswordChar = true;
+                passwordTextBox.UseSystemPasswordChar = true;
+                confirmPasswordTextBox.UseSystemPasswordChar = true;
             }
         }
 
         private void backToLogin_Click(object sender, EventArgs e)
         {
+            Username = usernameTextBox.Text;
+            Password = passwordTextBox.Text;
+
             LoginForm login = new LoginForm();
             login.Show();
             Visible = false;
@@ -53,7 +62,7 @@ namespace GitFit
 
         private void registerBtn_Click(object sender, EventArgs e)
         {
-            FillInForm fill = new FillInForm();
+            FillInForm fill = new FillInForm(signup);
             fill.Show();
             Visible = false;
         }
@@ -71,5 +80,7 @@ namespace GitFit
             a.Show();
             Visible = false;
         }
+
+
     }
 }

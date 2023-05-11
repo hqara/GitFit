@@ -55,7 +55,7 @@
             this.Controls.Add(this.timeQuestionnaireLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TimeQuestionnaire";
-            this.Text = "Time Management Questionnaire";
+            this.Text = "GitFit - Time Management Questionnaire";
             this.ResumeLayout(false);
 
         }
