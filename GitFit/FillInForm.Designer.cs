@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FillInForm));
             this.firstNameLabel = new System.Windows.Forms.Label();
             this.lastNameLabel = new System.Windows.Forms.Label();
@@ -49,8 +50,14 @@
             this.heightNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.weightNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.exitFillBtn = new System.Windows.Forms.Button();
+            this.userDataSet = new GitFit.UserDataSet();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.userTableAdapter = new GitFit.UserDataSetTableAdapters.UserTableAdapter();
+            this.tableAdapterManager = new GitFit.UserDataSetTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.heightNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.weightNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // firstNameLabel
@@ -276,12 +283,32 @@
             this.exitFillBtn.UseVisualStyleBackColor = false;
             this.exitFillBtn.Click += new System.EventHandler(this.exitFillBtn_Click);
             // 
+            // userDataSet
+            // 
+            this.userDataSet.DataSetName = "UserDataSet";
+            this.userDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataMember = "User";
+            this.userBindingSource.DataSource = this.userDataSet;
+            // 
+            // userTableAdapter
+            // 
+            this.userTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.UpdateOrder = GitFit.UserDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UserTableAdapter = this.userTableAdapter;
+            // 
             // FillInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(793, 610);
+            this.ClientSize = new System.Drawing.Size(872, 610);
             this.Controls.Add(this.exitFillBtn);
             this.Controls.Add(this.weightNumericUpDown);
             this.Controls.Add(this.heightNumericUpDown);
@@ -306,8 +333,11 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FillInForm";
             this.Text = "Git Fit Application";
+            this.Load += new System.EventHandler(this.FillInForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.heightNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.weightNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,5 +365,9 @@
         private System.Windows.Forms.NumericUpDown heightNumericUpDown;
         private System.Windows.Forms.NumericUpDown weightNumericUpDown;
         private System.Windows.Forms.Button exitFillBtn;
+        private UserDataSet userDataSet;
+        private System.Windows.Forms.BindingSource userBindingSource;
+        private UserDataSetTableAdapters.UserTableAdapter userTableAdapter;
+        private UserDataSetTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }

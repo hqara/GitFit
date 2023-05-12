@@ -9,6 +9,8 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 
 namespace GitFit
@@ -82,14 +84,6 @@ namespace GitFit
             ActivityQuesionnaire a = new ActivityQuesionnaire();
             a.Show();
             Visible = false;
-        }
-
-        private void userBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.userBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.userDataSet);
-
         }
 
     }
