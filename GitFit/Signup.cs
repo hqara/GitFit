@@ -22,6 +22,9 @@ namespace GitFit
         public Signup()
         {
             InitializeComponent();
+            this.signup = this;
+            this.Username = usernameTextBox.Text;
+            this.Password = passwordTextBox.Text;
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -46,12 +49,12 @@ namespace GitFit
 
         private void backToLogin_Click(object sender, EventArgs e)
         {
-            Username = usernameTextBox.Text;
-            Password = passwordTextBox.Text;
+            this.Username = usernameTextBox.Text;
+            this.Password = passwordTextBox.Text;
 
             LoginForm login = new LoginForm();
             login.Show();
-            Visible = false;
+            this.Visible = false;
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
@@ -62,7 +65,7 @@ namespace GitFit
 
         private void registerBtn_Click(object sender, EventArgs e)
         {
-            FillInForm fill = new FillInForm(signup);
+            FillInForm fill = new FillInForm(this);
             fill.Show();
             Visible = false;
         }
@@ -81,6 +84,13 @@ namespace GitFit
             Visible = false;
         }
 
+        private void userBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.userBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.userDataSet);
+
+        }
 
     }
 }

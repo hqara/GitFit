@@ -4,26 +4,26 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 
 namespace GitFit
 {
     public partial class FillInForm : Form
     {
         private Signup signup;
-        UserTableAdapter adapt;
+        private UserTableAdapter userTableAdapter;
+        private UserDataSet userDataSet;
 
         public FillInForm(Signup signup)
         {
             InitializeComponent();
             this.signup = signup;
-            this.adapt= new UserTableAdapter();
+            this.userTableAdapter = new UserTableAdapter();
+            this.userDataSet = new UserDataSet();
         }
+
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
@@ -39,34 +39,31 @@ namespace GitFit
                 System.Diagnostics.Process.GetCurrentProcess().Kill();
                 Application.Exit();
             }
-
         }
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
-            try {
-
-               
+            try
+            {
                 string username = signup.Username;
                 string password = signup.Password;
                 string fname = firstNameTextBox.Text;
                 string lname = lastNameTextBox.Text;
-                string dob = dateOfBirthTimePicker.Text;
+                DateTime dob = dateOfBirthTimePicker.Value;
+                string dobStr = dob.ToString("yyyy-MM-dd");
                 string email = emailTextBox.Text;
                 string phone = phoneTextBox.Text;
-                char gender = maleRadioButton.Checked ? 'M' : 'F';
-                string genderstr = gender.ToString();
+                string gender = maleRadioButton.Checked ? "M" : "F";
                 decimal height = heightNumericUpDown.Value;
                 decimal weight = weightNumericUpDown.Value;
-
-                this.adapt.InsertNewUser(username, password, fname, lname, dob, email, phone, genderstr, height, weight);
-                //this.adapt.Fill(UserDataSet.UserDataTable);
+                this.userTableAdapter = new UserTableAdapter();
+                this.userTableAdapter.InsertNewUser(username, password, fname, lname, dobStr, email, phone, gender, height, weight);
+                this.userTableAdapter.Fill(this.userDataSet.User);
                 MessageBox.Show("User Registration Completed.", "Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             }
             catch (Exception ex)
             {
-               MessageBox.Show("Please ensure that all fields\nin the form are filled out\nbefore submitting.", "Registration Failed.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"Registration failed: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

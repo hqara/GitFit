@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Signup));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,7 +38,7 @@
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.confirmPasswordTextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.confirmPasswordLabel = new System.Windows.Forms.Label();
             this.registerBtn = new System.Windows.Forms.Button();
             this.showPasswordCheckBox = new System.Windows.Forms.CheckBox();
             this.backToLogin = new System.Windows.Forms.Label();
@@ -45,8 +46,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.passwordLabel = new System.Windows.Forms.Label();
+            this.userDataSet = new GitFit.UserDataSet();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.userTableAdapter = new GitFit.UserDataSetTableAdapters.UserTableAdapter();
+            this.tableAdapterManager = new GitFit.UserDataSetTableAdapters.TableAdapterManager();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -102,7 +109,7 @@
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameTextBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameTextBox.ForeColor = System.Drawing.Color.Black;
             this.usernameTextBox.Location = new System.Drawing.Point(474, 143);
             this.usernameTextBox.Name = "usernameTextBox";
@@ -111,7 +118,7 @@
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordTextBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordTextBox.ForeColor = System.Drawing.Color.Black;
             this.passwordTextBox.Location = new System.Drawing.Point(474, 227);
             this.passwordTextBox.Name = "passwordTextBox";
@@ -121,7 +128,7 @@
             // 
             // confirmPasswordTextBox
             // 
-            this.confirmPasswordTextBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmPasswordTextBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmPasswordTextBox.ForeColor = System.Drawing.Color.Black;
             this.confirmPasswordTextBox.Location = new System.Drawing.Point(474, 318);
             this.confirmPasswordTextBox.Name = "confirmPasswordTextBox";
@@ -129,15 +136,15 @@
             this.confirmPasswordTextBox.TabIndex = 7;
             this.confirmPasswordTextBox.UseSystemPasswordChar = true;
             // 
-            // label4
+            // confirmPasswordLabel
             // 
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(474, 282);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(187, 33);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Confirm Password";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.confirmPasswordLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmPasswordLabel.Location = new System.Drawing.Point(474, 282);
+            this.confirmPasswordLabel.Name = "confirmPasswordLabel";
+            this.confirmPasswordLabel.Size = new System.Drawing.Size(187, 33);
+            this.confirmPasswordLabel.TabIndex = 6;
+            this.confirmPasswordLabel.Text = "Confirm Password";
+            this.confirmPasswordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // registerBtn
             // 
@@ -229,6 +236,26 @@
             this.passwordLabel.Text = "Password";
             this.passwordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // userDataSet
+            // 
+            this.userDataSet.DataSetName = "UserDataSet";
+            this.userDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataMember = "User";
+            this.userBindingSource.DataSource = this.userDataSet;
+            // 
+            // userTableAdapter
+            // 
+            this.userTableAdapter.ClearBeforeFill = false;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.UpdateOrder = GitFit.UserDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UserTableAdapter = this.userTableAdapter;
+            // 
             // Signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -243,7 +270,7 @@
             this.Controls.Add(this.showPasswordCheckBox);
             this.Controls.Add(this.registerBtn);
             this.Controls.Add(this.confirmPasswordTextBox);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.confirmPasswordLabel);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.label3);
@@ -255,6 +282,8 @@
             this.Text = "Git Fit";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,9 +298,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.TextBox passwordTextBox;
-        private System.Windows.Forms.Label password;
+        //private System.Windows.Forms.Label password;
         private System.Windows.Forms.TextBox confirmPasswordTextBox;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label confirmPasswordLabel;
         private System.Windows.Forms.Button registerBtn;
         private System.Windows.Forms.CheckBox showPasswordCheckBox;
         private System.Windows.Forms.Label backToLogin;
@@ -279,6 +308,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label passwordLabel;
+        private UserDataSet userDataSet;
+        private System.Windows.Forms.BindingSource userBindingSource;
+        private UserDataSetTableAdapters.UserTableAdapter userTableAdapter;
+        private UserDataSetTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }
 
