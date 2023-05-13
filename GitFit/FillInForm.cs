@@ -8,12 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace GitFit
 {
     public partial class FillInForm : Form
     {
         private Signup signup;
-      
 
         public FillInForm(Signup signup)
         {
@@ -53,7 +53,7 @@ namespace GitFit
                 string gender = maleRadioButton.Checked ? "M" : "F";
                 decimal height = heightNumericUpDown.Value;
                 decimal weight = weightNumericUpDown.Value;
-                this.userTableAdapter.Insert(username, password, fname, lname, dob, email, phone, gender, height, weight);
+                this.userTableAdapter.InsertNewUser(username, password, fname, lname, dobStr, email, phone, gender, height, weight);
                 this.userTableAdapter.Fill(this.userDataSet.User);
                 MessageBox.Show("User Registration Completed.", "Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -63,17 +63,13 @@ namespace GitFit
             }
         }
 
-        private void userBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.userBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.userDataSet);
-
-        }
 
         private void FillInForm_Load(object sender, EventArgs e)
         {
-           
+            // Set the values of the controls
+            usernameLabel.Text = signup.Username;
+            passwordLabel.Text = signup.Password;
+
             this.userTableAdapter.Fill(this.userDataSet.User);
 
         }
