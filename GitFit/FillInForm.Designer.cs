@@ -54,6 +54,8 @@
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userTableAdapter = new GitFit.UserDataSetTableAdapters.UserTableAdapter();
             this.tableAdapterManager = new GitFit.UserDataSetTableAdapters.TableAdapterManager();
+            this.usernameLabel = new System.Windows.Forms.Label();
+            this.passwordLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.heightNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.weightNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userDataSet)).BeginInit();
@@ -303,12 +305,32 @@
             this.tableAdapterManager.UpdateOrder = GitFit.UserDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UserTableAdapter = this.userTableAdapter;
             // 
+            // usernameLabel
+            // 
+            this.usernameLabel.AutoSize = true;
+            this.usernameLabel.Location = new System.Drawing.Point(592, 23);
+            this.usernameLabel.Name = "usernameLabel";
+            this.usernameLabel.Size = new System.Drawing.Size(67, 16);
+            this.usernameLabel.TabIndex = 21;
+            this.usernameLabel.Text = "username";
+            // 
+            // passwordLabel
+            // 
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.Location = new System.Drawing.Point(592, 55);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(66, 16);
+            this.passwordLabel.TabIndex = 22;
+            this.passwordLabel.Text = "password";
+            // 
             // FillInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(872, 610);
+            this.Controls.Add(this.passwordLabel);
+            this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.exitFillBtn);
             this.Controls.Add(this.weightNumericUpDown);
             this.Controls.Add(this.heightNumericUpDown);
@@ -369,5 +391,7 @@
         private System.Windows.Forms.BindingSource userBindingSource;
         private UserDataSetTableAdapters.UserTableAdapter userTableAdapter;
         private UserDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.Label usernameLabel;
+        private System.Windows.Forms.Label passwordLabel;
     }
 }

@@ -68,8 +68,12 @@ namespace GitFit
         private void registerBtn_Click(object sender, EventArgs e)
         {
             FillInForm fill = new FillInForm(this);
+            this.Username = usernameTextBox.Text;
+            this.Password = passwordTextBox.Text;
             fill.Show();
             Visible = false;
+
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
