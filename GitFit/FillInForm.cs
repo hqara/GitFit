@@ -13,7 +13,7 @@ namespace GitFit
 {
     public partial class FillInForm : Form
     {
-        private Signup signup;
+        public Signup signup;
 
         public FillInForm(Signup signup)
         {

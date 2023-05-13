@@ -13,10 +13,16 @@ namespace GitFit
 {
     public partial class LoginForm : Form
     {
+        public LoginForm login; 
+        public string loginUsername { get; set; }
+        public string loginPassword { get; set; }
+
         public LoginForm()
         {
             InitializeComponent();
-            
+            this.login = this;
+            this.loginUsername = usernameLoginTxt.Text;
+            this.loginPassword = passwordLoginTxt.Text;
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -74,10 +80,11 @@ namespace GitFit
             {
                 MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                MenuForm dashboard = new MenuForm();
+                MenuForm dashboard = new MenuForm(login);
                 dashboard.Show();
                 this.Visible = false;
-
+                this.loginUsername = username;
+                this.loginPassword = password;
             }
             else
             {
@@ -85,7 +92,7 @@ namespace GitFit
             }
           
         }
-
+       
         private void userBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();

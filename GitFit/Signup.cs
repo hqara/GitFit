@@ -50,9 +50,7 @@ namespace GitFit
         }
 
         private void backToLogin_Click(object sender, EventArgs e)
-        {
-            this.Username = usernameTextBox.Text;
-            this.Password = passwordTextBox.Text;
+        { 
 
             LoginForm login = new LoginForm();
             login.Show();
