@@ -49,13 +49,11 @@
             this.femaleRadioButton = new System.Windows.Forms.RadioButton();
             this.heightNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.weightNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.exitFillBtn = new System.Windows.Forms.Button();
+            this.returnFillBtn = new System.Windows.Forms.Button();
             this.userDataSet = new GitFit.UserDataSet();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userTableAdapter = new GitFit.UserDataSetTableAdapters.UserTableAdapter();
             this.tableAdapterManager = new GitFit.UserDataSetTableAdapters.TableAdapterManager();
-            this.usernameLabel = new System.Windows.Forms.Label();
-            this.passwordLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.heightNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.weightNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userDataSet)).BeginInit();
@@ -270,20 +268,20 @@
             this.weightNumericUpDown.TabIndex = 19;
             this.weightNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // exitFillBtn
+            // returnFillBtn
             // 
-            this.exitFillBtn.BackColor = System.Drawing.Color.LightSlateGray;
-            this.exitFillBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitFillBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitFillBtn.ForeColor = System.Drawing.Color.White;
-            this.exitFillBtn.Location = new System.Drawing.Point(72, 526);
-            this.exitFillBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.exitFillBtn.Name = "exitFillBtn";
-            this.exitFillBtn.Size = new System.Drawing.Size(144, 64);
-            this.exitFillBtn.TabIndex = 20;
-            this.exitFillBtn.Text = "Exit";
-            this.exitFillBtn.UseVisualStyleBackColor = false;
-            this.exitFillBtn.Click += new System.EventHandler(this.exitFillBtn_Click);
+            this.returnFillBtn.BackColor = System.Drawing.Color.LightSlateGray;
+            this.returnFillBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.returnFillBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.returnFillBtn.ForeColor = System.Drawing.Color.White;
+            this.returnFillBtn.Location = new System.Drawing.Point(72, 526);
+            this.returnFillBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.returnFillBtn.Name = "returnFillBtn";
+            this.returnFillBtn.Size = new System.Drawing.Size(144, 64);
+            this.returnFillBtn.TabIndex = 20;
+            this.returnFillBtn.Text = "Return";
+            this.returnFillBtn.UseVisualStyleBackColor = false;
+            this.returnFillBtn.Click += new System.EventHandler(this.returnFillBtn_Click);
             // 
             // userDataSet
             // 
@@ -305,33 +303,13 @@
             this.tableAdapterManager.UpdateOrder = GitFit.UserDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UserTableAdapter = this.userTableAdapter;
             // 
-            // usernameLabel
-            // 
-            this.usernameLabel.AutoSize = true;
-            this.usernameLabel.Location = new System.Drawing.Point(592, 23);
-            this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(67, 16);
-            this.usernameLabel.TabIndex = 21;
-            this.usernameLabel.Text = "username";
-            // 
-            // passwordLabel
-            // 
-            this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(592, 55);
-            this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(66, 16);
-            this.passwordLabel.TabIndex = 22;
-            this.passwordLabel.Text = "password";
-            // 
             // FillInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(872, 610);
-            this.Controls.Add(this.passwordLabel);
-            this.Controls.Add(this.usernameLabel);
-            this.Controls.Add(this.exitFillBtn);
+            this.ClientSize = new System.Drawing.Size(802, 610);
+            this.Controls.Add(this.returnFillBtn);
             this.Controls.Add(this.weightNumericUpDown);
             this.Controls.Add(this.heightNumericUpDown);
             this.Controls.Add(this.femaleRadioButton);
@@ -386,12 +364,10 @@
         private System.Windows.Forms.RadioButton femaleRadioButton;
         private System.Windows.Forms.NumericUpDown heightNumericUpDown;
         private System.Windows.Forms.NumericUpDown weightNumericUpDown;
-        private System.Windows.Forms.Button exitFillBtn;
+        private System.Windows.Forms.Button returnFillBtn;
         private UserDataSet userDataSet;
         private System.Windows.Forms.BindingSource userBindingSource;
         private UserDataSetTableAdapters.UserTableAdapter userTableAdapter;
         private UserDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.Label usernameLabel;
-        private System.Windows.Forms.Label passwordLabel;
     }
 }

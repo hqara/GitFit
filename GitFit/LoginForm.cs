@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -42,9 +43,12 @@ namespace GitFit
             }
         }
 
-        private void usernameLoginTxt_TextChanged(object sender, EventArgs e)
-        {
-            if (usernameLoginTxt.Text.Length > 0)
+        private void usernameLoginTxt_TextChanged(object sender, EventArgs e) { 
+
+            string username = usernameLoginTxt.Text;
+            int registered = (int)userTableAdapter.LoginRegisteredUsername(username);
+        
+             if (registered == 1)
             {
                 passwordLabel.Visible= true;
                 passwordLoginTxt.Visible = true;
@@ -58,5 +62,37 @@ namespace GitFit
             System.Diagnostics.Process.GetCurrentProcess().Kill();
             Application.Exit();
         }
+
+        private void loginBtn_Click(object sender, EventArgs e)
+        {
+            string username = usernameLoginTxt.Text;
+            string password = passwordLoginTxt.Text;
+
+            int registered = (int)userTableAdapter.LoginCompleteValidation(username, password);
+
+            if (registered == 1)
+            {
+                MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                MenuForm dashboard = new MenuForm();
+                dashboard.Show();
+                this.Visible = false;
+
+            }
+            else
+            {
+                MessageBox.Show("Invalid username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+          
+        }
+
+        private void userBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.userBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.userDataSet);
+
+        }
+
     }
 }

@@ -28,48 +28,61 @@ namespace GitFit
             base.OnFormClosing(e);
         }
 
-        private void exitFillBtn_Click(object sender, EventArgs e)
+        private void returnFillBtn_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you certain that you want to \nlose your registration information?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
-            {
-                System.Diagnostics.Process.GetCurrentProcess().Kill();
-                Application.Exit();
-            }
+            DialogResult result = MessageBox.Show("Are you sure you want to leave?\nYour registration information will be lost.", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    this.Visible = false;
+                    signup.Show();
+                    signup.Visible = true;
+                }
+                else
+                {   //Do nothing
+                    return;
+                } 
+
         }
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
-            try
+            if (string.IsNullOrWhiteSpace(firstNameTextBox.Text) || string.IsNullOrWhiteSpace(lastNameTextBox.Text) ||
+                (!maleRadioButton.Checked && !femaleRadioButton.Checked) || heightNumericUpDown.Value == 0 ||
+                weightNumericUpDown.Value == 0)
             {
-                string username = signup.Username;
-                string password = signup.Password;
-                string fname = firstNameTextBox.Text;
-                string lname = lastNameTextBox.Text;
-                DateTime dob = dateOfBirthTimePicker.Value;
-                string dobStr = dob.ToString("yyyy-MM-dd");
-                string email = emailTextBox.Text;
-                string phone = phoneTextBox.Text;
-                string gender = maleRadioButton.Checked ? "M" : "F";
-                decimal height = heightNumericUpDown.Value;
-                decimal weight = weightNumericUpDown.Value;
-                this.userTableAdapter.InsertNewUser(username, password, fname, lname, dobStr, email, phone, gender, height, weight);
-                this.userTableAdapter.Fill(this.userDataSet.User);
-                MessageBox.Show("User Registration Completed.", "Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please fill in all required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"Registration failed: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                try
+                {
+                    string username = signup.Username;
+                    string password = signup.Password;
+                    string fname = firstNameTextBox.Text;
+                    string lname = lastNameTextBox.Text;
+                    DateTime dob = dateOfBirthTimePicker.Value;
+                    string dobStr = dob.ToString("yyyy-MM-dd");
+                    string email = emailTextBox.Text;
+                    string phone = phoneTextBox.Text;
+                    string gender = maleRadioButton.Checked ? "M" : "F";
+                    decimal height = heightNumericUpDown.Value;
+                    decimal weight = weightNumericUpDown.Value;
+                    this.userTableAdapter.InsertNewUser(username, password, fname, lname, dobStr, email, phone, gender, height, weight);
+                    this.userTableAdapter.Fill(this.userDataSet.User);
+                    MessageBox.Show("User Registration Completed.", "Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Registration failed: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
 
 
         private void FillInForm_Load(object sender, EventArgs e)
         {
-            // Set the values of the controls
-            usernameLabel.Text = signup.Username;
-            passwordLabel.Text = signup.Password;
-
             this.userTableAdapter.Fill(this.userDataSet.User);
 
         }

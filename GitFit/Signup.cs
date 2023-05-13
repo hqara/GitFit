@@ -17,7 +17,7 @@ namespace GitFit
 {
     public partial class Signup : Form
     {
-        Signup signup;
+        public Signup signup;
 
         public string Username { get; set; } 
         public string Password { get; set; } 
@@ -67,12 +67,19 @@ namespace GitFit
 
         private void registerBtn_Click(object sender, EventArgs e)
         {
-            FillInForm fill = new FillInForm(this);
-            this.Username = usernameTextBox.Text;
-            this.Password = passwordTextBox.Text;
-            fill.Show();
-            Visible = false;
-
+            if (passwordTextBox.Text.Equals(confirmPasswordTextBox.Text))
+            {
+                FillInForm fill = new FillInForm(this);
+                this.Username = usernameTextBox.Text;
+                this.Password = passwordTextBox.Text;
+                fill.Show();
+                Visible = false;
+            }
+            else {
+                
+                MessageBox.Show("Passwords do not match. Please try again.", "Password Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        
             
         }
 
