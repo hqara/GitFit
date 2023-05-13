@@ -41,7 +41,6 @@
             this.confirmPasswordLabel = new System.Windows.Forms.Label();
             this.registerBtn = new System.Windows.Forms.Button();
             this.showPasswordCheckBox = new System.Windows.Forms.CheckBox();
-            this.backToLogin = new System.Windows.Forms.Label();
             this.exitBtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -50,6 +49,7 @@
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userTableAdapter = new GitFit.UserDataSetTableAdapters.UserTableAdapter();
             this.tableAdapterManager = new GitFit.UserDataSetTableAdapters.TableAdapterManager();
+            this.backToLogin = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userDataSet)).BeginInit();
@@ -155,7 +155,7 @@
             this.registerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registerBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registerBtn.ForeColor = System.Drawing.Color.White;
-            this.registerBtn.Location = new System.Drawing.Point(474, 448);
+            this.registerBtn.Location = new System.Drawing.Point(474, 451);
             this.registerBtn.Name = "registerBtn";
             this.registerBtn.Size = new System.Drawing.Size(123, 48);
             this.registerBtn.TabIndex = 8;
@@ -175,18 +175,6 @@
             this.showPasswordCheckBox.UseVisualStyleBackColor = true;
             this.showPasswordCheckBox.CheckedChanged += new System.EventHandler(this.showPasswordCheckBox_CheckedChanged);
             // 
-            // backToLogin
-            // 
-            this.backToLogin.AutoSize = true;
-            this.backToLogin.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backToLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.backToLogin.Location = new System.Drawing.Point(495, 403);
-            this.backToLogin.Name = "backToLogin";
-            this.backToLogin.Size = new System.Drawing.Size(267, 20);
-            this.backToLogin.TabIndex = 10;
-            this.backToLogin.Text = "Already Have an Account? LOG IN";
-            this.backToLogin.Click += new System.EventHandler(this.backToLogin_Click);
-            // 
             // exitBtn
             // 
             this.exitBtn.BackColor = System.Drawing.Color.LightSlateGray;
@@ -196,7 +184,7 @@
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitBtn.ForeColor = System.Drawing.Color.White;
-            this.exitBtn.Location = new System.Drawing.Point(657, 448);
+            this.exitBtn.Location = new System.Drawing.Point(657, 451);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(123, 48);
             this.exitBtn.TabIndex = 11;
@@ -256,6 +244,18 @@
             this.tableAdapterManager.UpdateOrder = GitFit.UserDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UserTableAdapter = this.userTableAdapter;
             // 
+            // backToLogin
+            // 
+            this.backToLogin.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backToLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.backToLogin.Location = new System.Drawing.Point(474, 403);
+            this.backToLogin.Name = "backToLogin";
+            this.backToLogin.Size = new System.Drawing.Size(306, 26);
+            this.backToLogin.TabIndex = 10;
+            this.backToLogin.Text = "Already Have an Account? LOG IN";
+            this.backToLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.backToLogin.Click += new System.EventHandler(this.backToLogin_Click);
+            // 
             // Signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -303,7 +303,6 @@
         private System.Windows.Forms.Label confirmPasswordLabel;
         private System.Windows.Forms.Button registerBtn;
         private System.Windows.Forms.CheckBox showPasswordCheckBox;
-        private System.Windows.Forms.Label backToLogin;
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
@@ -312,6 +311,7 @@
         private System.Windows.Forms.BindingSource userBindingSource;
         private UserDataSetTableAdapters.UserTableAdapter userTableAdapter;
         private UserDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.Label backToLogin;
     }
 }
 

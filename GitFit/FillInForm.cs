@@ -61,8 +61,7 @@ namespace GitFit
                     string password = signup.Password;
                     string fname = firstNameTextBox.Text;
                     string lname = lastNameTextBox.Text;
-                    DateTime dob = dateOfBirthTimePicker.Value;
-                    string dobStr = dob.ToString("yyyy-MM-dd");
+                    string dobStr = dateOfBirthTimePicker.Value.ToString("yyyy-MM-dd");
                     string email = emailTextBox.Text;
                     string phone = phoneTextBox.Text;
                     string gender = maleRadioButton.Checked ? "M" : "F";

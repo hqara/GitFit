@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GitFit.UserDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,14 +14,23 @@ namespace GitFit
 {
     public partial class MenuForm : Form
     {
-        public LoginForm login; 
-        public MenuForm(LoginForm login)
+        public LoginForm login;
+        public MenuForm(LoginForm login, string username)
         {
             InitializeComponent();
             this.login = login;
-            this.testLabel.Text = getLastNameByUsername();
-            
+            /*
+             * Hey Sarah, this is a test to changing pass, feel free to remove
+             * if (login.loginUsername.Equals("hqara")) {
+
+                this.testLabel.Text = "Old Password:" + GetPassword();
+                SetPassword("test");
+                this.testLabel.Text += "\nNew Password:"+GetPassword();
+            }
+            */
+           
         }
+
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
@@ -34,14 +44,141 @@ namespace GitFit
             Application.Exit();
         }
 
-
-        public string getLastNameByUsername()
+        public string GetPassword()
         {
             string username = this.login.loginUsername;
-            return userTableAdapter.getLastName(username).ToString();
+            UserDataSet.UserDataTable userTable = new UserTableAdapter().getDataByUsername(username);
+            if (userTable.Rows.Count > 0)
+            {
+                string lastName = userTable.Rows[0]["password"].ToString();
+                return lastName;
+            }
+            return null;
         }
 
+        public string GetFirstName()
+        {
+            string username = this.login.loginUsername;
+            UserDataSet.UserDataTable userTable = new UserTableAdapter().getDataByUsername(username);
+            if (userTable.Rows.Count > 0)
+            {
+                string lastName = userTable.Rows[0]["fname"].ToString();
+                return lastName;
+            }
+            return null;
+        }
 
+        public string GetLastName()
+        {
+            string username = this.login.loginUsername;
+            UserDataSet.UserDataTable userTable = new UserTableAdapter().getDataByUsername(username);
+            if (userTable.Rows.Count > 0)
+            {
+                string lastName = userTable.Rows[0]["lname"].ToString();
+                return lastName;
+            }
+            return null;
+        }
 
+        public string GetDOB()
+        {
+            string username = this.login.loginUsername;
+            UserDataSet.UserDataTable userTable = new UserTableAdapter().getDataByUsername(username);
+            if (userTable.Rows.Count > 0)
+            {
+                string dob = userTable.Rows[0]["dob"].ToString();
+                return dob;
+            }
+            return null;
+        }
+
+        public string GetEmail()
+        {
+            string username = this.login.loginUsername;
+            UserDataSet.UserDataTable userTable = new UserTableAdapter().getDataByUsername(username);
+            if (userTable.Rows.Count > 0)
+            {
+                string dob = userTable.Rows[0]["email"].ToString();
+                return dob;
+            }
+            return null;
+        }
+
+        public string GetPhone()
+        {
+            string username = this.login.loginUsername;
+            UserDataSet.UserDataTable userTable = new UserTableAdapter().getDataByUsername(username);
+            if (userTable.Rows.Count > 0)
+            {
+                string dob = userTable.Rows[0]["phone"].ToString();
+                return dob;
+            }
+            return null;
+        }
+
+        public string GetGender()
+        {
+            string username = this.login.loginUsername;
+            UserDataSet.UserDataTable userTable = new UserTableAdapter().getDataByUsername(username);
+            if (userTable.Rows.Count > 0)
+            {
+                string dob = userTable.Rows[0]["gender"].ToString();
+                return dob;
+            }
+            return null;
+        }
+
+        public string GetHeight()
+        {
+            string username = this.login.loginUsername;
+            UserDataSet.UserDataTable userTable = new UserTableAdapter().getDataByUsername(username);
+            if (userTable.Rows.Count > 0)
+            {
+                string dob = userTable.Rows[0]["height"].ToString();
+                return dob;
+            }
+            return null;
+        }
+        public string GetWeight()
+        {
+            string username = this.login.loginUsername;
+            UserDataSet.UserDataTable userTable = new UserTableAdapter().getDataByUsername(username);
+            if (userTable.Rows.Count > 0)
+            {
+                string dob = userTable.Rows[0]["weight"].ToString();
+                return dob;
+            }
+            return null;
+        }
+
+        public void SetPassword(string password)
+        {
+            string username = this.login.loginUsername;
+            userTableAdapter.setNewPassword(username, password);
+        }
+
+        public void SetEmail(string email)
+        {
+            string username = this.login.loginUsername;
+            userTableAdapter.setNewEmail(username, email);
+        }
+
+        public void SetPhone(string phone)
+        {
+            string username = this.login.loginUsername;
+            userTableAdapter.setNewPhone(username,phone);
+        }
+
+        public void SetHeight(decimal height)
+        {
+            string username = this.login.loginUsername;
+            userTableAdapter.setNewHeight(username, height);
+        }
+
+        public void SetWeight(decimal weight)
+        {
+            string username = this.login.loginUsername;
+            userTableAdapter.setNewWeight(username, weight);
+        }
     }
 }

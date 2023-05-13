@@ -78,13 +78,14 @@ namespace GitFit
 
             if (registered == 1)
             {
-                MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                MenuForm dashboard = new MenuForm(login);
-                dashboard.Show();
-                this.Visible = false;
+                MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.loginUsername = username;
                 this.loginPassword = password;
+                MenuForm dashboard = new MenuForm(login, username);
+                dashboard.Show();
+                this.Visible = false;
+        
             }
             else
             {

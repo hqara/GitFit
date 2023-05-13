@@ -65,20 +65,28 @@ namespace GitFit
 
         private void registerBtn_Click(object sender, EventArgs e)
         {
-            if (passwordTextBox.Text.Equals(confirmPasswordTextBox.Text))
+            string username = usernameTextBox.Text;
+
+            int registered = (int)userTableAdapter.LoginRegisteredUsername(username);
+
+            if (passwordTextBox.Text.Equals(confirmPasswordTextBox.Text) && registered==0)
             {
+                
                 FillInForm fill = new FillInForm(this);
                 this.Username = usernameTextBox.Text;
                 this.Password = passwordTextBox.Text;
                 fill.Show();
                 Visible = false;
             }
-            else {
-                
-                MessageBox.Show("Passwords do not match. Please try again.", "Password Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else if (!passwordTextBox.Text.Equals(confirmPasswordTextBox.Text)) {
+
+                MessageBox.Show("The passwords you entered do not match.\nPlease try again.", "Password Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        
-            
+            else if (registered == 1) {
+
+                MessageBox.Show("This username is already taken.\nPlease choose a different\nusername.", "Registration Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)

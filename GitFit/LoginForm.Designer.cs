@@ -129,21 +129,21 @@
             // 
             // usernameLoginTxt
             // 
-            this.usernameLoginTxt.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameLoginTxt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameLoginTxt.Location = new System.Drawing.Point(462, 176);
             this.usernameLoginTxt.Margin = new System.Windows.Forms.Padding(4);
             this.usernameLoginTxt.Name = "usernameLoginTxt";
-            this.usernameLoginTxt.Size = new System.Drawing.Size(306, 27);
+            this.usernameLoginTxt.Size = new System.Drawing.Size(338, 32);
             this.usernameLoginTxt.TabIndex = 4;
             this.usernameLoginTxt.TextChanged += new System.EventHandler(this.usernameLoginTxt_TextChanged);
             // 
             // passwordLoginTxt
             // 
-            this.passwordLoginTxt.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordLoginTxt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordLoginTxt.Location = new System.Drawing.Point(462, 279);
             this.passwordLoginTxt.Margin = new System.Windows.Forms.Padding(4);
             this.passwordLoginTxt.Name = "passwordLoginTxt";
-            this.passwordLoginTxt.Size = new System.Drawing.Size(306, 27);
+            this.passwordLoginTxt.Size = new System.Drawing.Size(330, 32);
             this.passwordLoginTxt.TabIndex = 5;
             this.passwordLoginTxt.UseSystemPasswordChar = true;
             this.passwordLoginTxt.Visible = false;
@@ -164,15 +164,15 @@
             // 
             // backToRegister
             // 
-            this.backToRegister.AutoSize = true;
-            this.backToRegister.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backToRegister.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backToRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.backToRegister.Location = new System.Drawing.Point(493, 403);
+            this.backToRegister.Location = new System.Drawing.Point(462, 405);
             this.backToRegister.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.backToRegister.Name = "backToRegister";
-            this.backToRegister.Size = new System.Drawing.Size(245, 19);
+            this.backToRegister.Size = new System.Drawing.Size(330, 30);
             this.backToRegister.TabIndex = 7;
             this.backToRegister.Text = "Don\'t Have an Account? REGISTER";
+            this.backToRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.backToRegister.Click += new System.EventHandler(this.backToRegister_Click);
             // 
             // loginBtn
@@ -183,7 +183,7 @@
             this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.ForeColor = System.Drawing.Color.White;
-            this.loginBtn.Location = new System.Drawing.Point(469, 450);
+            this.loginBtn.Location = new System.Drawing.Point(462, 460);
             this.loginBtn.Margin = new System.Windows.Forms.Padding(4);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(112, 59);
@@ -201,7 +201,7 @@
             this.exitLoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitLoginBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitLoginBtn.ForeColor = System.Drawing.Color.White;
-            this.exitLoginBtn.Location = new System.Drawing.Point(656, 450);
+            this.exitLoginBtn.Location = new System.Drawing.Point(680, 460);
             this.exitLoginBtn.Margin = new System.Windows.Forms.Padding(4);
             this.exitLoginBtn.Name = "exitLoginBtn";
             this.exitLoginBtn.Size = new System.Drawing.Size(112, 59);
@@ -315,7 +315,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(854, 588);
+            this.ClientSize = new System.Drawing.Size(858, 588);
             this.Controls.Add(this.exitLoginBtn);
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.backToRegister);
