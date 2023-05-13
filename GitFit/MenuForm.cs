@@ -15,6 +15,12 @@ namespace GitFit
     public partial class MenuForm : Form
     {
         public LoginForm login;
+
+        public MenuForm()
+        {
+            InitializeComponent();
+        }
+
         public MenuForm(LoginForm login, string username)
         {
             InitializeComponent();
@@ -179,6 +185,106 @@ namespace GitFit
         {
             string username = this.login.loginUsername;
             userTableAdapter.setNewWeight(username, weight);
+        }
+
+        private void activityLabel_Click(object sender, EventArgs e)
+        {
+            ActivityQuesionnaire a = new ActivityQuesionnaire();
+            a.Show();
+            Visible = false;
+        }
+
+        private void nutritionLabel_Click(object sender, EventArgs e)
+        {
+            NutritionQuestionnaire n = new NutritionQuestionnaire();
+            n.Show();
+            Visible = false;
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private Dictionary<DateTime, List<string>> taskDictionary = new Dictionary<DateTime, List<string>>();
+
+        private List<string> LoadTasks(DateTime date)
+        {
+            // Check if there are any tasks for the selected date
+            if (taskDictionary.ContainsKey(date))
+            {
+                // If there are, return the list of tasks for the selected date
+                return taskDictionary[date];
+            }
+            else
+            {
+                // If there are no tasks for the selected date, return an empty list
+                return new List<string>();
+            }
+        }
+
+        private void SaveTask(DateTime date, string task)
+        {
+            // Retrieve the tasks for the selected date
+            List<string> tasks = LoadTasks(date);
+
+            // Add the new task to the list
+            tasks.Add(task);
+
+            // Save the updated list of tasks for the selected date
+            // This example uses a simple dictionary to store the tasks
+            // but you could use a database or file system instead
+            if (taskDictionary.ContainsKey(date))
+            {
+                taskDictionary[date] = tasks;
+            }
+            else
+            {
+                taskDictionary.Add(date, tasks);
+            }
+        }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
+            // Clear the list box
+            listBox1.Items.Clear();
+
+            // Get the selected date
+            DateTime selectedDate = e.Start;
+
+            // Load the tasks for the selected date
+            List<string> tasks = LoadTasks(selectedDate);
+
+            // Display the tasks in the list box
+            foreach (string task in tasks)
+            {
+                listBox1.Items.Add(task);
+            }
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Get the selected date
+            DateTime selectedDate = monthCalendar1.SelectionStart;
+
+            // Get the task from the text box
+            string task = textBox3.Text;
+
+            // Save the task for the selected date
+            SaveTask(selectedDate, task);
+
+            // Reload the tasks for the selected date
+            List<string> tasks = LoadTasks(selectedDate);
+            listBox1.Items.Clear();
+            foreach (string t in tasks)
+            {
+                listBox1.Items.Add(t);
+            }
+
+            // Clear the text box
+            textBox3.Clear();
         }
     }
 }

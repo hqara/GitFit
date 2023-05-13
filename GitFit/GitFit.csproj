@@ -73,6 +73,12 @@
     <Compile Include="ActivityReport.Designer.cs">
       <DependentUpon>ActivityReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClockControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClockControl.Designer.cs">
+      <DependentUpon>ClockControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="FillInForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ActivityReport.resx">
       <DependentUpon>ActivityReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClockControl.resx">
+      <DependentUpon>ClockControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FillInForm.resx">
       <DependentUpon>FillInForm.cs</DependentUpon>

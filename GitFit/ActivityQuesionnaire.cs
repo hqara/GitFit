@@ -28,9 +28,9 @@ namespace GitFit
             DialogResult result = MessageBox.Show("Are you certain that you want to \nlose your current information?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
-                // User clicked the OK button, exit the program
-                System.Diagnostics.Process.GetCurrentProcess().Kill();
-                Application.Exit();
+                MenuForm m = new MenuForm();
+                m.Show();
+                Visible = false;
             }
         }
 
