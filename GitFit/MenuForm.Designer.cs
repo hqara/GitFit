@@ -36,8 +36,11 @@
             this.tableAdapterManager = new GitFit.UserDataSetTableAdapters.TableAdapterManager();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.testLabel = new System.Windows.Forms.Label();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.userDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // logoutBtn
@@ -81,11 +84,31 @@
             // 
             this.testLabel.AutoSize = true;
             this.testLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.testLabel.Location = new System.Drawing.Point(97, 45);
+            this.testLabel.Location = new System.Drawing.Point(484, 69);
             this.testLabel.Name = "testLabel";
             this.testLabel.Size = new System.Drawing.Size(102, 23);
             this.testLabel.TabIndex = 12;
             this.testLabel.Text = "test label";
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.BackColor = System.Drawing.Color.SteelBlue;
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.splitContainer1.Panel2Collapsed = true;
+            this.splitContainer1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.splitContainer1.Size = new System.Drawing.Size(206, 557);
+            this.splitContainer1.SplitterDistance = 49;
+            this.splitContainer1.TabIndex = 13;
             // 
             // MenuForm
             // 
@@ -93,6 +116,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(800, 557);
+            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.testLabel);
             this.Controls.Add(this.logoutBtn);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -100,6 +124,8 @@
             this.Text = "Dashboard";
             ((System.ComponentModel.ISupportInitialize)(this.userDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,5 +139,6 @@
         private UserDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingSource userBindingSource;
         private System.Windows.Forms.Label testLabel;
+        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }
