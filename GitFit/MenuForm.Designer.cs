@@ -380,7 +380,7 @@
             this.ClientSize = new System.Drawing.Size(924, 573);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.clockControl1);
+            //this.Controls.Add(this.clockControl1);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MenuForm";
