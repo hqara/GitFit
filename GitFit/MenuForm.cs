@@ -286,5 +286,37 @@ namespace GitFit
             // Clear the text box
             textBox3.Clear();
         }
+
+        public string bmiText(double value)
+        {
+            if (value < 18.5)
+            {
+                return ("Underweight");
+            }
+            else if (value > 18.5 && value < 24.9)
+            {
+                return ("Normal");
+            }
+            else if (value > 25 && value < 29.9)
+            {
+                return ("Overweight");
+            }
+            else if (value > 30)
+            {
+                return ("Obese");
+            }
+
+            return "";
+        }
+
+        private void calculateButton_Click(object sender, EventArgs e)
+        {
+            double height = double.Parse(heightNumericUpDown.Text);
+            double weight = double.Parse(weightNumericUpDown.Text);
+            double bmi = weight * 703 / (height * height);
+
+            numericTextBox.Text = bmi.ToString("F2");
+            textBox.Text = bmiText(bmi).ToString();
+        }
     }
 }

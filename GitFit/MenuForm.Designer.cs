@@ -42,10 +42,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.nutritionLabel = new System.Windows.Forms.Label();
             this.userLabel = new System.Windows.Forms.Label();
-            this.clockControl1 = new GitFit.ClockControl();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox = new System.Windows.Forms.TextBox();
+            this.numericTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.calculateButton = new System.Windows.Forms.Button();
@@ -58,6 +57,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.clockControl1 = new GitFit.ClockControl();
             ((System.ComponentModel.ISupportInitialize)(this.userDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -201,18 +201,10 @@
             this.userLabel.Text = "Hello User";
             this.userLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // clockControl1
-            // 
-            this.clockControl1.BackColor = System.Drawing.Color.AliceBlue;
-            this.clockControl1.Location = new System.Drawing.Point(259, 12);
-            this.clockControl1.Name = "clockControl1";
-            this.clockControl1.Size = new System.Drawing.Size(234, 27);
-            this.clockControl1.TabIndex = 14;
-            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBox);
+            this.groupBox1.Controls.Add(this.numericTextBox);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.calculateButton);
@@ -229,19 +221,19 @@
             this.groupBox1.Text = "BMI Calculator";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // textBox2
+            // textBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(376, 133);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(182, 30);
-            this.textBox2.TabIndex = 26;
+            this.textBox.Location = new System.Drawing.Point(376, 133);
+            this.textBox.Name = "textBox";
+            this.textBox.Size = new System.Drawing.Size(182, 30);
+            this.textBox.TabIndex = 26;
             // 
-            // textBox1
+            // numericTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(376, 68);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 30);
-            this.textBox1.TabIndex = 25;
+            this.numericTextBox.Location = new System.Drawing.Point(376, 68);
+            this.numericTextBox.Name = "numericTextBox";
+            this.numericTextBox.Size = new System.Drawing.Size(182, 30);
+            this.numericTextBox.TabIndex = 25;
             // 
             // label2
             // 
@@ -269,6 +261,7 @@
             this.calculateButton.TabIndex = 22;
             this.calculateButton.Text = "Calculate";
             this.calculateButton.UseVisualStyleBackColor = true;
+            this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
             // 
             // weightNumericUpDown
             // 
@@ -297,7 +290,6 @@
             // 
             // heightNumericUpDown
             // 
-            this.heightNumericUpDown.DecimalPlaces = 2;
             this.heightNumericUpDown.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.heightNumericUpDown.Location = new System.Drawing.Point(183, 42);
             this.heightNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -317,9 +309,9 @@
             this.heightLabel.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.heightLabel.Location = new System.Drawing.Point(20, 44);
             this.heightLabel.Name = "heightLabel";
-            this.heightLabel.Size = new System.Drawing.Size(118, 21);
+            this.heightLabel.Size = new System.Drawing.Size(145, 21);
             this.heightLabel.TabIndex = 16;
-            this.heightLabel.Text = "Height (cm):";
+            this.heightLabel.Text = "Height (inches):";
             // 
             // groupBox2
             // 
@@ -372,6 +364,14 @@
             this.monthCalendar1.TabIndex = 17;
             this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
+            // clockControl1
+            // 
+            this.clockControl1.BackColor = System.Drawing.Color.AliceBlue;
+            this.clockControl1.Location = new System.Drawing.Point(259, 12);
+            this.clockControl1.Name = "clockControl1";
+            this.clockControl1.Size = new System.Drawing.Size(234, 27);
+            this.clockControl1.TabIndex = 14;
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -380,7 +380,7 @@
             this.ClientSize = new System.Drawing.Size(924, 573);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            //this.Controls.Add(this.clockControl1);
+            this.Controls.Add(this.clockControl1);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MenuForm";
@@ -420,8 +420,8 @@
         private System.Windows.Forms.Label heightLabel;
         private System.Windows.Forms.NumericUpDown heightNumericUpDown;
         private System.Windows.Forms.Label weightLabel;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox;
+        private System.Windows.Forms.TextBox numericTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button calculateButton;

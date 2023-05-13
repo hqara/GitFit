@@ -126,9 +126,9 @@
             this.heightLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.heightLabel.Location = new System.Drawing.Point(68, 405);
             this.heightLabel.Name = "heightLabel";
-            this.heightLabel.Size = new System.Drawing.Size(129, 23);
+            this.heightLabel.Size = new System.Drawing.Size(158, 23);
             this.heightLabel.TabIndex = 7;
-            this.heightLabel.Text = "Height (cm):";
+            this.heightLabel.Text = "Height (inches):";
             // 
             // weightLabel
             // 
@@ -239,7 +239,6 @@
             // 
             // heightNumericUpDown
             // 
-            this.heightNumericUpDown.DecimalPlaces = 2;
             this.heightNumericUpDown.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.heightNumericUpDown.Location = new System.Drawing.Point(240, 402);
             this.heightNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
