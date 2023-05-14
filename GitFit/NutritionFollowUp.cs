@@ -17,15 +17,16 @@ namespace GitFit
             InitializeComponent();
         }
 
-        private void exitBtn_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.GetCurrentProcess().Kill();
-            Application.Exit();
-        }
-
         private void resultsButton_Click(object sender, EventArgs e)
         {
             NutritionReport report = new NutritionReport(); // change with param
+        }
+
+        private void menuBtn_Click(object sender, EventArgs e)
+        {
+            MenuForm menuForm = new MenuForm();
+            menuForm.Show();
+            Visible = false;
         }
     }
 }

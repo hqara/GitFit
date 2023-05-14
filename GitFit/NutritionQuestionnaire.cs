@@ -75,11 +75,11 @@ namespace GitFit
             return str[length - 1];
         }
 
-        private void exitBtn_Click_1(object sender, EventArgs e)
+        private void menuBtn_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.GetCurrentProcess().Kill();
-            Application.Exit();
-
+            MenuForm menuForm = new MenuForm();
+            menuForm.Show();
+            Visible = false;
         }
     }
 }

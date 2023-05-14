@@ -1,6 +1,6 @@
 ﻿namespace GitFit
 {
-    partial class HistoryForm
+    partial class SettingForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistoryForm));
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingForm));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.settingLabel = new System.Windows.Forms.Label();
             this.activityLabel = new System.Windows.Forms.Label();
@@ -41,41 +38,11 @@
             this.userLabel = new System.Windows.Forms.Label();
             this.logoutBtn = new System.Windows.Forms.Button();
             this.homeLabel = new System.Windows.Forms.Label();
-            this.tabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(248, 3);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(596, 570);
-            this.tabControl1.TabIndex = 0;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.AliceBlue;
-            this.tabPage1.Location = new System.Drawing.Point(4, 30);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(588, 536);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Activity Log";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.AliceBlue;
-            this.tabPage2.Location = new System.Drawing.Point(4, 30);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(793, 416);
-            this.tabPage2.TabIndex = 0;
-            this.tabPage2.Text = "Nutrition Log";
             // 
             // splitContainer1
             // 
@@ -195,7 +162,7 @@
             // 
             this.homeLabel.BackColor = System.Drawing.Color.LightSkyBlue;
             this.homeLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.homeLabel.Location = new System.Drawing.Point(-4, 192);
+            this.homeLabel.Location = new System.Drawing.Point(0, 194);
             this.homeLabel.Name = "homeLabel";
             this.homeLabel.Size = new System.Drawing.Size(253, 44);
             this.homeLabel.TabIndex = 19;
@@ -203,18 +170,16 @@
             this.homeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.homeLabel.Click += new System.EventHandler(this.homeLabel_Click);
             // 
-            // HistoryForm
+            // SettingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(845, 573);
+            this.ClientSize = new System.Drawing.Size(924, 573);
             this.Controls.Add(this.splitContainer1);
-            this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "HistoryForm";
-            this.Text = "History Report";
-            this.tabControl1.ResumeLayout(false);
+            this.Name = "SettingForm";
+            this.Text = "Settings";
             this.splitContainer1.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
@@ -225,9 +190,6 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label settingLabel;
         private System.Windows.Forms.Label activityLabel;

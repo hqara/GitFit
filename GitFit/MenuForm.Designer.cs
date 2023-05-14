@@ -58,6 +58,7 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.clockControl1 = new GitFit.ClockControl();
+            this.homeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.userDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -116,6 +117,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.homeLabel);
             this.splitContainer1.Panel1.Controls.Add(this.settingLabel);
             this.splitContainer1.Panel1.Controls.Add(this.activityLabel);
             this.splitContainer1.Panel1.Controls.Add(this.historyLabel);
@@ -144,6 +146,7 @@
             this.settingLabel.TabIndex = 17;
             this.settingLabel.Text = "Settings";
             this.settingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.settingLabel.Click += new System.EventHandler(this.settingLabel_Click);
             // 
             // activityLabel
             // 
@@ -290,7 +293,6 @@
             // 
             // heightNumericUpDown
             // 
-            this.heightNumericUpDown.DecimalPlaces = 2;
             this.heightNumericUpDown.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.heightNumericUpDown.Location = new System.Drawing.Point(183, 42);
             this.heightNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -373,6 +375,18 @@
             this.clockControl1.Size = new System.Drawing.Size(234, 27);
             this.clockControl1.TabIndex = 14;
             // 
+            // homeLabel
+            // 
+            this.homeLabel.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.homeLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homeLabel.Location = new System.Drawing.Point(0, 191);
+            this.homeLabel.Name = "homeLabel";
+            this.homeLabel.Size = new System.Drawing.Size(253, 44);
+            this.homeLabel.TabIndex = 18;
+            this.homeLabel.Text = "Home";
+            this.homeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.homeLabel.Click += new System.EventHandler(this.homeLabel_Click);
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -381,7 +395,6 @@
             this.ClientSize = new System.Drawing.Size(924, 573);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            //this.Controls.Add(this.clockControl1);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MenuForm";
@@ -432,5 +445,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Label homeLabel;
     }
 }

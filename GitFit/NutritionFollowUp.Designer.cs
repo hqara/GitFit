@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NutritionQuestionnaireFollowUp));
             this.resultsButton = new System.Windows.Forms.Button();
-            this.exitBtn = new System.Windows.Forms.Button();
+            this.menuBtn = new System.Windows.Forms.Button();
             this.questionLabel = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -43,7 +43,6 @@
             this.question8Label = new System.Windows.Forms.Label();
             this.question9Label = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.nutritionQuestionnaireTitleLabel = new System.Windows.Forms.Label();
             this.answer1ComboBox = new System.Windows.Forms.ComboBox();
             this.answer2ComboBox = new System.Windows.Forms.ComboBox();
@@ -74,22 +73,22 @@
             this.resultsButton.UseVisualStyleBackColor = false;
             this.resultsButton.Click += new System.EventHandler(this.resultsButton_Click);
             // 
-            // exitBtn
+            // menuBtn
             // 
-            this.exitBtn.BackColor = System.Drawing.Color.LightSlateGray;
-            this.exitBtn.FlatAppearance.BorderSize = 5;
-            this.exitBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSlateGray;
-            this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitBtn.ForeColor = System.Drawing.Color.White;
-            this.exitBtn.Location = new System.Drawing.Point(583, 578);
-            this.exitBtn.Margin = new System.Windows.Forms.Padding(5);
-            this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(149, 73);
-            this.exitBtn.TabIndex = 69;
-            this.exitBtn.Text = "Exit";
-            this.exitBtn.UseVisualStyleBackColor = false;
-            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            this.menuBtn.BackColor = System.Drawing.Color.LightSlateGray;
+            this.menuBtn.FlatAppearance.BorderSize = 5;
+            this.menuBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSlateGray;
+            this.menuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.menuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuBtn.ForeColor = System.Drawing.Color.White;
+            this.menuBtn.Location = new System.Drawing.Point(583, 578);
+            this.menuBtn.Margin = new System.Windows.Forms.Padding(5);
+            this.menuBtn.Name = "menuBtn";
+            this.menuBtn.Size = new System.Drawing.Size(149, 73);
+            this.menuBtn.TabIndex = 69;
+            this.menuBtn.Text = "Back to Menu";
+            this.menuBtn.UseVisualStyleBackColor = false;
+            this.menuBtn.Click += new System.EventHandler(this.menuBtn_Click);
             // 
             // questionLabel
             // 
@@ -216,29 +215,12 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSlateGray;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.nutritionQuestionnaireTitleLabel);
             this.panel1.Location = new System.Drawing.Point(5, 4);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(935, 66);
             this.panel1.TabIndex = 93;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.LightSlateGray;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray;
-            this.button2.FlatAppearance.BorderSize = 5;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(824, 3);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 59);
-            this.button2.TabIndex = 80;
-            this.button2.Text = "Exit";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // nutritionQuestionnaireTitleLabel
             // 
@@ -393,7 +375,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.questionLabel);
             this.Controls.Add(this.resultsButton);
-            this.Controls.Add(this.exitBtn);
+            this.Controls.Add(this.menuBtn);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -407,7 +389,7 @@
         #endregion
 
         private System.Windows.Forms.Button resultsButton;
-        private System.Windows.Forms.Button exitBtn;
+        private System.Windows.Forms.Button menuBtn;
         private System.Windows.Forms.Label questionLabel;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label18;
@@ -420,7 +402,6 @@
         private System.Windows.Forms.Label question8Label;
         private System.Windows.Forms.Label question9Label;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label nutritionQuestionnaireTitleLabel;
         private System.Windows.Forms.ComboBox answer1ComboBox;
         private System.Windows.Forms.ComboBox answer2ComboBox;

@@ -113,17 +113,19 @@ namespace GitFit
             }
         }
 
+        private void menuBtn_Click(object sender, EventArgs e)
+        {
+            MenuForm menuForm = new MenuForm();
+            menuForm.Show();
+            Visible = false;
+        }
+
         /*
         private Meal[] getBreakfasts()
         {
 
         }
         */
-        private void exitNReportBtn_Click_1(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.GetCurrentProcess().Kill();
-            Application.Exit();
-        }
     }
 
     public class Meal

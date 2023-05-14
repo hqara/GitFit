@@ -52,7 +52,7 @@
             this.addWaterButton = new System.Windows.Forms.Button();
             this.waterIntakeLabel = new System.Windows.Forms.Label();
             this.waterIntakeBar = new System.Windows.Forms.ProgressBar();
-            this.exitNReportBtn = new System.Windows.Forms.Button();
+            this.menuBtn = new System.Windows.Forms.Button();
             this.estimatedCalorieIntakeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.snackPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dinnerPicture)).BeginInit();
@@ -310,22 +310,22 @@
             this.waterIntakeBar.Size = new System.Drawing.Size(867, 28);
             this.waterIntakeBar.TabIndex = 50;
             // 
-            // exitNReportBtn
+            // menuBtn
             // 
-            this.exitNReportBtn.BackColor = System.Drawing.Color.LightSlateGray;
-            this.exitNReportBtn.FlatAppearance.BorderSize = 5;
-            this.exitNReportBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSlateGray;
-            this.exitNReportBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitNReportBtn.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitNReportBtn.ForeColor = System.Drawing.Color.White;
-            this.exitNReportBtn.Location = new System.Drawing.Point(822, 983);
-            this.exitNReportBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.exitNReportBtn.Name = "exitNReportBtn";
-            this.exitNReportBtn.Size = new System.Drawing.Size(112, 59);
-            this.exitNReportBtn.TabIndex = 72;
-            this.exitNReportBtn.Text = "Exit";
-            this.exitNReportBtn.UseVisualStyleBackColor = false;
-            this.exitNReportBtn.Click += new System.EventHandler(this.exitNReportBtn_Click_1);
+            this.menuBtn.BackColor = System.Drawing.Color.LightSlateGray;
+            this.menuBtn.FlatAppearance.BorderSize = 5;
+            this.menuBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSlateGray;
+            this.menuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.menuBtn.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuBtn.ForeColor = System.Drawing.Color.White;
+            this.menuBtn.Location = new System.Drawing.Point(762, 983);
+            this.menuBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.menuBtn.Name = "menuBtn";
+            this.menuBtn.Size = new System.Drawing.Size(172, 59);
+            this.menuBtn.TabIndex = 72;
+            this.menuBtn.Text = "Back to Menu";
+            this.menuBtn.UseVisualStyleBackColor = false;
+            this.menuBtn.Click += new System.EventHandler(this.menuBtn_Click);
             // 
             // estimatedCalorieIntakeLabel
             // 
@@ -345,7 +345,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1006, 1055);
-            this.Controls.Add(this.exitNReportBtn);
+            this.Controls.Add(this.menuBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.moreTipsLabel);
             this.Controls.Add(this.nutritionReportLabel);
@@ -407,7 +407,7 @@
         private System.Windows.Forms.Button addWaterButton;
         private System.Windows.Forms.Label waterIntakeLabel;
         private System.Windows.Forms.ProgressBar waterIntakeBar;
-        private System.Windows.Forms.Button exitNReportBtn;
+        private System.Windows.Forms.Button menuBtn;
         private System.Windows.Forms.Label estimatedCalorieIntakeLabel;
     }
 }

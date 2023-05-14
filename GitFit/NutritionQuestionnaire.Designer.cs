@@ -35,7 +35,7 @@
             this.nutritionReportLabel = new System.Windows.Forms.Label();
             this.snackLabel = new System.Windows.Forms.Label();
             this.dinnerLabel = new System.Windows.Forms.Label();
-            this.exitBtn = new System.Windows.Forms.Button();
+            this.menuBtn = new System.Windows.Forms.Button();
             this.lunchPanel = new System.Windows.Forms.Panel();
             this.lunchRadioButton2 = new System.Windows.Forms.RadioButton();
             this.lunchRadioButton4 = new System.Windows.Forms.RadioButton();
@@ -162,22 +162,22 @@
             this.dinnerLabel.Text = "What do you eat for dinner?";
             this.dinnerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // exitBtn
+            // menuBtn
             // 
-            this.exitBtn.BackColor = System.Drawing.Color.LightSlateGray;
-            this.exitBtn.FlatAppearance.BorderSize = 5;
-            this.exitBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSlateGray;
-            this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitBtn.ForeColor = System.Drawing.Color.White;
-            this.exitBtn.Location = new System.Drawing.Point(397, 781);
-            this.exitBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(112, 59);
-            this.exitBtn.TabIndex = 66;
-            this.exitBtn.Text = "Exit";
-            this.exitBtn.UseVisualStyleBackColor = false;
-            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click_1);
+            this.menuBtn.BackColor = System.Drawing.Color.LightSlateGray;
+            this.menuBtn.FlatAppearance.BorderSize = 5;
+            this.menuBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSlateGray;
+            this.menuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.menuBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuBtn.ForeColor = System.Drawing.Color.White;
+            this.menuBtn.Location = new System.Drawing.Point(397, 781);
+            this.menuBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.menuBtn.Name = "menuBtn";
+            this.menuBtn.Size = new System.Drawing.Size(112, 59);
+            this.menuBtn.TabIndex = 66;
+            this.menuBtn.Text = "Back to Menu";
+            this.menuBtn.UseVisualStyleBackColor = false;
+            this.menuBtn.Click += new System.EventHandler(this.menuBtn_Click);
             // 
             // lunchPanel
             // 
@@ -631,7 +631,7 @@
             this.Controls.Add(this.breakFastPicture1);
             this.Controls.Add(this.lunchPicture1);
             this.Controls.Add(this.lunchPanel);
-            this.Controls.Add(this.exitBtn);
+            this.Controls.Add(this.menuBtn);
             this.Controls.Add(this.lunchLabel);
             this.Controls.Add(this.breakFastPicture3);
             this.Controls.Add(this.breakfastLabel);
@@ -679,7 +679,7 @@
         private System.Windows.Forms.Label nutritionReportLabel;
         private System.Windows.Forms.Label snackLabel;
         private System.Windows.Forms.Label dinnerLabel;
-        private System.Windows.Forms.Button exitBtn;
+        private System.Windows.Forms.Button menuBtn;
         private System.Windows.Forms.Panel lunchPanel;
         private System.Windows.Forms.RadioButton lunchRadioButton2;
         private System.Windows.Forms.PictureBox lunchPicture2;

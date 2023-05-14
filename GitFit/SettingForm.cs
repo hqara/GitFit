@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GitFit
 {
-    public partial class HistoryForm : Form
+    public partial class SettingForm : Form
     {
-        public HistoryForm()
+        public SettingForm()
         {
             InitializeComponent();
         }
