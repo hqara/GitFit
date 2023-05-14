@@ -315,7 +315,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(858, 588);
+            this.ClientSize = new System.Drawing.Size(854, 539);
             this.Controls.Add(this.exitLoginBtn);
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.backToRegister);

@@ -167,6 +167,7 @@
             this.historyLabel.TabIndex = 16;
             this.historyLabel.Text = "History Report";
             this.historyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.historyLabel.Click += new System.EventHandler(this.historyLabel_Click);
             // 
             // pictureBox1
             // 
@@ -219,7 +220,6 @@
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "BMI Calculator";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // textBox
             // 
@@ -290,6 +290,7 @@
             // 
             // heightNumericUpDown
             // 
+            this.heightNumericUpDown.DecimalPlaces = 2;
             this.heightNumericUpDown.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.heightNumericUpDown.Location = new System.Drawing.Point(183, 42);
             this.heightNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -380,7 +381,7 @@
             this.ClientSize = new System.Drawing.Size(924, 573);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.clockControl1);
+            //this.Controls.Add(this.clockControl1);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MenuForm";

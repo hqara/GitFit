@@ -201,11 +201,6 @@ namespace GitFit
             Visible = false;
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private Dictionary<DateTime, List<string>> taskDictionary = new Dictionary<DateTime, List<string>>();
 
         private List<string> LoadTasks(DateTime date)
@@ -231,9 +226,6 @@ namespace GitFit
             // Add the new task to the list
             tasks.Add(task);
 
-            // Save the updated list of tasks for the selected date
-            // This example uses a simple dictionary to store the tasks
-            // but you could use a database or file system instead
             if (taskDictionary.ContainsKey(date))
             {
                 taskDictionary[date] = tasks;
@@ -317,6 +309,13 @@ namespace GitFit
 
             numericTextBox.Text = bmi.ToString("F2");
             textBox.Text = bmiText(bmi).ToString();
+        }
+
+        private void historyLabel_Click(object sender, EventArgs e)
+        {
+            HistoryForm h = new HistoryForm();
+            h.Show();
+            Visible = false;
         }
     }
 }
