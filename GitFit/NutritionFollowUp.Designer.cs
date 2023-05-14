@@ -45,6 +45,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.nutritionQuestionnaireTitleLabel = new System.Windows.Forms.Label();
+            this.answer1ComboBox = new System.Windows.Forms.ComboBox();
+            this.answer2ComboBox = new System.Windows.Forms.ComboBox();
+            this.answer3ComboBox = new System.Windows.Forms.ComboBox();
+            this.answer4ComboBox = new System.Windows.Forms.ComboBox();
+            this.answer5ComboBox = new System.Windows.Forms.ComboBox();
+            this.answer6ComboBox = new System.Windows.Forms.ComboBox();
+            this.answer7ComboBox = new System.Windows.Forms.ComboBox();
+            this.answer8ComboBox = new System.Windows.Forms.ComboBox();
+            this.answer9ComboBox = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -134,7 +143,7 @@
             this.question3Label.Name = "question3Label";
             this.question3Label.Size = new System.Drawing.Size(544, 41);
             this.question3Label.TabIndex = 86;
-            this.question3Label.Text = "3. How many fruits/veggies do you eat?";
+            this.question3Label.Text = "3. How often do you eat fruits/veggies?";
             this.question3Label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // question4Label
@@ -167,7 +176,7 @@
             this.question6Label.Name = "question6Label";
             this.question6Label.Size = new System.Drawing.Size(544, 41);
             this.question6Label.TabIndex = 89;
-            this.question6Label.Text = "6. How much time do you dedicate to cooking?";
+            this.question6Label.Text = "6. How much time do you dedicate to cooking weekly?";
             this.question6Label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // question7Label
@@ -244,12 +253,134 @@
             this.nutritionQuestionnaireTitleLabel.Text = "NUTRITION QUESTIONNAIRE";
             this.nutritionQuestionnaireTitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // answer1ComboBox
+            // 
+            this.answer1ComboBox.FormattingEnabled = true;
+            this.answer1ComboBox.Items.AddRange(new object[] {
+            "Losing weight",
+            "Gaining weight",
+            "Maintaining weight"});
+            this.answer1ComboBox.Location = new System.Drawing.Point(609, 140);
+            this.answer1ComboBox.Name = "answer1ComboBox";
+            this.answer1ComboBox.Size = new System.Drawing.Size(281, 24);
+            this.answer1ComboBox.TabIndex = 94;
+            // 
+            // answer2ComboBox
+            // 
+            this.answer2ComboBox.FormattingEnabled = true;
+            this.answer2ComboBox.Items.AddRange(new object[] {
+            "None (typical)",
+            "Vegan/Vegetarian",
+            "Pescatarian",
+            "Halal/Kosher"});
+            this.answer2ComboBox.Location = new System.Drawing.Point(609, 187);
+            this.answer2ComboBox.Name = "answer2ComboBox";
+            this.answer2ComboBox.Size = new System.Drawing.Size(281, 24);
+            this.answer2ComboBox.TabIndex = 95;
+            // 
+            // answer3ComboBox
+            // 
+            this.answer3ComboBox.FormattingEnabled = true;
+            this.answer3ComboBox.Items.AddRange(new object[] {
+            "Never",
+            "Rarely",
+            "Moderately",
+            "As often as possible",
+            "With every meal"});
+            this.answer3ComboBox.Location = new System.Drawing.Point(609, 234);
+            this.answer3ComboBox.Name = "answer3ComboBox";
+            this.answer3ComboBox.Size = new System.Drawing.Size(281, 24);
+            this.answer3ComboBox.TabIndex = 96;
+            // 
+            // answer4ComboBox
+            // 
+            this.answer4ComboBox.FormattingEnabled = true;
+            this.answer4ComboBox.Items.AddRange(new object[] {
+            "Sedentary",
+            "Light activity",
+            "Regular activity",
+            "Daily activity"});
+            this.answer4ComboBox.Location = new System.Drawing.Point(609, 281);
+            this.answer4ComboBox.Name = "answer4ComboBox";
+            this.answer4ComboBox.Size = new System.Drawing.Size(281, 24);
+            this.answer4ComboBox.TabIndex = 97;
+            // 
+            // answer5ComboBox
+            // 
+            this.answer5ComboBox.FormattingEnabled = true;
+            this.answer5ComboBox.Items.AddRange(new object[] {
+            "$0 - $40",
+            "$40 - $60",
+            "$60 - $80",
+            "$80+"});
+            this.answer5ComboBox.Location = new System.Drawing.Point(609, 328);
+            this.answer5ComboBox.Name = "answer5ComboBox";
+            this.answer5ComboBox.Size = new System.Drawing.Size(281, 24);
+            this.answer5ComboBox.TabIndex = 98;
+            // 
+            // answer6ComboBox
+            // 
+            this.answer6ComboBox.FormattingEnabled = true;
+            this.answer6ComboBox.Items.AddRange(new object[] {
+            "One hour",
+            "2-4 hours ",
+            "4-8 hours ",
+            "8+ hours"});
+            this.answer6ComboBox.Location = new System.Drawing.Point(609, 375);
+            this.answer6ComboBox.Name = "answer6ComboBox";
+            this.answer6ComboBox.Size = new System.Drawing.Size(281, 24);
+            this.answer6ComboBox.TabIndex = 99;
+            // 
+            // answer7ComboBox
+            // 
+            this.answer7ComboBox.FormattingEnabled = true;
+            this.answer7ComboBox.Items.AddRange(new object[] {
+            "Never",
+            "Once a month",
+            "Once a week",
+            "Multiple times a week"});
+            this.answer7ComboBox.Location = new System.Drawing.Point(609, 422);
+            this.answer7ComboBox.Name = "answer7ComboBox";
+            this.answer7ComboBox.Size = new System.Drawing.Size(281, 24);
+            this.answer7ComboBox.TabIndex = 100;
+            // 
+            // answer8ComboBox
+            // 
+            this.answer8ComboBox.FormattingEnabled = true;
+            this.answer8ComboBox.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.answer8ComboBox.Location = new System.Drawing.Point(609, 469);
+            this.answer8ComboBox.Name = "answer8ComboBox";
+            this.answer8ComboBox.Size = new System.Drawing.Size(281, 24);
+            this.answer8ComboBox.TabIndex = 101;
+            // 
+            // answer9ComboBox
+            // 
+            this.answer9ComboBox.FormattingEnabled = true;
+            this.answer9ComboBox.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.answer9ComboBox.Location = new System.Drawing.Point(609, 516);
+            this.answer9ComboBox.Name = "answer9ComboBox";
+            this.answer9ComboBox.Size = new System.Drawing.Size(281, 24);
+            this.answer9ComboBox.TabIndex = 102;
+            // 
             // NutritionQuestionnaireFollowUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(945, 677);
+            this.Controls.Add(this.answer9ComboBox);
+            this.Controls.Add(this.answer8ComboBox);
+            this.Controls.Add(this.answer7ComboBox);
+            this.Controls.Add(this.answer6ComboBox);
+            this.Controls.Add(this.answer5ComboBox);
+            this.Controls.Add(this.answer4ComboBox);
+            this.Controls.Add(this.answer3ComboBox);
+            this.Controls.Add(this.answer2ComboBox);
+            this.Controls.Add(this.answer1ComboBox);
             this.Controls.Add(this.question9Label);
             this.Controls.Add(this.question8Label);
             this.Controls.Add(this.question7Label);
@@ -291,5 +422,14 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label nutritionQuestionnaireTitleLabel;
+        private System.Windows.Forms.ComboBox answer1ComboBox;
+        private System.Windows.Forms.ComboBox answer2ComboBox;
+        private System.Windows.Forms.ComboBox answer3ComboBox;
+        private System.Windows.Forms.ComboBox answer4ComboBox;
+        private System.Windows.Forms.ComboBox answer5ComboBox;
+        private System.Windows.Forms.ComboBox answer6ComboBox;
+        private System.Windows.Forms.ComboBox answer7ComboBox;
+        private System.Windows.Forms.ComboBox answer8ComboBox;
+        private System.Windows.Forms.ComboBox answer9ComboBox;
     }
 }

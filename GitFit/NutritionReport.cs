@@ -12,7 +12,12 @@ namespace GitFit
 {
     public partial class NutritionReport : Form
     {
-        FoodChoices GeneralHealth { get; set; }
+        public FoodChoices GeneralHealth { get; set; }
+        public Meal[] Breakfasts { get; }
+        public Meal[] Lunches { get; }
+        public Meal[] Dinners { get; }
+        public Meal[] Snacks { get; } 
+
         public NutritionReport()
         {
             InitializeComponent();
@@ -108,6 +113,12 @@ namespace GitFit
             }
         }
 
+        /*
+        private Meal[] getBreakfasts()
+        {
+
+        }
+        */
         private void exitNReportBtn_Click_1(object sender, EventArgs e)
         {
             System.Diagnostics.Process.GetCurrentProcess().Kill();
@@ -115,7 +126,7 @@ namespace GitFit
         }
     }
 
-    class Meal
+    public class Meal
     {
         public Boolean IsVegan { get; }
         public Boolean IsLowCalorie { get; }
