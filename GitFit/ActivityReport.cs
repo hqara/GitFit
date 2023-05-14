@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Xml.Linq;
 
 namespace GitFit
 {
@@ -15,6 +18,8 @@ namespace GitFit
         public ActivityReport()
         {
             InitializeComponent();
+            
+
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
@@ -25,8 +30,12 @@ namespace GitFit
         public ActivityReport(int level, decimal score)
         {
             InitializeComponent();
+            String levelStr = "";
+
+
             if(level == 0)
             {
+                levelStr = "Above Average";
                 currentLevelLbl.Text = "Current Activity Level: Above Average \n"+ score;
                 ReportrichTextBox.Text = "The purpose of this report is to provide you with an evaluation of your current " +
                     "activity levels and to highlight the fact that you are performing above average in terms of physical activity." +
@@ -61,6 +70,7 @@ namespace GitFit
             }
             else if (level == 1)
             {
+                levelStr = "Average";
                 currentLevelLbl.Text = "Current Activity Level: Average \n"+ score;
                 ReportrichTextBox.Text = "The purpose of this report is to inform you that your current activity levels fall within the average range " +
                     "and to encourage you to consider further opportunities to enhance your overall fitness and well-being.\r\n\r\nMethodology:\r\nTo " +
@@ -97,6 +107,7 @@ namespace GitFit
             }
             else if (level == 2)
             {
+                levelStr = "Below Average";
                 currentLevelLbl.Text = "Current Activity Level: Below Average \n" + score;
                 ReportrichTextBox.Text = "The purpose of this report is to highlight the fact that your current activity levels are below average " +
                     "and to encourage you to make positive changes in order to improve your overall fitness and well-being.\r\n\r\nMethodology:\r\nTo " +
@@ -129,8 +140,9 @@ namespace GitFit
                     " progress to more challenging activities.\r\n\r\nSeek Support: Consider seeking guidance from a healthcare professional or " +
                     "certified fitness trainer who can provide personalized advice and help you develop an exercise plan that suits your needs" +
                     " and goals.\r\n\r\nBy implementing these strategies and committing to regular physical activity, you can improve your fitness" +
-                    " levels, enhance your overall health, and experience the numerous benefits associated with an active lifestyle.";
+                " levels, enhance your overall health, and experience the numerous benefits associated with an active lifestyle.";
             }
+            
         }
 
         private void exitBtn_Click_1(object sender, EventArgs e)

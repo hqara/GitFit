@@ -63,6 +63,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivityHistoryDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ActivityHistoryDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ActivityQuesionnaire.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +210,17 @@
     <EmbeddedResource Include="TimeReport.resx">
       <DependentUpon>TimeReport.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ActivityHistoryDataSet1.xsc">
+      <DependentUpon>ActivityHistoryDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ActivityHistoryDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ActivityHistoryDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ActivityHistoryDataSet1.xss">
+      <DependentUpon>ActivityHistoryDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
