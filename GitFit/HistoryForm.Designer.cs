@@ -161,9 +161,9 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.AliceBlue;
-            this.tabPage2.Location = new System.Drawing.Point(4, 30);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(667, 536);
+            this.tabPage2.Size = new System.Drawing.Size(667, 537);
             this.tabPage2.TabIndex = 0;
             this.tabPage2.Text = "Nutrition Log";
             // 
@@ -282,7 +282,7 @@
             this.logoutBtn.FlatAppearance.BorderSize = 5;
             this.logoutBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSlateGray;
             this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logoutBtn.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutBtn.ForeColor = System.Drawing.Color.White;
             this.logoutBtn.Location = new System.Drawing.Point(46, 488);
             this.logoutBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -388,7 +388,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(45, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -440,7 +439,6 @@
             this.Controls.Add(this.tableBindingNavigator);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.tabControl1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HistoryForm";
             this.Text = "History Report";
