@@ -108,35 +108,39 @@ namespace GitFit
             }
         }
 
-        private void problemAreasLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void estimatedCalorieIntakeLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void problemAreasInformationLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nutritionReportLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mealPlanLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void exitNReportBtn_Click_1(object sender, EventArgs e)
         {
             System.Diagnostics.Process.GetCurrentProcess().Kill();
             Application.Exit();
+        }
+    }
+
+    class Meal
+    {
+        public Boolean IsVegan { get; }
+        public Boolean IsLowCalorie { get; }
+        public Boolean IsHighProtein { get; }
+        public Boolean IsPescatarian { get; }
+        public Boolean IsEasyToMake { get; }
+        public Boolean IsBudgetFriendly { get; }
+        public Boolean IsTakeOut { get; }
+
+        public String Description { get; }
+        public String Name { get; }
+        public int Calories { get; }
+
+        public Meal(bool isVegan, bool isLowCalorie, bool isHighProtein, bool isPescatarian, bool isEasyToMake, bool isBudgetFriendly, bool isTakeOut, string description, string name, int calories) 
+        {
+            IsVegan = isVegan;
+            IsLowCalorie = isLowCalorie;
+            IsHighProtein = isHighProtein;
+            IsPescatarian = isPescatarian;
+            IsEasyToMake = isEasyToMake;
+            IsBudgetFriendly = isBudgetFriendly;
+            IsTakeOut = isTakeOut;
+            Description = description;
+            Name = name;
+            Calories = calories;
         }
     }
 }

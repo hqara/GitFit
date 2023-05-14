@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.moreTipsLabel = new System.Windows.Forms.Label();
             this.nutritionReportLabel = new System.Windows.Forms.Label();
-            this.estimatedCalorieIntakeLabel = new System.Windows.Forms.Label();
             this.problemAreasInformationLabel = new System.Windows.Forms.Label();
             this.problemAreasLabel = new System.Windows.Forms.Label();
             this.snackIdeasLabel = new System.Windows.Forms.Label();
@@ -54,6 +53,7 @@
             this.waterIntakeLabel = new System.Windows.Forms.Label();
             this.waterIntakeBar = new System.Windows.Forms.ProgressBar();
             this.exitNReportBtn = new System.Windows.Forms.Button();
+            this.estimatedCalorieIntakeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.snackPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dinnerPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lunchPicture)).BeginInit();
@@ -62,7 +62,7 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(69, 769);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -73,7 +73,7 @@
             // 
             // moreTipsLabel
             // 
-            this.moreTipsLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moreTipsLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.moreTipsLabel.Location = new System.Drawing.Point(69, 737);
             this.moreTipsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.moreTipsLabel.Name = "moreTipsLabel";
@@ -85,7 +85,7 @@
             // nutritionReportLabel
             // 
             this.nutritionReportLabel.BackColor = System.Drawing.Color.Transparent;
-            this.nutritionReportLabel.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nutritionReportLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nutritionReportLabel.Location = new System.Drawing.Point(71, 14);
             this.nutritionReportLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nutritionReportLabel.Name = "nutritionReportLabel";
@@ -93,35 +93,21 @@
             this.nutritionReportLabel.TabIndex = 69;
             this.nutritionReportLabel.Text = "NUTRITION REPORT";
             this.nutritionReportLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.nutritionReportLabel.Click += new System.EventHandler(this.nutritionReportLabel_Click);
-            // 
-            // estimatedCalorieIntakeLabel
-            // 
-            this.estimatedCalorieIntakeLabel.AutoSize = true;
-            this.estimatedCalorieIntakeLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.estimatedCalorieIntakeLabel.Location = new System.Drawing.Point(421, 102);
-            this.estimatedCalorieIntakeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.estimatedCalorieIntakeLabel.Name = "estimatedCalorieIntakeLabel";
-            this.estimatedCalorieIntakeLabel.Size = new System.Drawing.Size(260, 23);
-            this.estimatedCalorieIntakeLabel.TabIndex = 68;
-            this.estimatedCalorieIntakeLabel.Text = "Estimated Calorie Intake: ";
-            this.estimatedCalorieIntakeLabel.Click += new System.EventHandler(this.estimatedCalorieIntakeLabel_Click);
             // 
             // problemAreasInformationLabel
             // 
-            this.problemAreasInformationLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.problemAreasInformationLabel.Location = new System.Drawing.Point(70, 131);
+            this.problemAreasInformationLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.problemAreasInformationLabel.Location = new System.Drawing.Point(69, 129);
             this.problemAreasInformationLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.problemAreasInformationLabel.Name = "problemAreasInformationLabel";
             this.problemAreasInformationLabel.Size = new System.Drawing.Size(865, 58);
             this.problemAreasInformationLabel.TabIndex = 67;
             this.problemAreasInformationLabel.Text = resources.GetString("problemAreasInformationLabel.Text");
             this.problemAreasInformationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.problemAreasInformationLabel.Click += new System.EventHandler(this.problemAreasInformationLabel_Click);
             // 
             // problemAreasLabel
             // 
-            this.problemAreasLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.problemAreasLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.problemAreasLabel.Location = new System.Drawing.Point(69, 62);
             this.problemAreasLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.problemAreasLabel.Name = "problemAreasLabel";
@@ -129,11 +115,10 @@
             this.problemAreasLabel.TabIndex = 66;
             this.problemAreasLabel.Text = "Problem Areas";
             this.problemAreasLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.problemAreasLabel.Click += new System.EventHandler(this.problemAreasLabel_Click);
             // 
             // snackIdeasLabel
             // 
-            this.snackIdeasLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.snackIdeasLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.snackIdeasLabel.Location = new System.Drawing.Point(731, 451);
             this.snackIdeasLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.snackIdeasLabel.Name = "snackIdeasLabel";
@@ -143,7 +128,7 @@
             // 
             // dinnerIdeasLabel
             // 
-            this.dinnerIdeasLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dinnerIdeasLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dinnerIdeasLabel.Location = new System.Drawing.Point(518, 451);
             this.dinnerIdeasLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dinnerIdeasLabel.Name = "dinnerIdeasLabel";
@@ -153,7 +138,7 @@
             // 
             // lunchIdeasLabel
             // 
-            this.lunchIdeasLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lunchIdeasLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lunchIdeasLabel.Location = new System.Drawing.Point(305, 451);
             this.lunchIdeasLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lunchIdeasLabel.Name = "lunchIdeasLabel";
@@ -163,7 +148,7 @@
             // 
             // breakFastIdeasLabel
             // 
-            this.breakFastIdeasLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.breakFastIdeasLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.breakFastIdeasLabel.Location = new System.Drawing.Point(95, 451);
             this.breakFastIdeasLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.breakFastIdeasLabel.Name = "breakFastIdeasLabel";
@@ -209,7 +194,7 @@
             // 
             // snackLabel
             // 
-            this.snackLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.snackLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.snackLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.snackLabel.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.snackLabel.Location = new System.Drawing.Point(733, 257);
@@ -222,7 +207,7 @@
             // 
             // lunchLabel
             // 
-            this.lunchLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lunchLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lunchLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lunchLabel.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lunchLabel.Location = new System.Drawing.Point(311, 257);
@@ -235,7 +220,7 @@
             // 
             // dinnerLabel
             // 
-            this.dinnerLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dinnerLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dinnerLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dinnerLabel.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.dinnerLabel.Location = new System.Drawing.Point(522, 257);
@@ -248,7 +233,7 @@
             // 
             // breakfastLabel
             // 
-            this.breakfastLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.breakfastLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.breakfastLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.breakfastLabel.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.breakfastLabel.Location = new System.Drawing.Point(101, 257);
@@ -261,7 +246,7 @@
             // 
             // mealPlanLabel
             // 
-            this.mealPlanLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mealPlanLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mealPlanLabel.Location = new System.Drawing.Point(69, 208);
             this.mealPlanLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.mealPlanLabel.Name = "mealPlanLabel";
@@ -269,11 +254,10 @@
             this.mealPlanLabel.TabIndex = 57;
             this.mealPlanLabel.Text = "Weekly Meal Plan";
             this.mealPlanLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.mealPlanLabel.Click += new System.EventHandler(this.mealPlanLabel_Click);
             // 
             // waterIntakeMessageLabel
             // 
-            this.waterIntakeMessageLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.waterIntakeMessageLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.waterIntakeMessageLabel.Location = new System.Drawing.Point(517, 933);
             this.waterIntakeMessageLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.waterIntakeMessageLabel.Name = "waterIntakeMessageLabel";
@@ -284,16 +268,16 @@
             // 
             // addWaterTextBox
             // 
-            this.addWaterTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addWaterTextBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addWaterTextBox.Location = new System.Drawing.Point(69, 937);
             this.addWaterTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.addWaterTextBox.Name = "addWaterTextBox";
-            this.addWaterTextBox.Size = new System.Drawing.Size(216, 32);
+            this.addWaterTextBox.Size = new System.Drawing.Size(216, 28);
             this.addWaterTextBox.TabIndex = 55;
             // 
             // addWaterButton
             // 
-            this.addWaterButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addWaterButton.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addWaterButton.Location = new System.Drawing.Point(321, 934);
             this.addWaterButton.Margin = new System.Windows.Forms.Padding(4);
             this.addWaterButton.Name = "addWaterButton";
@@ -302,10 +286,11 @@
             this.addWaterButton.Text = "Add Water";
             this.addWaterButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.addWaterButton.UseVisualStyleBackColor = true;
+            this.addWaterButton.Click += new System.EventHandler(this.addWaterButton_Click);
             // 
             // waterIntakeLabel
             // 
-            this.waterIntakeLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.waterIntakeLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.waterIntakeLabel.Location = new System.Drawing.Point(69, 836);
             this.waterIntakeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.waterIntakeLabel.Name = "waterIntakeLabel";
@@ -331,7 +316,7 @@
             this.exitNReportBtn.FlatAppearance.BorderSize = 5;
             this.exitNReportBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSlateGray;
             this.exitNReportBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitNReportBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitNReportBtn.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitNReportBtn.ForeColor = System.Drawing.Color.White;
             this.exitNReportBtn.Location = new System.Drawing.Point(822, 983);
             this.exitNReportBtn.Margin = new System.Windows.Forms.Padding(4);
@@ -341,6 +326,17 @@
             this.exitNReportBtn.Text = "Exit";
             this.exitNReportBtn.UseVisualStyleBackColor = false;
             this.exitNReportBtn.Click += new System.EventHandler(this.exitNReportBtn_Click_1);
+            // 
+            // estimatedCalorieIntakeLabel
+            // 
+            this.estimatedCalorieIntakeLabel.AutoSize = true;
+            this.estimatedCalorieIntakeLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.estimatedCalorieIntakeLabel.Location = new System.Drawing.Point(388, 99);
+            this.estimatedCalorieIntakeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.estimatedCalorieIntakeLabel.Name = "estimatedCalorieIntakeLabel";
+            this.estimatedCalorieIntakeLabel.Size = new System.Drawing.Size(226, 21);
+            this.estimatedCalorieIntakeLabel.TabIndex = 68;
+            this.estimatedCalorieIntakeLabel.Text = "Estimated Calorie Intake: ";
             // 
             // NutritionReport
             // 
@@ -391,7 +387,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label moreTipsLabel;
         private System.Windows.Forms.Label nutritionReportLabel;
-        private System.Windows.Forms.Label estimatedCalorieIntakeLabel;
         private System.Windows.Forms.Label problemAreasInformationLabel;
         private System.Windows.Forms.Label problemAreasLabel;
         private System.Windows.Forms.Label snackIdeasLabel;
@@ -413,5 +408,6 @@
         private System.Windows.Forms.Label waterIntakeLabel;
         private System.Windows.Forms.ProgressBar waterIntakeBar;
         private System.Windows.Forms.Button exitNReportBtn;
+        private System.Windows.Forms.Label estimatedCalorieIntakeLabel;
     }
 }

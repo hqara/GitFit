@@ -91,7 +91,8 @@ namespace GitFit
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MenuForm r = new MenuForm();
+            //MenuForm r = new MenuForm();
+            NutritionReport r = new NutritionReport();
             r.Show();
             Visible= false;
         }
