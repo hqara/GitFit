@@ -27,22 +27,23 @@ namespace GitFit
         private void activityLabel_Click(object sender, EventArgs e)
         {
 
-
+            ActivityQuesionnaire a = new ActivityQuesionnaire();
+            a.Show();
+            Visible = false;
         }
 
         private void nutritionLabel_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void historyLabel_Click(object sender, EventArgs e)
-        {
-
+            NutritionQuestionnaire n = new NutritionQuestionnaire();
+            n.Show();
+            Visible = false;
         }
 
         private void settingLabel_Click(object sender, EventArgs e)
         {
-
+            SettingForm settingForm = new SettingForm();
+            settingForm.Show();
+            Visible = false;
         }
 
         private void logoutBtn_Click(object sender, EventArgs e)

@@ -324,12 +324,5 @@ namespace GitFit
             settingForm.Show();
             Visible = false;
         }
-
-        private void homeLabel_Click(object sender, EventArgs e)
-        {
-            MenuForm menuForm = new MenuForm();
-            menuForm.Show();
-            Visible = false;
-        }
     }
 }

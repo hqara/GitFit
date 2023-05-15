@@ -241,7 +241,6 @@
             this.historyLabel.TabIndex = 16;
             this.historyLabel.Text = "History Report";
             this.historyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.historyLabel.Click += new System.EventHandler(this.historyLabel_Click);
             // 
             // pictureBox1
             // 

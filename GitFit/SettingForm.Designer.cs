@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingForm));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.homeLabel = new System.Windows.Forms.Label();
             this.settingLabel = new System.Windows.Forms.Label();
             this.activityLabel = new System.Windows.Forms.Label();
             this.historyLabel = new System.Windows.Forms.Label();
@@ -37,11 +39,32 @@
             this.nutritionLabel = new System.Windows.Forms.Label();
             this.userLabel = new System.Windows.Forms.Label();
             this.logoutBtn = new System.Windows.Forms.Button();
-            this.homeLabel = new System.Windows.Forms.Label();
+            this.userDataSet = new GitFit.UserDataSet();
+            this.userTableAdapter = new GitFit.UserDataSetTableAdapters.UserTableAdapter();
+            this.tableAdapterManager = new GitFit.UserDataSetTableAdapters.TableAdapterManager();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.weightLabel = new System.Windows.Forms.Label();
+            this.heightLabel = new System.Windows.Forms.Label();
+            this.phoneLabel = new System.Windows.Forms.Label();
+            this.emailLabel = new System.Windows.Forms.Label();
+            this.ageLabel = new System.Windows.Forms.Label();
+            this.lastNameLabel = new System.Windows.Forms.Label();
+            this.firstNameLabel = new System.Windows.Forms.Label();
+            this.fNameLabel = new System.Windows.Forms.Label();
+            this.lNameLabel = new System.Windows.Forms.Label();
+            this.age1Label = new System.Windows.Forms.Label();
+            this.email1Label = new System.Windows.Forms.Label();
+            this.phone1Label = new System.Windows.Forms.Label();
+            this.height1Label = new System.Windows.Forms.Label();
+            this.weight1Label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -72,6 +95,18 @@
             this.splitContainer1.SplitterDistance = 49;
             this.splitContainer1.TabIndex = 14;
             // 
+            // homeLabel
+            // 
+            this.homeLabel.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.homeLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homeLabel.Location = new System.Drawing.Point(0, 194);
+            this.homeLabel.Name = "homeLabel";
+            this.homeLabel.Size = new System.Drawing.Size(253, 44);
+            this.homeLabel.TabIndex = 19;
+            this.homeLabel.Text = "Home";
+            this.homeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.homeLabel.Click += new System.EventHandler(this.homeLabel_Click);
+            // 
             // settingLabel
             // 
             this.settingLabel.BackColor = System.Drawing.Color.LightSkyBlue;
@@ -82,7 +117,6 @@
             this.settingLabel.TabIndex = 17;
             this.settingLabel.Text = "Settings";
             this.settingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.settingLabel.Click += new System.EventHandler(this.settingLabel_Click);
             // 
             // activityLabel
             // 
@@ -158,24 +192,198 @@
             this.logoutBtn.UseVisualStyleBackColor = false;
             this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
-            // homeLabel
+            // userDataSet
             // 
-            this.homeLabel.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.homeLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.homeLabel.Location = new System.Drawing.Point(0, 194);
-            this.homeLabel.Name = "homeLabel";
-            this.homeLabel.Size = new System.Drawing.Size(253, 44);
-            this.homeLabel.TabIndex = 19;
-            this.homeLabel.Text = "Home";
-            this.homeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.homeLabel.Click += new System.EventHandler(this.homeLabel_Click);
+            this.userDataSet.DataSetName = "UserDataSet";
+            this.userDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // userTableAdapter
+            // 
+            this.userTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.TableTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = GitFit.UserDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UserTableAdapter = this.userTableAdapter;
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataMember = "User";
+            this.userBindingSource.DataSource = this.userDataSet;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.weight1Label);
+            this.groupBox1.Controls.Add(this.height1Label);
+            this.groupBox1.Controls.Add(this.phone1Label);
+            this.groupBox1.Controls.Add(this.email1Label);
+            this.groupBox1.Controls.Add(this.age1Label);
+            this.groupBox1.Controls.Add(this.lNameLabel);
+            this.groupBox1.Controls.Add(this.fNameLabel);
+            this.groupBox1.Controls.Add(this.weightLabel);
+            this.groupBox1.Controls.Add(this.heightLabel);
+            this.groupBox1.Controls.Add(this.phoneLabel);
+            this.groupBox1.Controls.Add(this.emailLabel);
+            this.groupBox1.Controls.Add(this.ageLabel);
+            this.groupBox1.Controls.Add(this.lastNameLabel);
+            this.groupBox1.Controls.Add(this.firstNameLabel);
+            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(255, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(723, 264);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Profile Summary";
+            // 
+            // weightLabel
+            // 
+            this.weightLabel.AutoSize = true;
+            this.weightLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weightLabel.Location = new System.Drawing.Point(338, 215);
+            this.weightLabel.Name = "weightLabel";
+            this.weightLabel.Size = new System.Drawing.Size(106, 21);
+            this.weightLabel.TabIndex = 27;
+            this.weightLabel.Text = "Weight (lb):";
+            // 
+            // heightLabel
+            // 
+            this.heightLabel.AutoSize = true;
+            this.heightLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.heightLabel.Location = new System.Drawing.Point(17, 215);
+            this.heightLabel.Name = "heightLabel";
+            this.heightLabel.Size = new System.Drawing.Size(138, 21);
+            this.heightLabel.TabIndex = 26;
+            this.heightLabel.Text = "Height (inches):";
+            // 
+            // phoneLabel
+            // 
+            this.phoneLabel.AutoSize = true;
+            this.phoneLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneLabel.Location = new System.Drawing.Point(409, 121);
+            this.phoneLabel.Name = "phoneLabel";
+            this.phoneLabel.Size = new System.Drawing.Size(143, 21);
+            this.phoneLabel.TabIndex = 24;
+            this.phoneLabel.Text = "Phone Number: ";
+            // 
+            // emailLabel
+            // 
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailLabel.Location = new System.Drawing.Point(17, 121);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(62, 21);
+            this.emailLabel.TabIndex = 23;
+            this.emailLabel.Text = "Email: ";
+            // 
+            // ageLabel
+            // 
+            this.ageLabel.AutoSize = true;
+            this.ageLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ageLabel.Location = new System.Drawing.Point(596, 35);
+            this.ageLabel.Name = "ageLabel";
+            this.ageLabel.Size = new System.Drawing.Size(55, 21);
+            this.ageLabel.TabIndex = 22;
+            this.ageLabel.Text = "Age: ";
+            // 
+            // lastNameLabel
+            // 
+            this.lastNameLabel.AutoSize = true;
+            this.lastNameLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastNameLabel.Location = new System.Drawing.Point(312, 35);
+            this.lastNameLabel.Name = "lastNameLabel";
+            this.lastNameLabel.Size = new System.Drawing.Size(110, 21);
+            this.lastNameLabel.TabIndex = 21;
+            this.lastNameLabel.Text = "Last Name: ";
+            // 
+            // firstNameLabel
+            // 
+            this.firstNameLabel.AutoSize = true;
+            this.firstNameLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstNameLabel.Location = new System.Drawing.Point(17, 35);
+            this.firstNameLabel.Name = "firstNameLabel";
+            this.firstNameLabel.Size = new System.Drawing.Size(106, 21);
+            this.firstNameLabel.TabIndex = 20;
+            this.firstNameLabel.Text = "First Name: ";
+            // 
+            // fNameLabel
+            // 
+            this.fNameLabel.AutoSize = true;
+            this.fNameLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fNameLabel.Location = new System.Drawing.Point(17, 77);
+            this.fNameLabel.Name = "fNameLabel";
+            this.fNameLabel.Size = new System.Drawing.Size(60, 21);
+            this.fNameLabel.TabIndex = 40;
+            this.fNameLabel.Text = "label1";
+            // 
+            // lNameLabel
+            // 
+            this.lNameLabel.AutoSize = true;
+            this.lNameLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNameLabel.Location = new System.Drawing.Point(312, 73);
+            this.lNameLabel.Name = "lNameLabel";
+            this.lNameLabel.Size = new System.Drawing.Size(60, 21);
+            this.lNameLabel.TabIndex = 41;
+            this.lNameLabel.Text = "label2";
+            // 
+            // age1Label
+            // 
+            this.age1Label.AutoSize = true;
+            this.age1Label.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.age1Label.Location = new System.Drawing.Point(596, 73);
+            this.age1Label.Name = "age1Label";
+            this.age1Label.Size = new System.Drawing.Size(60, 21);
+            this.age1Label.TabIndex = 42;
+            this.age1Label.Text = "label3";
+            // 
+            // email1Label
+            // 
+            this.email1Label.AutoSize = true;
+            this.email1Label.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.email1Label.Location = new System.Drawing.Point(17, 161);
+            this.email1Label.Name = "email1Label";
+            this.email1Label.Size = new System.Drawing.Size(60, 21);
+            this.email1Label.TabIndex = 43;
+            this.email1Label.Text = "label4";
+            // 
+            // phone1Label
+            // 
+            this.phone1Label.AutoSize = true;
+            this.phone1Label.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phone1Label.Location = new System.Drawing.Point(409, 152);
+            this.phone1Label.Name = "phone1Label";
+            this.phone1Label.Size = new System.Drawing.Size(60, 21);
+            this.phone1Label.TabIndex = 44;
+            this.phone1Label.Text = "label5";
+            // 
+            // height1Label
+            // 
+            this.height1Label.AutoSize = true;
+            this.height1Label.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.height1Label.Location = new System.Drawing.Point(161, 215);
+            this.height1Label.Name = "height1Label";
+            this.height1Label.Size = new System.Drawing.Size(60, 21);
+            this.height1Label.TabIndex = 45;
+            this.height1Label.Text = "label6";
+            // 
+            // weight1Label
+            // 
+            this.weight1Label.AutoSize = true;
+            this.weight1Label.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weight1Label.Location = new System.Drawing.Point(450, 215);
+            this.weight1Label.Name = "weight1Label";
+            this.weight1Label.Size = new System.Drawing.Size(60, 21);
+            this.weight1Label.TabIndex = 46;
+            this.weight1Label.Text = "label7";
             // 
             // SettingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(924, 573);
+            this.ClientSize = new System.Drawing.Size(990, 573);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SettingForm";
@@ -184,6 +392,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -199,5 +411,24 @@
         private System.Windows.Forms.Label userLabel;
         private System.Windows.Forms.Button logoutBtn;
         private System.Windows.Forms.Label homeLabel;
+        private UserDataSet userDataSet;
+        private UserDataSetTableAdapters.UserTableAdapter userTableAdapter;
+        private UserDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingSource userBindingSource;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label weightLabel;
+        private System.Windows.Forms.Label heightLabel;
+        private System.Windows.Forms.Label phoneLabel;
+        private System.Windows.Forms.Label emailLabel;
+        private System.Windows.Forms.Label ageLabel;
+        private System.Windows.Forms.Label lastNameLabel;
+        private System.Windows.Forms.Label firstNameLabel;
+        private System.Windows.Forms.Label phone1Label;
+        private System.Windows.Forms.Label email1Label;
+        private System.Windows.Forms.Label age1Label;
+        private System.Windows.Forms.Label lNameLabel;
+        private System.Windows.Forms.Label fNameLabel;
+        private System.Windows.Forms.Label weight1Label;
+        private System.Windows.Forms.Label height1Label;
     }
 }

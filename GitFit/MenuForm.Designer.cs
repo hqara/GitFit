@@ -36,6 +36,7 @@
             this.tableAdapterManager = new GitFit.UserDataSetTableAdapters.TableAdapterManager();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.homeLabel = new System.Windows.Forms.Label();
             this.settingLabel = new System.Windows.Forms.Label();
             this.activityLabel = new System.Windows.Forms.Label();
             this.historyLabel = new System.Windows.Forms.Label();
@@ -58,7 +59,6 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.clockControl1 = new GitFit.ClockControl();
-            this.homeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.userDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -100,6 +100,7 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.TableTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = GitFit.UserDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UserTableAdapter = this.userTableAdapter;
             // 
@@ -135,6 +136,17 @@
             this.splitContainer1.Size = new System.Drawing.Size(249, 573);
             this.splitContainer1.SplitterDistance = 49;
             this.splitContainer1.TabIndex = 13;
+            // 
+            // homeLabel
+            // 
+            this.homeLabel.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.homeLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homeLabel.Location = new System.Drawing.Point(0, 191);
+            this.homeLabel.Name = "homeLabel";
+            this.homeLabel.Size = new System.Drawing.Size(253, 44);
+            this.homeLabel.TabIndex = 18;
+            this.homeLabel.Text = "Home";
+            this.homeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // settingLabel
             // 
@@ -374,18 +386,6 @@
             this.clockControl1.Name = "clockControl1";
             this.clockControl1.Size = new System.Drawing.Size(234, 27);
             this.clockControl1.TabIndex = 14;
-            // 
-            // homeLabel
-            // 
-            this.homeLabel.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.homeLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.homeLabel.Location = new System.Drawing.Point(0, 191);
-            this.homeLabel.Name = "homeLabel";
-            this.homeLabel.Size = new System.Drawing.Size(253, 44);
-            this.homeLabel.TabIndex = 18;
-            this.homeLabel.Text = "Home";
-            this.homeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.homeLabel.Click += new System.EventHandler(this.homeLabel_Click);
             // 
             // MenuForm
             // 
