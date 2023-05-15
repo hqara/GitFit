@@ -189,7 +189,7 @@
             this.userLabel.Name = "userLabel";
             this.userLabel.Size = new System.Drawing.Size(249, 39);
             this.userLabel.TabIndex = 13;
-            this.userLabel.Text = "Hello User";
+            this.userLabel.Text = "Hello";
             this.userLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // logoutBtn

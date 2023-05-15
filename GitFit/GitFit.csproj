@@ -142,18 +142,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TimeQuestionnaire.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TimeQuestionnaire.Designer.cs">
-      <DependentUpon>TimeQuestionnaire.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TimeReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TimeReport.Designer.cs">
-      <DependentUpon>TimeReport.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserDataSet.cs">
       <DependentUpon>UserDataSet.xsd</DependentUpon>
     </Compile>
@@ -207,12 +195,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="TimeQuestionnaire.resx">
-      <DependentUpon>TimeQuestionnaire.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TimeReport.resx">
-      <DependentUpon>TimeReport.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="ActivityHistoryDataSet1.xsc">
       <DependentUpon>ActivityHistoryDataSet1.xsd</DependentUpon>
     </None>

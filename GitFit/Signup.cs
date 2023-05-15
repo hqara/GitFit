@@ -66,25 +66,28 @@ namespace GitFit
         private void registerBtn_Click(object sender, EventArgs e)
         {
             string username = usernameTextBox.Text;
+            string password = passwordTextBox.Text;
+            string confirmPassword = confirmPasswordTextBox.Text;
 
-            int registered = (int)userTableAdapter.LoginRegisteredUsername(username);
-
-            if (passwordTextBox.Text.Equals(confirmPasswordTextBox.Text) && registered==0)
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(confirmPassword))
             {
-                
-                FillInForm fill = new FillInForm(this);
-                this.Username = usernameTextBox.Text;
-                this.Password = passwordTextBox.Text;
-                fill.Show();
-                Visible = false;
+                MessageBox.Show("Please enter a username and password.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (!passwordTextBox.Text.Equals(confirmPasswordTextBox.Text)) {
-
+            else if (!password.Equals(confirmPassword))
+            {
                 MessageBox.Show("The passwords you entered do not match.\nPlease try again.", "Password Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (registered == 1) {
-
-                MessageBox.Show("This username is already taken.\nPlease choose a different\nusername.", "Registration Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else if (userTableAdapter.LoginRegisteredUsername(username) == 1)
+            {
+                MessageBox.Show("This username is already taken.\nPlease choose a different username.", "Registration Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                FillInForm fill = new FillInForm(this);
+                this.Username = username;
+                this.Password = password;
+                fill.Show();
+                Visible = false;
             }
 
         }

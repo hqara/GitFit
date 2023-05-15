@@ -70,6 +70,9 @@ namespace GitFit
                     this.userTableAdapter.InsertNewUser(username, password, fname, lname, dobStr, email, phone, gender, height, weight);
                     this.userTableAdapter.Fill(this.userDataSet.User);
                     MessageBox.Show("User Registration Completed.", "Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MenuForm m = new MenuForm();
+                    m.Show();
+                    Visible = false;
                 }
 
                 catch (Exception ex)

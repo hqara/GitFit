@@ -96,7 +96,7 @@
             this.tableDataGridView.Name = "tableDataGridView";
             this.tableDataGridView.RowHeadersWidth = 62;
             this.tableDataGridView.RowTemplate.Height = 28;
-            this.tableDataGridView.Size = new System.Drawing.Size(685, 483);
+            this.tableDataGridView.Size = new System.Drawing.Size(685, 535);
             this.tableDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
@@ -247,7 +247,7 @@
             this.userLabel.Name = "userLabel";
             this.userLabel.Size = new System.Drawing.Size(249, 39);
             this.userLabel.TabIndex = 13;
-            this.userLabel.Text = "Hello User";
+            this.userLabel.Text = "Hello";
             this.userLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // logoutBtn

@@ -286,6 +286,5 @@ namespace GitFit
                 MessageBox.Show("Please enter a valid weight!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
     }
 }
