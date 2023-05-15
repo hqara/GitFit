@@ -42,6 +42,7 @@
             this.question8Label = new System.Windows.Forms.Label();
             this.question9Label = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.menuBtn = new System.Windows.Forms.Button();
             this.nutritionQuestionnaireTitleLabel = new System.Windows.Forms.Label();
             this.answer1ComboBox = new System.Windows.Forms.ComboBox();
             this.answer2ComboBox = new System.Windows.Forms.ComboBox();
@@ -52,7 +53,6 @@
             this.answer7ComboBox = new System.Windows.Forms.ComboBox();
             this.answer8ComboBox = new System.Windows.Forms.ComboBox();
             this.answer9ComboBox = new System.Windows.Forms.ComboBox();
-            this.menuBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -206,6 +206,23 @@
             this.panel1.Size = new System.Drawing.Size(935, 66);
             this.panel1.TabIndex = 93;
             // 
+            // menuBtn
+            // 
+            this.menuBtn.BackColor = System.Drawing.Color.LightSlateGray;
+            this.menuBtn.FlatAppearance.BorderSize = 5;
+            this.menuBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSlateGray;
+            this.menuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.menuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuBtn.ForeColor = System.Drawing.Color.White;
+            this.menuBtn.Location = new System.Drawing.Point(756, 3);
+            this.menuBtn.Margin = new System.Windows.Forms.Padding(5);
+            this.menuBtn.Name = "menuBtn";
+            this.menuBtn.Size = new System.Drawing.Size(156, 56);
+            this.menuBtn.TabIndex = 103;
+            this.menuBtn.Text = "Back to Menu";
+            this.menuBtn.UseVisualStyleBackColor = false;
+            this.menuBtn.Click += new System.EventHandler(this.menuBtn_Click_1);
+            // 
             // nutritionQuestionnaireTitleLabel
             // 
             this.nutritionQuestionnaireTitleLabel.BackColor = System.Drawing.Color.Transparent;
@@ -331,23 +348,6 @@
             this.answer9ComboBox.Name = "answer9ComboBox";
             this.answer9ComboBox.Size = new System.Drawing.Size(281, 24);
             this.answer9ComboBox.TabIndex = 102;
-            // 
-            // menuBtn
-            // 
-            this.menuBtn.BackColor = System.Drawing.Color.LightSlateGray;
-            this.menuBtn.FlatAppearance.BorderSize = 5;
-            this.menuBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSlateGray;
-            this.menuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.menuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuBtn.ForeColor = System.Drawing.Color.White;
-            this.menuBtn.Location = new System.Drawing.Point(781, 3);
-            this.menuBtn.Margin = new System.Windows.Forms.Padding(5);
-            this.menuBtn.Name = "menuBtn";
-            this.menuBtn.Size = new System.Drawing.Size(131, 56);
-            this.menuBtn.TabIndex = 103;
-            this.menuBtn.Text = "Back to Menu";
-            this.menuBtn.UseVisualStyleBackColor = false;
-            this.menuBtn.Click += new System.EventHandler(this.menuBtn_Click_1);
             // 
             // NutritionQuestionnaireFollowUp
             // 
