@@ -117,22 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas massa risus, maximus sit amet ligula eu, venenatis suscipit velit. In at luctus enim. Ut sed purus et tortor condimentum pellentesque id non lacus. Quisque et congue ipsum. Duis mollis leo libero, sed ornare libero faucibus vel. Proin interdum mollis mauris. Donec ut sagittis neque, tristique rutrum tortor.</value>
-  </data>
   <data name="problemAreasInformationLabel.Text" xml:space="preserve">
-    <value>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas massa risus, maximus sit amet ligula eu, venenatis suscipit velit. In at luctus enim. Ut sed purus et tortor condimentum pellentesque id non lacus. Quisque et congue ipsum. Duis mollis leo libero, sed ornare libero faucibus vel. Proin interdum mollis mauris. Donec ut sagittis neque, tristique rutrum tortor.</value>
-  </data>
-  <data name="snackIdeasLabel.Text" xml:space="preserve">
-    <value>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas massa risus, maximus sit amet ligula eu, venenatis suscipit velit. In at luctus enim. Ut sed purus et tortor condimentum pellentesque id non lacus. Quisque et congue ipsum. Duis mollis leo libero, sed ornare libero faucibus vel. Proin interdum mollis mauris. Donec ut sagittis neque, tristique rutrum tortor.</value>
-  </data>
-  <data name="dinnerIdeasLabel.Text" xml:space="preserve">
-    <value>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas massa risus, maximus sit amet ligula eu, venenatis suscipit velit. In at luctus enim. Ut sed purus et tortor condimentum pellentesque id non lacus. Quisque et congue ipsum. Duis mollis leo libero, sed ornare libero faucibus vel. Proin interdum mollis mauris. Donec ut sagittis neque, tristique rutrum tortor.</value>
-  </data>
-  <data name="lunchIdeasLabel.Text" xml:space="preserve">
-    <value>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas massa risus, maximus sit amet ligula eu, venenatis suscipit velit. In at luctus enim. Ut sed purus et tortor condimentum pellentesque id non lacus. Quisque et congue ipsum. Duis mollis leo libero, sed ornare libero faucibus vel. Proin interdum mollis mauris. Donec ut sagittis neque, tristique rutrum tortor.</value>
-  </data>
-  <data name="breakFastIdeasLabel.Text" xml:space="preserve">
     <value>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas massa risus, maximus sit amet ligula eu, venenatis suscipit velit. In at luctus enim. Ut sed purus et tortor condimentum pellentesque id non lacus. Quisque et congue ipsum. Duis mollis leo libero, sed ornare libero faucibus vel. Proin interdum mollis mauris. Donec ut sagittis neque, tristique rutrum tortor.</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />

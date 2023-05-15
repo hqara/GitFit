@@ -12,7 +12,7 @@ namespace GitFit
 {
     public enum FoodChoices
     {
-        Unhealthy, 
+        Unhealthy,
         Healthy,
         Moderate,
         VeryUnhealthy
@@ -40,8 +40,8 @@ namespace GitFit
             choices[2] = getValue(dinnerPanel);
             choices[3] = getValue(snackPannel);
 
-            NutritionReport nutrition_form = new NutritionReport(2300, choices); // change to nutrition follow up
-            nutrition_form.Show();
+            NutritionQuestionnaireFollowUp next = new NutritionQuestionnaireFollowUp(); // change to nutrition follow up
+            next.Show();
             Visible = false;
         }
 

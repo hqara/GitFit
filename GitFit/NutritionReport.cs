@@ -13,14 +13,28 @@ namespace GitFit
     public partial class NutritionReport : Form
     {
         public FoodChoices GeneralHealth { get; set; }
+        /* ALL AVAILABLE MEALS*/
         public Meal[] Breakfasts { get; }
         public Meal[] Lunches { get; }
         public Meal[] Dinners { get; }
-        public Meal[] Snacks { get; } 
+        public Meal[] Snacks { get; }
+
+        /* ALL RECOMMENDED MEALS */
+
+        public Meal[] RecommendedBreakfasts { get; }
+        public Meal[] RecommmendedLunches { get; }
+        public Meal[] RecommendedDinners { get; }
+        public Meal[] RecommendedSnacks { get; }
+
+        public static Meal[] currentMeals; // 0=breakfast, 1=lunch, 2=dinner, 3=snacks
 
         public NutritionReport()
         {
             InitializeComponent();
+            if (GeneralHealth == FoodChoices.Healthy || GeneralHealth == FoodChoices.Moderate)
+            {
+                // moreTipsTextLabel.Text = "You generally have healthy food choices. ";
+            }
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -120,41 +134,30 @@ namespace GitFit
             Visible = false;
         }
 
-        /*
-        private Meal[] getBreakfasts()
+        private void breakfastPicture_Click(object sender, EventArgs e)
         {
-
+            MealDescription desc = new MealDescription(currentMeals[0]);
+            desc.Show();
         }
-        */
-    }
 
-    public class Meal
-    {
-        public Boolean IsVegan { get; }
-        public Boolean IsLowCalorie { get; }
-        public Boolean IsHighProtein { get; }
-        public Boolean IsPescatarian { get; }
-        public Boolean IsEasyToMake { get; }
-        public Boolean IsBudgetFriendly { get; }
-        public Boolean IsTakeOut { get; }
-
-        public String Description { get; }
-        public String Name { get; }
-        public int Calories { get; }
-
-        public Meal(bool isVegan, bool isLowCalorie, bool isHighProtein, bool isPescatarian, bool isEasyToMake, bool isBudgetFriendly, bool isTakeOut, string description, string name, int calories) 
+        private void lunchPicture_Click(object sender, EventArgs e)
         {
-            IsVegan = isVegan;
-            IsLowCalorie = isLowCalorie;
-            IsHighProtein = isHighProtein;
-            IsPescatarian = isPescatarian;
-            IsEasyToMake = isEasyToMake;
-            IsBudgetFriendly = isBudgetFriendly;
-            IsTakeOut = isTakeOut;
-            Description = description;
-            Name = name;
-            Calories = calories;
+            MealDescription desc = new MealDescription(currentMeals[1]);
+            desc.Show();
         }
+
+        private void dinnerPicture_Click(object sender, EventArgs e)
+        {
+            MealDescription desc = new MealDescription(currentMeals[2]);
+            desc.Show();
+        }
+
+        private void snackPicture_Click(object sender, EventArgs e)
+        {
+            MealDescription desc = new MealDescription(currentMeals[3]);
+            desc.Show();
+        }
+
     }
 }
 

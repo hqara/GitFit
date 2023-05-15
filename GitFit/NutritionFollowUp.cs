@@ -19,10 +19,26 @@ namespace GitFit
 
         private void resultsButton_Click(object sender, EventArgs e)
         {
-            NutritionReport report = new NutritionReport(); // change with param
+            Boolean b = true;
+            foreach (ComboBox box in answersPanel.Controls)
+            {
+                if (box.SelectedIndex == -1)
+                {
+                    MessageBox.Show("All fields must be completed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    b = false;
+                }
+            }
+
+            if (b)
+            {
+                NutritionReport report = new NutritionReport(); // change with db param
+                report.Show();
+                Visible = false;
+            }
+
         }
 
-        private void menuBtn_Click_1(object sender, EventArgs e)
+        private void menuBtn_Click(object sender, EventArgs e)
         {
             MenuForm menuForm = new MenuForm();
             menuForm.Show();
