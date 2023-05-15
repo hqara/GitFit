@@ -40,7 +40,7 @@ namespace GitFit
             choices[2] = getValue(dinnerPanel);
             choices[3] = getValue(snackPannel);
 
-            NutritionQuestionnaireFollowUp next = new NutritionQuestionnaireFollowUp(); // change to nutrition follow up
+            NutritionQuestionnaireFollowUp next = new NutritionQuestionnaireFollowUp(choices); // change to nutrition follow up
             next.Show();
             Visible = false;
         }

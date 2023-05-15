@@ -13,9 +13,12 @@ namespace GitFit
 {
     public partial class NutritionQuestionnaireFollowUp : Form
     {
-        public NutritionQuestionnaireFollowUp()
+        public FoodChoices[] foodContainer
+        { get; set; }   
+        public NutritionQuestionnaireFollowUp(FoodChoices[] choices)
         {
             InitializeComponent();
+            foodContainer = choices;
         }
 
         private void resultsButton_Click(object sender, EventArgs e)

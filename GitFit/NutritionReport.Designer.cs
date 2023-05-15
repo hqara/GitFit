@@ -84,6 +84,7 @@
             this.prevDinnerButton.TabIndex = 129;
             this.prevDinnerButton.Text = "←";
             this.prevDinnerButton.UseVisualStyleBackColor = true;
+            this.prevDinnerButton.Click += new System.EventHandler(this.prevDinnerButton_Click);
             // 
             // prevLunchButton
             // 
@@ -93,6 +94,7 @@
             this.prevLunchButton.TabIndex = 128;
             this.prevLunchButton.Text = "←";
             this.prevLunchButton.UseVisualStyleBackColor = true;
+            this.prevLunchButton.Click += new System.EventHandler(this.prevLunchButton_Click);
             // 
             // prevBreakfastButton
             // 
@@ -102,6 +104,7 @@
             this.prevBreakfastButton.TabIndex = 127;
             this.prevBreakfastButton.Text = "←";
             this.prevBreakfastButton.UseVisualStyleBackColor = true;
+            this.prevBreakfastButton.Click += new System.EventHandler(this.prevBreakfastButton_Click);
             // 
             // nextDinnerButton
             // 
@@ -111,6 +114,7 @@
             this.nextDinnerButton.TabIndex = 126;
             this.nextDinnerButton.Text = "→";
             this.nextDinnerButton.UseVisualStyleBackColor = true;
+            this.nextDinnerButton.Click += new System.EventHandler(this.nextDinnerButton_Click);
             // 
             // nextSnackButton
             // 
@@ -120,6 +124,7 @@
             this.nextSnackButton.TabIndex = 125;
             this.nextSnackButton.Text = "→";
             this.nextSnackButton.UseVisualStyleBackColor = true;
+            this.nextSnackButton.Click += new System.EventHandler(this.nextSnackButton_Click);
             // 
             // nextLunchButton
             // 
@@ -129,6 +134,7 @@
             this.nextLunchButton.TabIndex = 124;
             this.nextLunchButton.Text = "→";
             this.nextLunchButton.UseVisualStyleBackColor = true;
+            this.nextLunchButton.Click += new System.EventHandler(this.nextLunchButton_Click);
             // 
             // nextBreakfastButton
             // 
@@ -138,6 +144,7 @@
             this.nextBreakfastButton.TabIndex = 123;
             this.nextBreakfastButton.Text = "→";
             this.nextBreakfastButton.UseVisualStyleBackColor = true;
+            this.nextBreakfastButton.Click += new System.EventHandler(this.nextBreakfastButton_Click);
             // 
             // nutritionQuestionnaireTitleLabel
             // 
@@ -160,6 +167,7 @@
             this.prevSnackButton.TabIndex = 130;
             this.prevSnackButton.Text = "←";
             this.prevSnackButton.UseVisualStyleBackColor = true;
+            this.prevSnackButton.Click += new System.EventHandler(this.prevSnackButton_Click);
             // 
             // panel1
             // 
