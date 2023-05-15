@@ -59,7 +59,7 @@
             // 
             // question9Label
             // 
-            this.question9Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.question9Label.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.question9Label.Location = new System.Drawing.Point(45, 504);
             this.question9Label.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.question9Label.Name = "question9Label";
@@ -70,18 +70,19 @@
             // 
             // answer8ComboBox
             // 
+            this.answer8ComboBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer8ComboBox.FormattingEnabled = true;
             this.answer8ComboBox.Items.AddRange(new object[] {
             "Yes",
             "No"});
             this.answer8ComboBox.Location = new System.Drawing.Point(17, 348);
             this.answer8ComboBox.Name = "answer8ComboBox";
-            this.answer8ComboBox.Size = new System.Drawing.Size(281, 24);
+            this.answer8ComboBox.Size = new System.Drawing.Size(281, 29);
             this.answer8ComboBox.TabIndex = 101;
             // 
             // question8Label
             // 
-            this.question8Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.question8Label.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.question8Label.Location = new System.Drawing.Point(45, 457);
             this.question8Label.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.question8Label.Name = "question8Label";
@@ -92,7 +93,7 @@
             // 
             // question7Label
             // 
-            this.question7Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.question7Label.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.question7Label.Location = new System.Drawing.Point(45, 410);
             this.question7Label.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.question7Label.Name = "question7Label";
@@ -103,7 +104,7 @@
             // 
             // question6Label
             // 
-            this.question6Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.question6Label.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.question6Label.Location = new System.Drawing.Point(45, 363);
             this.question6Label.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.question6Label.Name = "question6Label";
@@ -114,7 +115,7 @@
             // 
             // question5Label
             // 
-            this.question5Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.question5Label.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.question5Label.Location = new System.Drawing.Point(45, 316);
             this.question5Label.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.question5Label.Name = "question5Label";
@@ -125,7 +126,7 @@
             // 
             // question4Label
             // 
-            this.question4Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.question4Label.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.question4Label.Location = new System.Drawing.Point(45, 269);
             this.question4Label.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.question4Label.Name = "question4Label";
@@ -136,7 +137,7 @@
             // 
             // question3Label
             // 
-            this.question3Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.question3Label.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.question3Label.Location = new System.Drawing.Point(45, 222);
             this.question3Label.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.question3Label.Name = "question3Label";
@@ -147,7 +148,7 @@
             // 
             // label19
             // 
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(45, 175);
             this.label19.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label19.Name = "label19";
@@ -158,7 +159,7 @@
             // 
             // label8
             // 
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(45, 128);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
@@ -169,17 +170,18 @@
             // 
             // questionLabel
             // 
-            this.questionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.questionLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionLabel.Location = new System.Drawing.Point(16, 82);
             this.questionLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.questionLabel.Name = "questionLabel";
-            this.questionLabel.Size = new System.Drawing.Size(721, 34);
+            this.questionLabel.Size = new System.Drawing.Size(796, 34);
             this.questionLabel.TabIndex = 106;
             this.questionLabel.Text = "How is your nutrition?";
             this.questionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // answer7ComboBox
             // 
+            this.answer7ComboBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer7ComboBox.FormattingEnabled = true;
             this.answer7ComboBox.Items.AddRange(new object[] {
             "Never",
@@ -188,11 +190,12 @@
             "Multiple times a week"});
             this.answer7ComboBox.Location = new System.Drawing.Point(17, 301);
             this.answer7ComboBox.Name = "answer7ComboBox";
-            this.answer7ComboBox.Size = new System.Drawing.Size(281, 24);
+            this.answer7ComboBox.Size = new System.Drawing.Size(281, 29);
             this.answer7ComboBox.TabIndex = 100;
             // 
             // answer3ComboBox
             // 
+            this.answer3ComboBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer3ComboBox.FormattingEnabled = true;
             this.answer3ComboBox.Items.AddRange(new object[] {
             "Never",
@@ -202,11 +205,12 @@
             "With every meal"});
             this.answer3ComboBox.Location = new System.Drawing.Point(17, 113);
             this.answer3ComboBox.Name = "answer3ComboBox";
-            this.answer3ComboBox.Size = new System.Drawing.Size(281, 24);
+            this.answer3ComboBox.Size = new System.Drawing.Size(281, 29);
             this.answer3ComboBox.TabIndex = 96;
             // 
             // answer6ComboBox
             // 
+            this.answer6ComboBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer6ComboBox.FormattingEnabled = true;
             this.answer6ComboBox.Items.AddRange(new object[] {
             "One hour",
@@ -215,11 +219,12 @@
             "8+ hours"});
             this.answer6ComboBox.Location = new System.Drawing.Point(17, 254);
             this.answer6ComboBox.Name = "answer6ComboBox";
-            this.answer6ComboBox.Size = new System.Drawing.Size(281, 24);
+            this.answer6ComboBox.Size = new System.Drawing.Size(281, 29);
             this.answer6ComboBox.TabIndex = 99;
             // 
             // answer4ComboBox
             // 
+            this.answer4ComboBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer4ComboBox.FormattingEnabled = true;
             this.answer4ComboBox.Items.AddRange(new object[] {
             "Sedentary",
@@ -228,11 +233,12 @@
             "Daily activity"});
             this.answer4ComboBox.Location = new System.Drawing.Point(17, 160);
             this.answer4ComboBox.Name = "answer4ComboBox";
-            this.answer4ComboBox.Size = new System.Drawing.Size(281, 24);
+            this.answer4ComboBox.Size = new System.Drawing.Size(281, 29);
             this.answer4ComboBox.TabIndex = 97;
             // 
             // answer5ComboBox
             // 
+            this.answer5ComboBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer5ComboBox.FormattingEnabled = true;
             this.answer5ComboBox.Items.AddRange(new object[] {
             "$0 - $40",
@@ -241,7 +247,7 @@
             "$80+"});
             this.answer5ComboBox.Location = new System.Drawing.Point(17, 207);
             this.answer5ComboBox.Name = "answer5ComboBox";
-            this.answer5ComboBox.Size = new System.Drawing.Size(281, 24);
+            this.answer5ComboBox.Size = new System.Drawing.Size(281, 29);
             this.answer5ComboBox.TabIndex = 98;
             // 
             // resultsButton
@@ -250,7 +256,7 @@
             this.resultsButton.FlatAppearance.BorderSize = 5;
             this.resultsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSlateGray;
             this.resultsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.resultsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultsButton.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultsButton.ForeColor = System.Drawing.Color.White;
             this.resultsButton.Location = new System.Drawing.Point(662, 576);
             this.resultsButton.Margin = new System.Windows.Forms.Padding(5);
@@ -263,6 +269,7 @@
             // 
             // answer1ComboBox
             // 
+            this.answer1ComboBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer1ComboBox.FormattingEnabled = true;
             this.answer1ComboBox.Items.AddRange(new object[] {
             "Losing weight",
@@ -270,13 +277,13 @@
             "Maintaining weight"});
             this.answer1ComboBox.Location = new System.Drawing.Point(17, 19);
             this.answer1ComboBox.Name = "answer1ComboBox";
-            this.answer1ComboBox.Size = new System.Drawing.Size(281, 24);
+            this.answer1ComboBox.Size = new System.Drawing.Size(281, 29);
             this.answer1ComboBox.TabIndex = 94;
             // 
             // nutritionQuestionnaireTitleLabel
             // 
             this.nutritionQuestionnaireTitleLabel.BackColor = System.Drawing.Color.Transparent;
-            this.nutritionQuestionnaireTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nutritionQuestionnaireTitleLabel.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nutritionQuestionnaireTitleLabel.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.nutritionQuestionnaireTitleLabel.Location = new System.Drawing.Point(-7, 4);
             this.nutritionQuestionnaireTitleLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -299,13 +306,14 @@
             // 
             // answer9ComboBox
             // 
+            this.answer9ComboBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer9ComboBox.FormattingEnabled = true;
             this.answer9ComboBox.Items.AddRange(new object[] {
             "Yes",
             "No"});
             this.answer9ComboBox.Location = new System.Drawing.Point(17, 395);
             this.answer9ComboBox.Name = "answer9ComboBox";
-            this.answer9ComboBox.Size = new System.Drawing.Size(281, 24);
+            this.answer9ComboBox.Size = new System.Drawing.Size(281, 29);
             this.answer9ComboBox.TabIndex = 102;
             // 
             // menuBtn
@@ -314,7 +322,7 @@
             this.menuBtn.FlatAppearance.BorderSize = 5;
             this.menuBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSlateGray;
             this.menuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.menuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuBtn.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuBtn.ForeColor = System.Drawing.Color.White;
             this.menuBtn.Location = new System.Drawing.Point(475, 576);
             this.menuBtn.Margin = new System.Windows.Forms.Padding(5);
@@ -327,6 +335,7 @@
             // 
             // answer2ComboBox
             // 
+            this.answer2ComboBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer2ComboBox.FormattingEnabled = true;
             this.answer2ComboBox.Items.AddRange(new object[] {
             "None (typical)",
@@ -335,7 +344,7 @@
             "Halal/Kosher"});
             this.answer2ComboBox.Location = new System.Drawing.Point(17, 66);
             this.answer2ComboBox.Name = "answer2ComboBox";
-            this.answer2ComboBox.Size = new System.Drawing.Size(281, 24);
+            this.answer2ComboBox.Size = new System.Drawing.Size(281, 29);
             this.answer2ComboBox.TabIndex = 95;
             // 
             // answersPanel
