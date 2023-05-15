@@ -116,6 +116,11 @@
     <Compile Include="NutritionFollowUp.Designer.cs">
       <DependentUpon>NutritionFollowUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="NutritionHistoryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NutritionHistoryDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="NutritionReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +219,17 @@
     </None>
     <None Include="ActivityHistoryDataSet1.xss">
       <DependentUpon>ActivityHistoryDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="NutritionHistoryDataSet.xsc">
+      <DependentUpon>NutritionHistoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NutritionHistoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NutritionHistoryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NutritionHistoryDataSet.xss">
+      <DependentUpon>NutritionHistoryDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

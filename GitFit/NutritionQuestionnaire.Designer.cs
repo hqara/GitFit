@@ -166,6 +166,7 @@
             this.nextButton.TabIndex = 104;
             this.nextButton.Text = "Next";
             this.nextButton.UseVisualStyleBackColor = false;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
             // snackRadioButton4
             // 
@@ -388,6 +389,7 @@
             this.menuBtn.TabIndex = 102;
             this.menuBtn.Text = "Back to Menu";
             this.menuBtn.UseVisualStyleBackColor = false;
+            this.menuBtn.Click += new System.EventHandler(this.menuBtn_Click);
             // 
             // lunchLabel
             // 

@@ -157,7 +157,6 @@ namespace GitFit
             MealDescription desc = new MealDescription(currentMeals[3]);
             desc.Show();
         }
-
     }
 }
 

@@ -259,6 +259,7 @@
             this.resultsButton.TabIndex = 105;
             this.resultsButton.Text = "Results";
             this.resultsButton.UseVisualStyleBackColor = false;
+            this.resultsButton.Click += new System.EventHandler(this.resultsButton_Click);
             // 
             // answer1ComboBox
             // 
@@ -322,6 +323,7 @@
             this.menuBtn.TabIndex = 104;
             this.menuBtn.Text = "Back to Menu";
             this.menuBtn.UseVisualStyleBackColor = false;
+            this.menuBtn.Click += new System.EventHandler(this.menuBtn_Click);
             // 
             // answer2ComboBox
             // 

@@ -187,6 +187,7 @@
             this.menuBtn.TabIndex = 121;
             this.menuBtn.Text = "Back to Menu";
             this.menuBtn.UseVisualStyleBackColor = false;
+            this.menuBtn.Click += new System.EventHandler(this.menuBtn_Click);
             // 
             // estimatedCalorieIntakeLabel
             // 
@@ -229,6 +230,7 @@
             this.snackPicture.Size = new System.Drawing.Size(125, 89);
             this.snackPicture.TabIndex = 117;
             this.snackPicture.TabStop = false;
+            this.snackPicture.Click += new System.EventHandler(this.snackPicture_Click);
             // 
             // dinnerPicture
             // 
@@ -238,6 +240,7 @@
             this.dinnerPicture.Size = new System.Drawing.Size(125, 89);
             this.dinnerPicture.TabIndex = 116;
             this.dinnerPicture.TabStop = false;
+            this.dinnerPicture.Click += new System.EventHandler(this.dinnerPicture_Click);
             // 
             // lunchPicture
             // 
@@ -247,6 +250,7 @@
             this.lunchPicture.Size = new System.Drawing.Size(125, 89);
             this.lunchPicture.TabIndex = 115;
             this.lunchPicture.TabStop = false;
+            this.lunchPicture.Click += new System.EventHandler(this.lunchPicture_Click);
             // 
             // breakfastPicture
             // 
@@ -256,6 +260,7 @@
             this.breakfastPicture.Size = new System.Drawing.Size(125, 89);
             this.breakfastPicture.TabIndex = 114;
             this.breakfastPicture.TabStop = false;
+            this.breakfastPicture.Click += new System.EventHandler(this.breakfastPicture_Click);
             // 
             // snackLabel
             // 
