@@ -1,6 +1,6 @@
 ﻿namespace GitFit
 {
-    partial class NutritionQuestionnaireFollowUp
+    partial class NutritionFollowUp
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NutritionQuestionnaireFollowUp));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NutritionFollowUp));
             this.question9Label = new System.Windows.Forms.Label();
             this.answer8ComboBox = new System.Windows.Forms.ComboBox();
             this.question8Label = new System.Windows.Forms.Label();

@@ -18,6 +18,7 @@ namespace GitFit
     public partial class Signup : Form
     {
         public Signup signup;
+        public NutritionFollowUp r;
 
         public string Username { get; set; } 
         public string Password { get; set; } 
@@ -96,7 +97,9 @@ namespace GitFit
         {
             //MenuForm r = new MenuForm();
             //NutritionReport r = new NutritionReport();
-            NutritionQuestionnaireFollowUp r = new NutritionQuestionnaireFollowUp();
+            //NutritionFollowUpQuestionnaire r = new NutritionFollowUpQuestionnaire();
+            FoodChoices[] foodContainer = r.foodContainer; 
+            r = new NutritionFollowUp(foodContainer);
             r.Show();
             Visible= false;
         }

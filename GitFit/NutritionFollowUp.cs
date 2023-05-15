@@ -11,14 +11,13 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GitFit
 {
-    public partial class NutritionQuestionnaireFollowUp : Form
+    public partial class NutritionFollowUp : Form
     {
-        public FoodChoices[] foodContainer
-        { get; set; }   
-        public NutritionQuestionnaireFollowUp(FoodChoices[] choices)
+        public FoodChoices[] foodContainer { get; set; }   
+        public NutritionFollowUp(FoodChoices[] choices)
         {
             InitializeComponent();
-            foodContainer = choices;
+            this.foodContainer = choices;
         }
 
         private void resultsButton_Click(object sender, EventArgs e)
