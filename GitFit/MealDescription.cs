@@ -43,6 +43,7 @@ namespace GitFit
         public int Carbohydrates { get; }
         public int Fats { get; }
 
+        public Image image { get; set; }
         public Meal(bool isVegan, bool isPescatarian, bool isEasyToMake, bool isBudgetFriendly, bool isTakeOut, string description, string name, int calories, int proteins, int carbohydrates, int fats)
         {
             IsVegan = isVegan;
@@ -56,6 +57,7 @@ namespace GitFit
             Proteins = proteins;
             Carbohydrates = carbohydrates;
             Fats = fats;
+            this.image = image;
         }
 
         public String MacroInformation()

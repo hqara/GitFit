@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MealDescription));
             this.BenefitsTextBox = new System.Windows.Forms.TextBox();
             this.mealDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.macroInformationTextBox = new System.Windows.Forms.TextBox();
@@ -90,6 +91,7 @@
             this.Controls.Add(this.macroInformationTextBox);
             this.Controls.Add(this.mealNameLabel);
             this.Controls.Add(this.mealPictureBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MealDescription";
             this.Text = "MealDescription";
             ((System.ComponentModel.ISupportInitialize)(this.mealPictureBox)).EndInit();

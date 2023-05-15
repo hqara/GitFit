@@ -33,7 +33,6 @@
             this.answer8ComboBox = new System.Windows.Forms.ComboBox();
             this.question8Label = new System.Windows.Forms.Label();
             this.question7Label = new System.Windows.Forms.Label();
-            this.question6Label = new System.Windows.Forms.Label();
             this.question5Label = new System.Windows.Forms.Label();
             this.question4Label = new System.Windows.Forms.Label();
             this.question3Label = new System.Windows.Forms.Label();
@@ -53,6 +52,7 @@
             this.menuBtn = new System.Windows.Forms.Button();
             this.answer2ComboBox = new System.Windows.Forms.ComboBox();
             this.answersPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.answersPanel.SuspendLayout();
             this.SuspendLayout();
@@ -101,17 +101,6 @@
             this.question7Label.TabIndex = 113;
             this.question7Label.Text = "7. How often do you have to takeout?";
             this.question7Label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // question6Label
-            // 
-            this.question6Label.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.question6Label.Location = new System.Drawing.Point(45, 363);
-            this.question6Label.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.question6Label.Name = "question6Label";
-            this.question6Label.Size = new System.Drawing.Size(435, 41);
-            this.question6Label.TabIndex = 112;
-            this.question6Label.Text = "6. How much time do you dedicate to cooking weekly?";
-            this.question6Label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // question5Label
             // 
@@ -363,16 +352,27 @@
             this.answersPanel.Size = new System.Drawing.Size(323, 436);
             this.answersPanel.TabIndex = 117;
             // 
-            // NutritionQuestionnaireFollowUp
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(45, 373);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(424, 41);
+            this.label1.TabIndex = 118;
+            this.label1.Text = "6. How much time do you dedicate to cooking weekly?";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // NutritionFollowUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(826, 677);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.question9Label);
             this.Controls.Add(this.question8Label);
             this.Controls.Add(this.question7Label);
-            this.Controls.Add(this.question6Label);
             this.Controls.Add(this.question5Label);
             this.Controls.Add(this.question4Label);
             this.Controls.Add(this.question3Label);
@@ -385,7 +385,7 @@
             this.Controls.Add(this.answersPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "NutritionQuestionnaireFollowUp";
+            this.Name = "NutritionFollowUp";
             this.Text = "GitFit - Nutrition Questionnaire";
             this.panel1.ResumeLayout(false);
             this.answersPanel.ResumeLayout(false);
@@ -399,7 +399,6 @@
         private System.Windows.Forms.ComboBox answer8ComboBox;
         private System.Windows.Forms.Label question8Label;
         private System.Windows.Forms.Label question7Label;
-        private System.Windows.Forms.Label question6Label;
         private System.Windows.Forms.Label question5Label;
         private System.Windows.Forms.Label question4Label;
         private System.Windows.Forms.Label question3Label;
@@ -419,5 +418,6 @@
         private System.Windows.Forms.Button menuBtn;
         private System.Windows.Forms.ComboBox answer2ComboBox;
         private System.Windows.Forms.Panel answersPanel;
+        private System.Windows.Forms.Label label1;
     }
 }
