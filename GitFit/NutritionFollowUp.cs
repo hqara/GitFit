@@ -22,7 +22,7 @@ namespace GitFit
             NutritionReport report = new NutritionReport(); // change with param
         }
 
-        private void menuBtn_Click(object sender, EventArgs e)
+        private void menuBtn_Click_1(object sender, EventArgs e)
         {
             MenuForm menuForm = new MenuForm();
             menuForm.Show();

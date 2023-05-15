@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NutritionQuestionnaireFollowUp));
             this.resultsButton = new System.Windows.Forms.Button();
-            this.menuBtn = new System.Windows.Forms.Button();
             this.questionLabel = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -53,6 +52,7 @@
             this.answer7ComboBox = new System.Windows.Forms.ComboBox();
             this.answer8ComboBox = new System.Windows.Forms.ComboBox();
             this.answer9ComboBox = new System.Windows.Forms.ComboBox();
+            this.menuBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,23 +72,6 @@
             this.resultsButton.Text = "Results";
             this.resultsButton.UseVisualStyleBackColor = false;
             this.resultsButton.Click += new System.EventHandler(this.resultsButton_Click);
-            // 
-            // menuBtn
-            // 
-            this.menuBtn.BackColor = System.Drawing.Color.LightSlateGray;
-            this.menuBtn.FlatAppearance.BorderSize = 5;
-            this.menuBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSlateGray;
-            this.menuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.menuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuBtn.ForeColor = System.Drawing.Color.White;
-            this.menuBtn.Location = new System.Drawing.Point(583, 578);
-            this.menuBtn.Margin = new System.Windows.Forms.Padding(5);
-            this.menuBtn.Name = "menuBtn";
-            this.menuBtn.Size = new System.Drawing.Size(149, 73);
-            this.menuBtn.TabIndex = 69;
-            this.menuBtn.Text = "Back to Menu";
-            this.menuBtn.UseVisualStyleBackColor = false;
-            this.menuBtn.Click += new System.EventHandler(this.menuBtn_Click);
             // 
             // questionLabel
             // 
@@ -215,6 +198,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSlateGray;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.menuBtn);
             this.panel1.Controls.Add(this.nutritionQuestionnaireTitleLabel);
             this.panel1.Location = new System.Drawing.Point(5, 4);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
@@ -348,6 +332,23 @@
             this.answer9ComboBox.Size = new System.Drawing.Size(281, 24);
             this.answer9ComboBox.TabIndex = 102;
             // 
+            // menuBtn
+            // 
+            this.menuBtn.BackColor = System.Drawing.Color.LightSlateGray;
+            this.menuBtn.FlatAppearance.BorderSize = 5;
+            this.menuBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSlateGray;
+            this.menuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.menuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuBtn.ForeColor = System.Drawing.Color.White;
+            this.menuBtn.Location = new System.Drawing.Point(781, 3);
+            this.menuBtn.Margin = new System.Windows.Forms.Padding(5);
+            this.menuBtn.Name = "menuBtn";
+            this.menuBtn.Size = new System.Drawing.Size(131, 56);
+            this.menuBtn.TabIndex = 103;
+            this.menuBtn.Text = "Back to Menu";
+            this.menuBtn.UseVisualStyleBackColor = false;
+            this.menuBtn.Click += new System.EventHandler(this.menuBtn_Click_1);
+            // 
             // NutritionQuestionnaireFollowUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -375,7 +376,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.questionLabel);
             this.Controls.Add(this.resultsButton);
-            this.Controls.Add(this.menuBtn);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -389,7 +389,6 @@
         #endregion
 
         private System.Windows.Forms.Button resultsButton;
-        private System.Windows.Forms.Button menuBtn;
         private System.Windows.Forms.Label questionLabel;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label18;
@@ -412,5 +411,6 @@
         private System.Windows.Forms.ComboBox answer7ComboBox;
         private System.Windows.Forms.ComboBox answer8ComboBox;
         private System.Windows.Forms.ComboBox answer9ComboBox;
+        private System.Windows.Forms.Button menuBtn;
     }
 }
