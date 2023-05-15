@@ -154,6 +154,9 @@
     <Compile Include="TimeReport.Designer.cs">
       <DependentUpon>TimeReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserDataSet.cs">
+      <DependentUpon>UserDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UserDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

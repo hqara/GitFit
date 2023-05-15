@@ -28,8 +28,6 @@ namespace GitFit {
         
         private TableDataTable tableTable;
         
-        private global::System.Data.DataRelation relationFK_tablename_User;
-        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -220,7 +218,6 @@ namespace GitFit {
                     this.tableTable.InitVars();
                 }
             }
-            this.relationFK_tablename_User = this.Relations["FK_tablename_User"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -235,10 +232,6 @@ namespace GitFit {
             base.Tables.Add(this.tableUser);
             this.tableTable = new TableDataTable();
             base.Tables.Add(this.tableTable);
-            this.relationFK_tablename_User = new global::System.Data.DataRelation("FK_tablename_User", new global::System.Data.DataColumn[] {
-                        this.tableUser.usernameColumn}, new global::System.Data.DataColumn[] {
-                        this.tableTable.usernameColumn}, false);
-            this.Relations.Add(this.relationFK_tablename_User);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -721,8 +714,6 @@ namespace GitFit {
             
             private global::System.Data.DataColumn columnId;
             
-            private global::System.Data.DataColumn columnusername;
-            
             private global::System.Data.DataColumn columnscore;
             
             private global::System.Data.DataColumn columnlevel;
@@ -765,14 +756,6 @@ namespace GitFit {
             public global::System.Data.DataColumn IdColumn {
                 get {
                     return this.columnId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn usernameColumn {
-                get {
-                    return this.columnusername;
                 }
             }
             
@@ -829,16 +812,12 @@ namespace GitFit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TableRow AddTableRow(int Id, UserRow parentUserRowByFK_tablename_User, int score, string level) {
+            public TableRow AddTableRow(int Id, int score, string level) {
                 TableRow rowTableRow = ((TableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id,
-                        null,
                         score,
                         level};
-                if ((parentUserRowByFK_tablename_User != null)) {
-                    columnValuesArray[1] = parentUserRowByFK_tablename_User[0];
-                }
                 rowTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTableRow);
                 return rowTableRow;
@@ -869,7 +848,6 @@ namespace GitFit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columnId = base.Columns["Id"];
-                this.columnusername = base.Columns["username"];
                 this.columnscore = base.Columns["score"];
                 this.columnlevel = base.Columns["level"];
             }
@@ -879,8 +857,6 @@ namespace GitFit {
             private void InitClass() {
                 this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnId);
-                this.columnusername = new global::System.Data.DataColumn("username", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnusername);
                 this.columnscore = new global::System.Data.DataColumn("score", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnscore);
                 this.columnlevel = new global::System.Data.DataColumn("level", typeof(string), null, global::System.Data.MappingType.Element);
@@ -889,8 +865,6 @@ namespace GitFit {
                                 this.columnId}, true));
                 this.columnId.AllowDBNull = false;
                 this.columnId.Unique = true;
-                this.columnusername.AllowDBNull = false;
-                this.columnusername.MaxLength = 25;
                 this.columnscore.AllowDBNull = false;
                 this.columnlevel.AllowDBNull = false;
                 this.columnlevel.MaxLength = 25;
@@ -1184,17 +1158,6 @@ namespace GitFit {
             public void SetphoneNull() {
                 this[this.tableUser.phoneColumn] = global::System.Convert.DBNull;
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TableRow[] GetTableRows() {
-                if ((this.Table.ChildRelations["FK_tablename_User"] == null)) {
-                    return new TableRow[0];
-                }
-                else {
-                    return ((TableRow[])(base.GetChildRows(this.Table.ChildRelations["FK_tablename_User"])));
-                }
-            }
         }
         
         /// <summary>
@@ -1224,17 +1187,6 @@ namespace GitFit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string username {
-                get {
-                    return ((string)(this[this.tableTable.usernameColumn]));
-                }
-                set {
-                    this[this.tableTable.usernameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int score {
                 get {
                     return ((int)(this[this.tableTable.scoreColumn]));
@@ -1252,17 +1204,6 @@ namespace GitFit {
                 }
                 set {
                     this[this.tableTable.levelColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UserRow UserRow {
-                get {
-                    return ((UserRow)(this.GetParentRow(this.Table.ParentRelations["FK_tablename_User"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_tablename_User"]);
                 }
             }
         }
@@ -2416,40 +2357,35 @@ SELECT username, password, fname, lname, dob, email, phone, gender, height, weig
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Table";
             tableMapping.ColumnMappings.Add("Id", "Id");
-            tableMapping.ColumnMappings.Add("username", "username");
             tableMapping.ColumnMappings.Add("score", "score");
             tableMapping.ColumnMappings.Add("level", "level");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Table] WHERE (([Id] = @Original_Id) AND ([username] = @Origina" +
-                "l_username) AND ([score] = @Original_score) AND ([level] = @Original_level))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Table] WHERE (([Id] = @Original_Id) AND ([score] = @Original_s" +
+                "core) AND ([level] = @Original_level))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_username", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "username", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "score", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_level", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "level", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Table] ([Id], [username], [score], [level]) VALUES (@Id, @user" +
-                "name, @score, @level);\r\nSELECT Id, username, score, level FROM [Table] WHERE (Id" +
-                " = @Id)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Table] ([Id], [score], [level]) VALUES (@Id, @score, @level);\r" +
+                "\nSELECT Id, score, level FROM [Table] WHERE (Id = @Id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@username", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "username", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "score", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@level", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "level", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Table] SET [Id] = @Id, [username] = @username, [score] = @score, [level] = @level WHERE (([Id] = @Original_Id) AND ([username] = @Original_username) AND ([score] = @Original_score) AND ([level] = @Original_level));
-SELECT Id, username, score, level FROM [Table] WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Table] SET [Id] = @Id, [score] = @score, [level] = @level WHERE (([" +
+                "Id] = @Original_Id) AND ([score] = @Original_score) AND ([level] = @Original_lev" +
+                "el));\r\nSELECT Id, score, level FROM [Table] WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@username", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "username", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "score", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@level", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "level", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_username", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "username", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "score", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_level", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "level", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
@@ -2467,7 +2403,7 @@ SELECT Id, username, score, level FROM [Table] WHERE (Id = @Id)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, username, score, [level] FROM dbo.[Table]";
+            this._commandCollection[0].CommandText = "SELECT Id, score, [level] FROM dbo.[Table]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2528,20 +2464,14 @@ SELECT Id, username, score, level FROM [Table] WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_username, int Original_score, string Original_level) {
+        public virtual int Delete(int Original_Id, int Original_score, string Original_level) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            if ((Original_username == null)) {
-                throw new global::System.ArgumentNullException("Original_username");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_username));
-            }
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_score));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_score));
             if ((Original_level == null)) {
                 throw new global::System.ArgumentNullException("Original_level");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_level));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_level));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2563,20 +2493,14 @@ SELECT Id, username, score, level FROM [Table] WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Id, string username, int score, string level) {
+        public virtual int Insert(int Id, int score, string level) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id));
-            if ((username == null)) {
-                throw new global::System.ArgumentNullException("username");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(username));
-            }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(score));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(score));
             if ((level == null)) {
                 throw new global::System.ArgumentNullException("level");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(level));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(level));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2598,34 +2522,22 @@ SELECT Id, username, score, level FROM [Table] WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Id, string username, int score, string level, int Original_Id, string Original_username, int Original_score, string Original_level) {
+        public virtual int Update(int Id, int score, string level, int Original_Id, int Original_score, string Original_level) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Id));
-            if ((username == null)) {
-                throw new global::System.ArgumentNullException("username");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(username));
-            }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(score));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(score));
             if ((level == null)) {
                 throw new global::System.ArgumentNullException("level");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(level));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(level));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_Id));
-            if ((Original_username == null)) {
-                throw new global::System.ArgumentNullException("Original_username");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_username));
-            }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_score));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Id));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_score));
             if ((Original_level == null)) {
                 throw new global::System.ArgumentNullException("Original_level");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_level));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_level));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2647,8 +2559,8 @@ SELECT Id, username, score, level FROM [Table] WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string username, int score, string level, int Original_Id, string Original_username, int Original_score, string Original_level) {
-            return this.Update(Original_Id, username, score, level, Original_Id, Original_username, Original_score, Original_level);
+        public virtual int Update(int score, string level, int Original_Id, int Original_score, string Original_level) {
+            return this.Update(Original_Id, score, level, Original_Id, Original_score, Original_level);
         }
     }
     

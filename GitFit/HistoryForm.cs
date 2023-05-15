@@ -15,6 +15,7 @@ namespace GitFit
         public HistoryForm()
         {
             InitializeComponent();
+            
         }
 
         private void homeLabel_Click(object sender, EventArgs e)
@@ -63,6 +64,8 @@ namespace GitFit
         private void HistoryForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'userDataSet.Table' table. You can move, or remove it, as needed.
+            
+            //this.tableTableAdapter.Insert()
             this.tableTableAdapter.Fill(this.userDataSet.Table);
 
         }

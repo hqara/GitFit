@@ -10,11 +10,14 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Xml.Linq;
+using GitFit.UserDataSetTableAdapters;
 
 namespace GitFit
 {
     public partial class ActivityReport : Form
     {
+        public HistoryForm history;
+        int id = 0;
         public ActivityReport()
         {
             InitializeComponent();
@@ -32,11 +35,11 @@ namespace GitFit
             InitializeComponent();
             String levelStr = "";
 
-
+            id++;
             if(level == 0)
             {
                 levelStr = "Above Average";
-                currentLevelLbl.Text = "Current Activity Level: Above Average \n"+ score;
+                currentLevelLbl.Text = "Current Activity Level: Above Average \n Score: "+ score;
                 ReportrichTextBox.Text = "The purpose of this report is to provide you with an evaluation of your current " +
                     "activity levels and to highlight the fact that you are performing above average in terms of physical activity." +
                     "\r\n\r\nMethodology:\r\nTo determine your physical activity levels, we utilized a combination of self-reporting " +
@@ -71,7 +74,7 @@ namespace GitFit
             else if (level == 1)
             {
                 levelStr = "Average";
-                currentLevelLbl.Text = "Current Activity Level: Average \n"+ score;
+                currentLevelLbl.Text = "Current Activity Level: Average \n Score: " + score;
                 ReportrichTextBox.Text = "The purpose of this report is to inform you that your current activity levels fall within the average range " +
                     "and to encourage you to consider further opportunities to enhance your overall fitness and well-being.\r\n\r\nMethodology:\r\nTo " +
                     "evaluate your physical activity levels, we utilized a combination of self-reporting and objective measurements. You were asked to " +
@@ -108,7 +111,7 @@ namespace GitFit
             else if (level == 2)
             {
                 levelStr = "Below Average";
-                currentLevelLbl.Text = "Current Activity Level: Below Average \n" + score;
+                currentLevelLbl.Text = "Current Activity Level: Below Average \n Score: " + score;
                 ReportrichTextBox.Text = "The purpose of this report is to highlight the fact that your current activity levels are below average " +
                     "and to encourage you to make positive changes in order to improve your overall fitness and well-being.\r\n\r\nMethodology:\r\nTo " +
                     "evaluate your physical activity levels, we utilized a combination of self-reporting and objective measurements. You were asked to" +
@@ -142,27 +145,44 @@ namespace GitFit
                     " and goals.\r\n\r\nBy implementing these strategies and committing to regular physical activity, you can improve your fitness" +
                 " levels, enhance your overall health, and experience the numerous benefits associated with an active lifestyle.";
             }
+            this.tableTableAdapter.Insert(id, (int)score, levelStr);
+            
             
         }
 
         private void exitBtn_Click_1(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you certain that you want to \nlose your current information?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Are you sure you want to leave?\nYour registration information will be lost.", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
             if (result == DialogResult.Yes)
             {
-                // User clicked the OK button, exit the program
-                System.Diagnostics.Process.GetCurrentProcess().Kill();
-                Application.Exit();
+                this.Visible = false;
+                history.Show();
+                history.Visible = true;
+            }
+            else
+            {   //Do nothing
+                return;
             }
         }
 
         private void ActivityReport_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'userDataSet.Table' table. You can move, or remove it, as needed.
+            this.tableTableAdapter.Fill(this.userDataSet.Table);
 
         }
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
+
+        }
+
+        private void tableBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.tableBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.userDataSet);
 
         }
     }
