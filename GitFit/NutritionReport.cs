@@ -14,20 +14,21 @@ namespace GitFit
     public partial class NutritionReport : Form
     {
         public FoodChoices GeneralHealth { get; set; }
+
         /* ALL AVAILABLE MEALS*/
         public Meal[] Breakfasts = new Meal[4];
         public Meal[] Lunches = new Meal[4];
         public Meal[] Dinners = new Meal[4];
         public Meal[] Snacks = new Meal[4];
 
-        private static int breakfastIterator, lunchIterator, dinnerIterator, snackIterator;
+        private static int breakfastIterator = -1, lunchIterator = -1, dinnerIterator = -1, snackIterator = -1;
 
         /* ALL RECOMMENDED MEALS */
 
-        public Meal[] RecommendedBreakfasts { get; }
-        public Meal[] RecommmendedLunches { get; }
-        public Meal[] RecommendedDinners { get; }
-        public Meal[] RecommendedSnacks { get; }
+        public List<Meal> RecommendedBreakfasts { get; }
+        public List<Meal> RecommendedLunches { get; }
+        public List<Meal> RecommendedDinners { get; }
+        public List<Meal> RecommendedSnacks { get; }
 
         public static Meal[] currentMeals; // 0=breakfast, 1=lunch, 2=dinner, 3=snacks
 
@@ -173,130 +174,61 @@ namespace GitFit
 
         public void InitializeMeals()
         {
-            Breakfasts[0] = new Meal(true, true, true, true, false, "Avocado spread on whole grain bread", "Avocado Toast", 360, 7, 20, 17);
-            Breakfasts[1] = new Meal(false, true, true, true, false, "Fruits, honey and granola on top of greek yoghourt", "Greek yoghour bowl", 320, 24, 20, 14);
-            Breakfasts[2] = new Meal(true, false, false, true, false, "Meat and veggies inside of muffin-shaped baked eggs", "Egg bites", 200, 20, 20, 14);
-            Breakfasts[3] = new Meal(false, true, true, false, false, "Cooked oats, savory or sweet", "oatmeal", 250, 13, 20, 12);
+            Breakfasts[0] = new Meal(true, true, true, true, false, "Avocado spread on whole grain bread", "Avocado Toast", 360, 7, 20, 17, "avocado");
+            Breakfasts[1] = new Meal(false, true, true, true, false, "Fruits, honey and granola on top of greek yoghourt", "Greek yoghourt bowl", 320, 24, 20, 14, "yoghourt");
+            Breakfasts[2] = new Meal(true, false, false, true, false, "Meat and veggies inside of muffin-shaped baked eggs", "Egg bites", 200, 20, 20, 14, "eggs");
+            Breakfasts[3] = new Meal(false, true, true, false, false, "Cooked oats, savory or sweet", "oatmeal", 250, 13, 20, 12, "oats");
 
-            Lunches[0] = new Meal(false, false, true, true, false, "Turkey, cheese and lettuce on whole-grain bread", "Turkey sandwich", 300, 29, 20, 12);
-            Lunches[1] = new Meal(false, false, false, true, true, "Chicken, lettuce and sauce inside a tortilla wrap", "Chicken wrap", 320, 34, 17, 12);
-            Lunches[2] = new Meal(false, true, true, false, true, "Roma tomatoes, feta cheese, olives, cucumbers and red onions, diced and enjoyed", "Greek Salad", 400, 9, 21, 18);
-            Lunches[3] = new Meal(false, false, false, true, false, "Chicken, broccoli and rice", "Chicken, broccoli and rice", 400, 32, 20, 12);
+            Lunches[0] = new Meal(false, false, true, true, false, "Turkey, cheese and lettuce on whole-grain bread", "Turkey sandwich", 300, 29, 20, 12, "turkey");
+            Lunches[1] = new Meal(false, false, false, true, true, "Chicken, lettuce and sauce inside a tortilla wrap", "Chicken wrap", 320, 34, 17, 12, "wrap");
+            Lunches[2] = new Meal(false, true, true, false, true, "Roma tomatoes, feta cheese, olives, cucumbers and red onions, diced and enjoyed", "Greek Salad", 400, 9, 21, 18, "greek");
+            Lunches[3] = new Meal(false, false, false, true, false, "Chicken, broccoli and rice", "Chicken, broccoli and rice", 400, 32, 20, 12, "CRB");
 
-            Dinners[0] = new Meal(true, true, false, true, false, "Chopped vegetables and broth, blended", "Vegetable soup", 200, 4, 18, 0);
-            Dinners[1] = new Meal(false, true, false, false, false, "Smoked salmon on begetables and rice", "Salmon bowl", 400, 36, 42, 14);
-            Dinners[2] = new Meal(false, true, false, true, false, "Tuna, rice and chipotle sauce", "Tuna rice", 320, 17, 35, 7);
-            Dinners[3] = new Meal(true, true, false, false, false, "Balanced bowls of any vegetables, protein sources and fats", "Nourish bowl", 600, 30, 39, 14);
+            Dinners[0] = new Meal(true, true, false, true, false, "Chopped vegetables and broth, blended", "Vegetable soup", 200, 4, 18, 0, "veggies");
+            Dinners[1] = new Meal(false, true, false, false, false, "Smoked salmon on begetables and rice", "Salmon bowl", 400, 36, 42, 14, "salmon");
+            Dinners[2] = new Meal(false, true, false, true, false, "Tuna, rice and chipotle sauce", "Tuna rice", 320, 17, 35, 7, "tuna");
+            Dinners[3] = new Meal(true, true, false, false, false, "Balanced bowls of any vegetables, protein sources and fats", "Nourish bowl", 600, 30, 39, 14, "nourish");
 
-            Snacks[0] = new Meal(true, true, false, false, true, "Chopped fruits (any)", "Fruit salad", 100, 1, 25, 0);
-            Snacks[1] = new Meal(true, true, true, true, false, "Popcorn", "Popcorn", 60, 1, 10, 2);
-            Snacks[2] = new Meal(true, true, true, false, false, "Mixed nuts", "Nuts", 320, 13, 20, 13);
-            Snacks[3] = new Meal(true, true, false, true, true, "Granola bar", "Granola bar", 140, 5, 19, 3);
-        }
-
-        private void prevBreakfastButton_Click(object sender, EventArgs e)
-        {
-            if (breakfastIterator == 0)
-            {
-                breakfastIterator = Breakfasts.Length - 1;
-            }
-            else
-            {
-                breakfastIterator--;
-            }
-            currentMeals[0] = Breakfasts[breakfastIterator];
+            Snacks[0] = new Meal(true, true, false, false, true, "Chopped fruits (any)", "Fruit salad", 100, 1, 25, 0, "fruits");
+            Snacks[1] = new Meal(true, true, true, true, false, "Popcorn", "Popcorn", 60, 1, 10, 2, "popcorn");
+            Snacks[2] = new Meal(true, true, true, false, false, "Mixed nuts", "Nuts", 320, 13, 20, 13, "nuts");
+            Snacks[3] = new Meal(true, true, false, true, true, "Granola bar", "Granola bar", 140, 5, 19, 3, "granola");
         }
 
         private void nextBreakfastButton_Click(object sender, EventArgs e)
         {
-
-            if (breakfastIterator == Breakfasts.Length - 1)
+            if (RecommendedBreakfasts.Count > 0)
             {
-                breakfastIterator = 0;
+                breakfastIterator = (breakfastIterator + 1) % RecommendedBreakfasts.Count;
+                breakfastPicture.Image = RecommendedBreakfasts[breakfastIterator].image;
             }
-            else
-            {
-                breakfastIterator++;
-            }
-            currentMeals[0] = Breakfasts[breakfastIterator];
-        }
-
-        private void prevLunchButton_Click(object sender, EventArgs e)
-        {
-            if (lunchIterator == 0)
-            {
-                lunchIterator = Lunches.Length - 1;
-            }
-            else
-            {
-                lunchIterator--;
-            }
-            currentMeals[1] = Lunches[lunchIterator];
         }
 
         private void nextLunchButton_Click(object sender, EventArgs e)
         {
-            if (lunchIterator == Lunches.Length - 1)
+            if (RecommendedLunches.Count > 0)
             {
-                lunchIterator = 0;
+                lunchIterator = (lunchIterator + 1) % RecommendedLunches.Count;
+                lunchPicture.Image = RecommendedLunches[lunchIterator].image;
             }
-            else
-            {
-                lunchIterator++;
-            }
-            currentMeals[1] = Lunches[lunchIterator];
-        }
-
-        private void prevDinnerButton_Click(object sender, EventArgs e)
-        {
-            if (dinnerIterator == 0)
-            {
-                dinnerIterator = Dinners.Length - 1;
-            }
-            else
-            {
-                dinnerIterator--;
-            }
-            currentMeals[2] = Dinners[dinnerIterator];
         }
 
         private void nextDinnerButton_Click(object sender, EventArgs e)
         {
-            if (dinnerIterator == Dinners.Length - 1)
+            if (RecommendedDinners.Count > 0)
             {
-                dinnerIterator = 0;
+                dinnerIterator = (dinnerIterator + 1) % RecommendedDinners.Count;
+                dinnerPicture.Image = RecommendedDinners[dinnerIterator].image;
             }
-            else
-            {
-                dinnerIterator++;
-            }
-            currentMeals[2] = Dinners[dinnerIterator];
-        }
-
-        private void prevSnackButton_Click(object sender, EventArgs e)
-        {
-            if (snackIterator == 0)
-            {
-                snackIterator = Snacks.Length - 1;
-            }
-            else
-            {
-                snackIterator--;
-            }
-            currentMeals[3] = Snacks[snackIterator];
         }
 
         private void nextSnackButton_Click(object sender, EventArgs e)
         {
-            if (snackIterator == Snacks.Length - 1)
+            if (RecommendedSnacks.Count > 0)
             {
-                snackIterator = 0;
+                snackIterator = (snackIterator + 1) % RecommendedSnacks.Count;
+                snackPicture.Image = RecommendedSnacks[snackIterator].image;
             }
-            else
-            {
-                snackIterator++;
-            }
-            currentMeals[3] = Snacks[snackIterator];
         }
     }
 }

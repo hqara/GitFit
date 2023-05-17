@@ -208,6 +208,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="ActivityHistoryDataSet1.xsc">
       <DependentUpon>ActivityHistoryDataSet1.xsd</DependentUpon>
@@ -268,6 +269,22 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\avocado.jpg" />
+    <None Include="Resources\CRB.jpg" />
+    <None Include="Resources\eggs.jpg" />
+    <None Include="Resources\fruits.jpg" />
+    <None Include="Resources\granola.jpg" />
+    <None Include="Resources\greek.jpg" />
+    <None Include="Resources\nourish.jpg" />
+    <None Include="Resources\nuts.jpg" />
+    <None Include="Resources\oats.jpg" />
+    <None Include="Resources\popcorn.jpg" />
+    <None Include="Resources\salmon.jpg" />
+    <None Include="Resources\tuna.jpg" />
+    <None Include="Resources\turkey.jpg" />
+    <None Include="Resources\veggies.jpg" />
+    <None Include="Resources\wrap.jpg" />
+    <None Include="Resources\yoghourt.jpg" />
     <Content Include="UserDatabase.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

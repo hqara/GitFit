@@ -21,6 +21,7 @@ namespace GitFit
         public MealDescription(Meal meal)
         {
             InitializeComponent();
+            mealPictureBox.Image = meal.image;
             mealNameLabel.Text = meal.Name;
             macroInformationTextBox.Text = meal.MacroInformation();
             mealDescriptionTextBox.Text = meal.Description;
@@ -42,9 +43,10 @@ namespace GitFit
         public int Proteins { get; }
         public int Carbohydrates { get; }
         public int Fats { get; }
+        public Image image { get; }
+        public string imageString { get; }
 
-        public Image image { get; set; }
-        public Meal(bool isVegan, bool isPescatarian, bool isEasyToMake, bool isBudgetFriendly, bool isTakeOut, string description, string name, int calories, int proteins, int carbohydrates, int fats)
+        public Meal(bool isVegan, bool isPescatarian, bool isEasyToMake, bool isBudgetFriendly, bool isTakeOut, string description, string name, int calories, int proteins, int carbohydrates, int fats, String imageString)
         {
             IsVegan = isVegan;
             IsPescatarian = isPescatarian;
@@ -57,7 +59,7 @@ namespace GitFit
             Proteins = proteins;
             Carbohydrates = carbohydrates;
             Fats = fats;
-            this.image = image;
+            this.image = (Image)(Properties.Resources.ResourceManager.GetObject(imageString));
         }
 
         public String MacroInformation()
