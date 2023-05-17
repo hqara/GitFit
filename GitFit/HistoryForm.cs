@@ -12,10 +12,11 @@ namespace GitFit
 {
     public partial class HistoryForm : Form
     {
-        public HistoryForm()
+        public LoginForm login { get; set; }
+        public HistoryForm(LoginForm login)
         {
             InitializeComponent();
-            
+            this.login = login;
         }
 
         private void homeLabel_Click(object sender, EventArgs e)
@@ -35,7 +36,7 @@ namespace GitFit
 
         private void nutritionLabel_Click(object sender, EventArgs e)
         {
-            NutritionQuestionnaire n = new NutritionQuestionnaire();
+            NutritionQuestionnaire n = new NutritionQuestionnaire(login);
             n.Show();
             Visible = false;
         }

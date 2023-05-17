@@ -92,24 +92,5 @@ namespace GitFit
             }
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //MenuForm r = new MenuForm();
-            //NutritionReport r = new NutritionReport();
-            //NutritionFollowUpQuestionnaire r = new NutritionFollowUpQuestionnaire();
-            FoodChoices[] foodContainer = r.foodContainer; 
-            r = new NutritionFollowUp(foodContainer);
-            r.Show();
-            Visible= false;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            ActivityQuesionnaire a = new ActivityQuesionnaire();
-            a.Show();
-            Visible = false;
-        }
-
     }
 }

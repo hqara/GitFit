@@ -116,6 +116,9 @@
     <Compile Include="NutritionFollowUp.Designer.cs">
       <DependentUpon>NutritionFollowUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="NutritionHistoryDataSet.cs">
+      <DependentUpon>NutritionHistoryDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="NutritionHistoryDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

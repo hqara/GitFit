@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NutritionReport));
             this.tipLabel = new System.Windows.Forms.Label();
             this.nextDinnerButton = new System.Windows.Forms.Button();
@@ -54,11 +55,34 @@
             this.addWaterButton = new System.Windows.Forms.Button();
             this.waterIntakeLabel = new System.Windows.Forms.Label();
             this.waterIntakeBar = new System.Windows.Forms.ProgressBar();
+            this.nutritionHistoryDataSet = new GitFit.NutritionHistoryDataSet();
+            this.nutritionHistoryDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nutritionAnswersDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nutritionAnswersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.userDataSet = new GitFit.UserDataSet();
+            this.nutritionAnswersTableAdapter = new GitFit.UserDataSetTableAdapters.NutritionAnswersTableAdapter();
+            this.tableAdapterManager = new GitFit.UserDataSetTableAdapters.TableAdapterManager();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.snackPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dinnerPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lunchPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.breakfastPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nutritionHistoryDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nutritionHistoryDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nutritionAnswersDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nutritionAnswersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // tipLabel
@@ -328,13 +352,134 @@
             this.waterIntakeBar.Size = new System.Drawing.Size(536, 23);
             this.waterIntakeBar.TabIndex = 106;
             // 
+            // nutritionHistoryDataSet
+            // 
+            this.nutritionHistoryDataSet.DataSetName = "NutritionHistoryDataSet";
+            this.nutritionHistoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nutritionHistoryDataSetBindingSource
+            // 
+            this.nutritionHistoryDataSetBindingSource.DataSource = this.nutritionHistoryDataSet;
+            this.nutritionHistoryDataSetBindingSource.Position = 0;
+            // 
+            // nutritionAnswersDataGridView
+            // 
+            this.nutritionAnswersDataGridView.AutoGenerateColumns = false;
+            this.nutritionAnswersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.nutritionAnswersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11});
+            this.nutritionAnswersDataGridView.DataSource = this.nutritionAnswersBindingSource;
+            this.nutritionAnswersDataGridView.Location = new System.Drawing.Point(488, 57);
+            this.nutritionAnswersDataGridView.Name = "nutritionAnswersDataGridView";
+            this.nutritionAnswersDataGridView.Size = new System.Drawing.Size(101, 78);
+            this.nutritionAnswersDataGridView.TabIndex = 131;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "username";
+            this.dataGridViewTextBoxColumn1.HeaderText = "username";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "general_health";
+            this.dataGridViewTextBoxColumn2.HeaderText = "general_health";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "question1";
+            this.dataGridViewTextBoxColumn3.HeaderText = "question1";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "question2";
+            this.dataGridViewTextBoxColumn4.HeaderText = "question2";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "question3";
+            this.dataGridViewTextBoxColumn5.HeaderText = "question3";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "question4";
+            this.dataGridViewTextBoxColumn6.HeaderText = "question4";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "question5";
+            this.dataGridViewTextBoxColumn7.HeaderText = "question5";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "question6";
+            this.dataGridViewTextBoxColumn8.HeaderText = "question6";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "question7";
+            this.dataGridViewTextBoxColumn9.HeaderText = "question7";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "question8";
+            this.dataGridViewTextBoxColumn10.HeaderText = "question8";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "question9";
+            this.dataGridViewTextBoxColumn11.HeaderText = "question9";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // nutritionAnswersBindingSource
+            // 
+            this.nutritionAnswersBindingSource.DataMember = "NutritionAnswers";
+            this.nutritionAnswersBindingSource.DataSource = this.userDataSet;
+            // 
+            // userDataSet
+            // 
+            this.userDataSet.DataSetName = "UserDataSet";
+            this.userDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nutritionAnswersTableAdapter
+            // 
+            this.nutritionAnswersTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.NutritionAnswersTableAdapter = this.nutritionAnswersTableAdapter;
+            this.tableAdapterManager.TableTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = GitFit.UserDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UserTableAdapter = null;
+            // 
             // NutritionReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(626, 597);
+            this.ClientSize = new System.Drawing.Size(625, 603);
+            this.Controls.Add(this.nutritionAnswersDataGridView);
             this.Controls.Add(this.tipLabel);
             this.Controls.Add(this.nextDinnerButton);
             this.Controls.Add(this.nextSnackButton);
@@ -363,11 +508,17 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NutritionReport";
             this.Text = "GitFit - Nutrition Report";
+            this.Load += new System.EventHandler(this.NutritionReport_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.snackPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dinnerPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lunchPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.breakfastPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nutritionHistoryDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nutritionHistoryDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nutritionAnswersDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nutritionAnswersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -400,5 +551,23 @@
         private System.Windows.Forms.Button addWaterButton;
         private System.Windows.Forms.Label waterIntakeLabel;
         private System.Windows.Forms.ProgressBar waterIntakeBar;
+        private NutritionHistoryDataSet nutritionHistoryDataSet;
+        private System.Windows.Forms.BindingSource nutritionHistoryDataSetBindingSource;
+        private UserDataSet userDataSet;
+        private System.Windows.Forms.BindingSource nutritionAnswersBindingSource;
+        private UserDataSetTableAdapters.NutritionAnswersTableAdapter nutritionAnswersTableAdapter;
+        private UserDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridView nutritionAnswersDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
     }
 }

@@ -21,9 +21,11 @@ namespace GitFit
     public partial class NutritionQuestionnaire : Form
     {
         public FoodChoices[] choices = new FoodChoices[4];
-        public NutritionQuestionnaire()
+        LoginForm login { get; set; }
+        public NutritionQuestionnaire(LoginForm login)
         {
             InitializeComponent();
+            this.login = login;
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -40,7 +42,7 @@ namespace GitFit
             choices[2] = getValue(dinnerPanel);
             choices[3] = getValue(snackPannel);
 
-            NutritionFollowUp next = new NutritionFollowUp(choices); // change to nutrition follow up
+            NutritionFollowUp next = new NutritionFollowUp(choices, login); // change to nutrition follow up
             next.Show();
             Visible = false;
         }

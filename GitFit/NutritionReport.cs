@@ -22,6 +22,8 @@ namespace GitFit
         public Meal[] Dinners = new Meal[4];
         public Meal[] Snacks = new Meal[4];
 
+        LoginForm login { get; set; }
+
         private static int breakfastIterator = -1, lunchIterator = -1, dinnerIterator = -1, snackIterator = -1;
 
         /* ALL RECOMMENDED MEALS */
@@ -33,10 +35,11 @@ namespace GitFit
 
         public static Meal[] currentMeals; // 0=breakfast, 1=lunch, 2=dinner, 3=snacks
 
-        public NutritionReport()
+        public NutritionReport(LoginForm login)
         {
             InitializeComponent();
             InitializeMeals();
+            this.login = login;
             breakfastIterator = lunchIterator = dinnerIterator = snackIterator = 0;
         }
 
@@ -214,6 +217,13 @@ namespace GitFit
             }
         }
 
+        private void NutritionReport_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'userDataSet.NutritionAnswers' table. You can move, or remove it, as needed.
+            this.nutritionAnswersTableAdapter.Fill(this.userDataSet.NutritionAnswers);
+
+        }
+
         private void nextDinnerButton_Click(object sender, EventArgs e)
         {
             if (RecommendedDinners.Count > 0)
@@ -244,6 +254,30 @@ namespace GitFit
             }
             return null;
         }
+
+        public string GetHeight()
+        {
+            string username = this.login.loginUsername;
+            UserDataSet.UserDataTable userTable = new UserTableAdapter().getDataByUsername(username);
+            if (userTable.Rows.Count > 0)
+            {
+                string dob = userTable.Rows[0]["height"].ToString();
+                return dob;
+            }
+            return null;
+        }
+        public string GetWeight()
+        {
+            string username = this.login.loginUsername;
+            UserDataSet.UserDataTable userTable = new UserTableAdapter().getDataByUsername(username);
+            if (userTable.Rows.Count > 0)
+            {
+                string dob = userTable.Rows[0]["weight"].ToString();
+                return dob;
+            }
+            return null;
+        }
+
     }
 }
 

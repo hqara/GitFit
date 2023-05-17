@@ -61,7 +61,7 @@ namespace GitFit
 
         private void nutritionLabel_Click(object sender, EventArgs e)
         {
-            NutritionQuestionnaire n = new NutritionQuestionnaire();
+            NutritionQuestionnaire n = new NutritionQuestionnaire(login);
             n.Show();
             Visible = false;
         }
