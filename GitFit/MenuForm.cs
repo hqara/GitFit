@@ -178,7 +178,7 @@ namespace GitFit
 
         private void historyLabel_Click(object sender, EventArgs e)
         {
-            HistoryForm h = new HistoryForm();
+            HistoryForm h = new HistoryForm(login);
             h.Show();
             Visible = false;
         }
