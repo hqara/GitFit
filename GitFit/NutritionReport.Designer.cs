@@ -37,7 +37,7 @@
             this.nutritionQuestionnaireTitleLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuBtn = new System.Windows.Forms.Button();
-            this.estimatedCalorieIntakeLabel = new System.Windows.Forms.Label();
+            this.youShouldConsumeLabel = new System.Windows.Forms.Label();
             this.problemAreasInformationLabel = new System.Windows.Forms.Label();
             this.problemAreasLabel = new System.Windows.Forms.Label();
             this.snackPicture = new System.Windows.Forms.PictureBox();
@@ -64,7 +64,7 @@
             // tipLabel
             // 
             this.tipLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tipLabel.Location = new System.Drawing.Point(45, 187);
+            this.tipLabel.Location = new System.Drawing.Point(46, 233);
             this.tipLabel.Name = "tipLabel";
             this.tipLabel.Size = new System.Drawing.Size(537, 23);
             this.tipLabel.TabIndex = 131;
@@ -73,7 +73,7 @@
             // 
             // nextDinnerButton
             // 
-            this.nextDinnerButton.Location = new System.Drawing.Point(364, 332);
+            this.nextDinnerButton.Location = new System.Drawing.Point(365, 378);
             this.nextDinnerButton.Margin = new System.Windows.Forms.Padding(2);
             this.nextDinnerButton.Name = "nextDinnerButton";
             this.nextDinnerButton.Size = new System.Drawing.Size(38, 20);
@@ -84,7 +84,7 @@
             // 
             // nextSnackButton
             // 
-            this.nextSnackButton.Location = new System.Drawing.Point(508, 332);
+            this.nextSnackButton.Location = new System.Drawing.Point(509, 378);
             this.nextSnackButton.Margin = new System.Windows.Forms.Padding(2);
             this.nextSnackButton.Name = "nextSnackButton";
             this.nextSnackButton.Size = new System.Drawing.Size(38, 20);
@@ -95,7 +95,7 @@
             // 
             // nextLunchButton
             // 
-            this.nextLunchButton.Location = new System.Drawing.Point(220, 332);
+            this.nextLunchButton.Location = new System.Drawing.Point(221, 378);
             this.nextLunchButton.Margin = new System.Windows.Forms.Padding(2);
             this.nextLunchButton.Name = "nextLunchButton";
             this.nextLunchButton.Size = new System.Drawing.Size(38, 20);
@@ -106,7 +106,7 @@
             // 
             // nextBreakfastButton
             // 
-            this.nextBreakfastButton.Location = new System.Drawing.Point(76, 332);
+            this.nextBreakfastButton.Location = new System.Drawing.Point(77, 378);
             this.nextBreakfastButton.Margin = new System.Windows.Forms.Padding(2);
             this.nextBreakfastButton.Name = "nextBreakfastButton";
             this.nextBreakfastButton.Size = new System.Drawing.Size(38, 20);
@@ -146,7 +146,7 @@
             this.menuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.menuBtn.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuBtn.ForeColor = System.Drawing.Color.White;
-            this.menuBtn.Location = new System.Drawing.Point(448, 489);
+            this.menuBtn.Location = new System.Drawing.Point(449, 535);
             this.menuBtn.Name = "menuBtn";
             this.menuBtn.Size = new System.Drawing.Size(129, 48);
             this.menuBtn.TabIndex = 121;
@@ -154,20 +154,20 @@
             this.menuBtn.UseVisualStyleBackColor = false;
             this.menuBtn.Click += new System.EventHandler(this.menuBtn_Click);
             // 
-            // estimatedCalorieIntakeLabel
+            // youShouldConsumeLabel
             // 
-            this.estimatedCalorieIntakeLabel.AutoSize = true;
-            this.estimatedCalorieIntakeLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.estimatedCalorieIntakeLabel.Location = new System.Drawing.Point(217, 81);
-            this.estimatedCalorieIntakeLabel.Name = "estimatedCalorieIntakeLabel";
-            this.estimatedCalorieIntakeLabel.Size = new System.Drawing.Size(185, 19);
-            this.estimatedCalorieIntakeLabel.TabIndex = 120;
-            this.estimatedCalorieIntakeLabel.Text = "Estimated Calorie Intake: ";
+            this.youShouldConsumeLabel.AutoSize = true;
+            this.youShouldConsumeLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.youShouldConsumeLabel.Location = new System.Drawing.Point(231, 57);
+            this.youShouldConsumeLabel.Name = "youShouldConsumeLabel";
+            this.youShouldConsumeLabel.Size = new System.Drawing.Size(164, 18);
+            this.youShouldConsumeLabel.TabIndex = 120;
+            this.youShouldConsumeLabel.Text = "You should consume:";
             // 
             // problemAreasInformationLabel
             // 
             this.problemAreasInformationLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.problemAreasInformationLabel.Location = new System.Drawing.Point(44, 106);
+            this.problemAreasInformationLabel.Location = new System.Drawing.Point(45, 152);
             this.problemAreasInformationLabel.Name = "problemAreasInformationLabel";
             this.problemAreasInformationLabel.Size = new System.Drawing.Size(544, 47);
             this.problemAreasInformationLabel.TabIndex = 119;
@@ -177,16 +177,16 @@
             // problemAreasLabel
             // 
             this.problemAreasLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.problemAreasLabel.Location = new System.Drawing.Point(44, 51);
+            this.problemAreasLabel.Location = new System.Drawing.Point(45, 129);
             this.problemAreasLabel.Name = "problemAreasLabel";
-            this.problemAreasLabel.Size = new System.Drawing.Size(537, 23);
+            this.problemAreasLabel.Size = new System.Drawing.Size(544, 23);
             this.problemAreasLabel.TabIndex = 118;
             this.problemAreasLabel.Text = "Problem Areas";
             this.problemAreasLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // snackPicture
             // 
-            this.snackPicture.Location = new System.Drawing.Point(482, 254);
+            this.snackPicture.Location = new System.Drawing.Point(483, 300);
             this.snackPicture.Name = "snackPicture";
             this.snackPicture.Size = new System.Drawing.Size(94, 72);
             this.snackPicture.TabIndex = 117;
@@ -195,7 +195,7 @@
             // 
             // dinnerPicture
             // 
-            this.dinnerPicture.Location = new System.Drawing.Point(338, 254);
+            this.dinnerPicture.Location = new System.Drawing.Point(339, 300);
             this.dinnerPicture.Name = "dinnerPicture";
             this.dinnerPicture.Size = new System.Drawing.Size(94, 72);
             this.dinnerPicture.TabIndex = 116;
@@ -204,7 +204,7 @@
             // 
             // lunchPicture
             // 
-            this.lunchPicture.Location = new System.Drawing.Point(194, 254);
+            this.lunchPicture.Location = new System.Drawing.Point(195, 300);
             this.lunchPicture.Name = "lunchPicture";
             this.lunchPicture.Size = new System.Drawing.Size(94, 72);
             this.lunchPicture.TabIndex = 115;
@@ -213,7 +213,7 @@
             // 
             // breakfastPicture
             // 
-            this.breakfastPicture.Location = new System.Drawing.Point(50, 254);
+            this.breakfastPicture.Location = new System.Drawing.Point(51, 300);
             this.breakfastPicture.Name = "breakfastPicture";
             this.breakfastPicture.Size = new System.Drawing.Size(94, 72);
             this.breakfastPicture.TabIndex = 114;
@@ -225,7 +225,7 @@
             this.snackLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.snackLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.snackLabel.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.snackLabel.Location = new System.Drawing.Point(479, 210);
+            this.snackLabel.Location = new System.Drawing.Point(479, 268);
             this.snackLabel.Name = "snackLabel";
             this.snackLabel.Size = new System.Drawing.Size(97, 29);
             this.snackLabel.TabIndex = 108;
@@ -237,7 +237,7 @@
             this.lunchLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lunchLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lunchLabel.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lunchLabel.Location = new System.Drawing.Point(200, 210);
+            this.lunchLabel.Location = new System.Drawing.Point(195, 268);
             this.lunchLabel.Name = "lunchLabel";
             this.lunchLabel.Size = new System.Drawing.Size(94, 29);
             this.lunchLabel.TabIndex = 105;
@@ -249,7 +249,7 @@
             this.dinnerLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dinnerLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dinnerLabel.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.dinnerLabel.Location = new System.Drawing.Point(338, 210);
+            this.dinnerLabel.Location = new System.Drawing.Point(336, 268);
             this.dinnerLabel.Name = "dinnerLabel";
             this.dinnerLabel.Size = new System.Drawing.Size(97, 29);
             this.dinnerLabel.TabIndex = 107;
@@ -261,7 +261,7 @@
             this.breakfastLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.breakfastLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.breakfastLabel.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.breakfastLabel.Location = new System.Drawing.Point(45, 210);
+            this.breakfastLabel.Location = new System.Drawing.Point(41, 268);
             this.breakfastLabel.Name = "breakfastLabel";
             this.breakfastLabel.Size = new System.Drawing.Size(111, 29);
             this.breakfastLabel.TabIndex = 104;
@@ -271,7 +271,7 @@
             // mealPlanLabel
             // 
             this.mealPlanLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mealPlanLabel.Location = new System.Drawing.Point(44, 162);
+            this.mealPlanLabel.Location = new System.Drawing.Point(45, 208);
             this.mealPlanLabel.Name = "mealPlanLabel";
             this.mealPlanLabel.Size = new System.Drawing.Size(537, 23);
             this.mealPlanLabel.TabIndex = 113;
@@ -280,10 +280,10 @@
             // 
             // waterIntakeMessageLabel
             // 
-            this.waterIntakeMessageLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.waterIntakeMessageLabel.Location = new System.Drawing.Point(388, 448);
+            this.waterIntakeMessageLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.waterIntakeMessageLabel.Location = new System.Drawing.Point(339, 494);
             this.waterIntakeMessageLabel.Name = "waterIntakeMessageLabel";
-            this.waterIntakeMessageLabel.Size = new System.Drawing.Size(176, 23);
+            this.waterIntakeMessageLabel.Size = new System.Drawing.Size(239, 23);
             this.waterIntakeMessageLabel.TabIndex = 112;
             this.waterIntakeMessageLabel.Text = "Let\'s hit our water goal today!";
             this.waterIntakeMessageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -291,7 +291,7 @@
             // addWaterTextBox
             // 
             this.addWaterTextBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addWaterTextBox.Location = new System.Drawing.Point(52, 452);
+            this.addWaterTextBox.Location = new System.Drawing.Point(53, 498);
             this.addWaterTextBox.Name = "addWaterTextBox";
             this.addWaterTextBox.Size = new System.Drawing.Size(163, 24);
             this.addWaterTextBox.TabIndex = 111;
@@ -299,7 +299,7 @@
             // addWaterButton
             // 
             this.addWaterButton.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addWaterButton.Location = new System.Drawing.Point(241, 449);
+            this.addWaterButton.Location = new System.Drawing.Point(242, 495);
             this.addWaterButton.Name = "addWaterButton";
             this.addWaterButton.Size = new System.Drawing.Size(75, 25);
             this.addWaterButton.TabIndex = 110;
@@ -311,7 +311,7 @@
             // waterIntakeLabel
             // 
             this.waterIntakeLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.waterIntakeLabel.Location = new System.Drawing.Point(44, 370);
+            this.waterIntakeLabel.Location = new System.Drawing.Point(45, 416);
             this.waterIntakeLabel.Name = "waterIntakeLabel";
             this.waterIntakeLabel.Size = new System.Drawing.Size(532, 23);
             this.waterIntakeLabel.TabIndex = 109;
@@ -322,7 +322,7 @@
             // 
             this.waterIntakeBar.BackColor = System.Drawing.SystemColors.Control;
             this.waterIntakeBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.waterIntakeBar.Location = new System.Drawing.Point(44, 405);
+            this.waterIntakeBar.Location = new System.Drawing.Point(45, 451);
             this.waterIntakeBar.Maximum = 3000;
             this.waterIntakeBar.Name = "waterIntakeBar";
             this.waterIntakeBar.Size = new System.Drawing.Size(536, 23);
@@ -334,7 +334,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(626, 547);
+            this.ClientSize = new System.Drawing.Size(626, 597);
             this.Controls.Add(this.tipLabel);
             this.Controls.Add(this.nextDinnerButton);
             this.Controls.Add(this.nextSnackButton);
@@ -342,7 +342,7 @@
             this.Controls.Add(this.nextBreakfastButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuBtn);
-            this.Controls.Add(this.estimatedCalorieIntakeLabel);
+            this.Controls.Add(this.youShouldConsumeLabel);
             this.Controls.Add(this.problemAreasInformationLabel);
             this.Controls.Add(this.problemAreasLabel);
             this.Controls.Add(this.snackPicture);
@@ -383,7 +383,7 @@
         private System.Windows.Forms.Label nutritionQuestionnaireTitleLabel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button menuBtn;
-        private System.Windows.Forms.Label estimatedCalorieIntakeLabel;
+        private System.Windows.Forms.Label youShouldConsumeLabel;
         private System.Windows.Forms.Label problemAreasInformationLabel;
         private System.Windows.Forms.Label problemAreasLabel;
         private System.Windows.Forms.PictureBox snackPicture;

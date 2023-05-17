@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GitFit.UserDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -229,6 +230,19 @@ namespace GitFit
                 snackIterator = (snackIterator + 1) % RecommendedSnacks.Count;
                 snackPicture.Image = RecommendedSnacks[snackIterator].image;
             }
+        }
+
+        /* DATABSE RETRIEVAL */
+        public string GetGender()
+        {
+            string username = this.login.loginUsername;
+            UserDataSet.UserDataTable userTable = new UserTableAdapter().getDataByUsername(username);
+            if (userTable.Rows.Count > 0)
+            {
+                string dob = userTable.Rows[0]["gender"].ToString();
+                return dob;
+            }
+            return null;
         }
     }
 }
