@@ -148,10 +148,44 @@ namespace GitFit
                     " and goals.\r\n\r\nBy implementing these strategies and committing to regular physical activity, you can improve your fitness" +
                 " levels, enhance your overall health, and experience the numerous benefits associated with an active lifestyle.";
             }
-            this.tableTableAdapter.Insert(id, (int)score, levelStr);
             
             
+
+            
+            
+
+            // Check if the ID already exists
+            bool idExists = CheckIfIdExists(id);
+
+            if (!idExists)
+            {
+                // Insert new data
+                this.tableTableAdapter.Insert(id, (int)score, levelStr);
+            }
+            else
+            {
+                // Handle the case where the ID already exists
+                id++;
+                this.tableTableAdapter.Insert(id, (int)score, levelStr);
+            }
+
+
+
         }
+        private bool CheckIfIdExists(int id)
+        {
+            foreach (DataRow row in this.tableTableAdapter.GetData())
+            {
+                int existingId = (int)row["id"]; // Assuming "id" is the column name
+                if (existingId == id)
+                {
+                    return true; // ID already exists
+                }
+            }
+
+            return false; // ID doesn't exist
+        }
+
 
         private void exitBtn_Click_1(object sender, EventArgs e)
         {

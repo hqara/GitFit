@@ -26,7 +26,7 @@ namespace GitFit
         {
             InitializeComponent();
             this.login = login;
-            this.userLabel.Text += " " + login.loginUsername;
+            //this.userLabel.Text += " " + login.loginUsername;
 
         }
 
