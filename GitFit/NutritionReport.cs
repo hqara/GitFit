@@ -35,21 +35,13 @@ namespace GitFit
 
         public static Meal[] currentMeals; // 0=breakfast, 1=lunch, 2=dinner, 3=snacks
 
-        public NutritionReport(LoginForm login)
-        {
-            InitializeComponent();
-            InitializeMeals();
-            this.login = login;
-            breakfastIterator = lunchIterator = dinnerIterator = snackIterator = 0;
-        }
-
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             e.Cancel = true;
             base.OnFormClosing(e);
         }
 
-        public NutritionReport(FoodChoices[] choices)
+        public NutritionReport(FoodChoices[] choices, LoginForm login)
         {
             InitializeComponent();
             InitializeMeals();
@@ -66,6 +58,13 @@ namespace GitFit
 
                 problemAreasInformationLabel.Text += "\nYou should pay more attention to what you eat. Moderation is key. Here are \nsome meals plans to help";
             }
+
+            this.login = login;
+            macrosLabel.Text = "Calories: " + Math.Round(GetCalories(), 2);
+            macrosLabel.Text += "\nProtein: " + Math.Round(GetProtein(), 2);
+            macrosLabel.Text += "\nCarbs: " + Math.Round(GetCarbs(), 2);
+            macrosLabel.Text += "\nFats: " + Math.Round(GetFats(), 2);
+            breakfastIterator = lunchIterator = dinnerIterator = snackIterator = 0;
 
         }
 
@@ -205,7 +204,7 @@ namespace GitFit
             {
                 breakfastIterator = (breakfastIterator + 1) % RecommendedBreakfasts.Count;
                 breakfastPicture.Image = RecommendedBreakfasts[breakfastIterator].image;
-            }
+            }                                            
         }
 
         private void nextLunchButton_Click(object sender, EventArgs e)
@@ -278,6 +277,62 @@ namespace GitFit
             return null;
         }
 
+        
+        public double GetCalories()
+        {
+            if (GetGender().Equals("M"))
+            {
+                // For men: 66 + (6.2 x weight) + (12.7 x height) – (6.76 x age)
+                return 66 + (6.2 * Double.Parse(GetWeight())) + (12.7 * Double.Parse(GetHeight())) - (6.76 * GetAge());
+            }
+
+            // For women: 655.1 + (4.35 x weight) + (4.7 x height) – (4.7 x age)
+            return 655.1 + (4.35 * Double.Parse(GetWeight())) + (4.7 * Double.Parse(GetHeight())) - (4.7 * GetAge());
+        }
+
+        public double GetCalories(Boolean surplus)
+        {
+            if (surplus)
+            {
+                return GetCalories() + 500;
+            }
+
+            return GetCalories() - 500;
+        }
+
+        public string GetDOB()
+        {
+            string username = this.login.loginUsername;
+            UserDataSet.UserDataTable userTable = new UserTableAdapter().getDataByUsername(username);
+            if (userTable.Rows.Count > 0)
+            {
+                string dob = userTable.Rows[0]["dob"].ToString();
+                return dob;
+            }
+            return null;
+        }
+
+        public int GetAge()
+        {
+            DateTime dob = DateTime.Parse(GetDOB());
+            DateTime now = DateTime.Now;
+            return now.Year - dob.Year;
+        }
+
+        public double GetProtein()
+        {
+            return 0.36 * Double.Parse(GetWeight());
+        }
+
+        public double GetCarbs()
+        {
+            return (GetCalories() * 0.45) / 4;
+        }
+
+        public double GetFats()
+        {
+            return (GetCalories() * 0.2) / 9;
+        }
     }
 }
 

@@ -57,22 +57,11 @@
             this.waterIntakeBar = new System.Windows.Forms.ProgressBar();
             this.nutritionHistoryDataSet = new GitFit.NutritionHistoryDataSet();
             this.nutritionHistoryDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nutritionAnswersDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nutritionAnswersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userDataSet = new GitFit.UserDataSet();
             this.nutritionAnswersTableAdapter = new GitFit.UserDataSetTableAdapters.NutritionAnswersTableAdapter();
             this.tableAdapterManager = new GitFit.UserDataSetTableAdapters.TableAdapterManager();
+            this.macrosLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.snackPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dinnerPicture)).BeginInit();
@@ -80,7 +69,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.breakfastPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nutritionHistoryDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nutritionHistoryDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nutritionAnswersDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nutritionAnswersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userDataSet)).BeginInit();
             this.SuspendLayout();
@@ -88,7 +76,7 @@
             // tipLabel
             // 
             this.tipLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tipLabel.Location = new System.Drawing.Point(46, 233);
+            this.tipLabel.Location = new System.Drawing.Point(46, 255);
             this.tipLabel.Name = "tipLabel";
             this.tipLabel.Size = new System.Drawing.Size(537, 23);
             this.tipLabel.TabIndex = 131;
@@ -97,7 +85,7 @@
             // 
             // nextDinnerButton
             // 
-            this.nextDinnerButton.Location = new System.Drawing.Point(365, 378);
+            this.nextDinnerButton.Location = new System.Drawing.Point(365, 400);
             this.nextDinnerButton.Margin = new System.Windows.Forms.Padding(2);
             this.nextDinnerButton.Name = "nextDinnerButton";
             this.nextDinnerButton.Size = new System.Drawing.Size(38, 20);
@@ -108,7 +96,7 @@
             // 
             // nextSnackButton
             // 
-            this.nextSnackButton.Location = new System.Drawing.Point(509, 378);
+            this.nextSnackButton.Location = new System.Drawing.Point(509, 400);
             this.nextSnackButton.Margin = new System.Windows.Forms.Padding(2);
             this.nextSnackButton.Name = "nextSnackButton";
             this.nextSnackButton.Size = new System.Drawing.Size(38, 20);
@@ -119,7 +107,7 @@
             // 
             // nextLunchButton
             // 
-            this.nextLunchButton.Location = new System.Drawing.Point(221, 378);
+            this.nextLunchButton.Location = new System.Drawing.Point(221, 400);
             this.nextLunchButton.Margin = new System.Windows.Forms.Padding(2);
             this.nextLunchButton.Name = "nextLunchButton";
             this.nextLunchButton.Size = new System.Drawing.Size(38, 20);
@@ -130,7 +118,7 @@
             // 
             // nextBreakfastButton
             // 
-            this.nextBreakfastButton.Location = new System.Drawing.Point(77, 378);
+            this.nextBreakfastButton.Location = new System.Drawing.Point(77, 400);
             this.nextBreakfastButton.Margin = new System.Windows.Forms.Padding(2);
             this.nextBreakfastButton.Name = "nextBreakfastButton";
             this.nextBreakfastButton.Size = new System.Drawing.Size(38, 20);
@@ -170,7 +158,7 @@
             this.menuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.menuBtn.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuBtn.ForeColor = System.Drawing.Color.White;
-            this.menuBtn.Location = new System.Drawing.Point(449, 535);
+            this.menuBtn.Location = new System.Drawing.Point(449, 557);
             this.menuBtn.Name = "menuBtn";
             this.menuBtn.Size = new System.Drawing.Size(129, 48);
             this.menuBtn.TabIndex = 121;
@@ -182,7 +170,7 @@
             // 
             this.youShouldConsumeLabel.AutoSize = true;
             this.youShouldConsumeLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.youShouldConsumeLabel.Location = new System.Drawing.Point(231, 57);
+            this.youShouldConsumeLabel.Location = new System.Drawing.Point(231, 51);
             this.youShouldConsumeLabel.Name = "youShouldConsumeLabel";
             this.youShouldConsumeLabel.Size = new System.Drawing.Size(164, 18);
             this.youShouldConsumeLabel.TabIndex = 120;
@@ -190,18 +178,18 @@
             // 
             // problemAreasInformationLabel
             // 
-            this.problemAreasInformationLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.problemAreasInformationLabel.Location = new System.Drawing.Point(45, 152);
+            this.problemAreasInformationLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.problemAreasInformationLabel.Location = new System.Drawing.Point(45, 174);
             this.problemAreasInformationLabel.Name = "problemAreasInformationLabel";
-            this.problemAreasInformationLabel.Size = new System.Drawing.Size(544, 47);
+            this.problemAreasInformationLabel.Size = new System.Drawing.Size(544, 56);
             this.problemAreasInformationLabel.TabIndex = 119;
             this.problemAreasInformationLabel.Text = resources.GetString("problemAreasInformationLabel.Text");
-            this.problemAreasInformationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.problemAreasInformationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // problemAreasLabel
             // 
             this.problemAreasLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.problemAreasLabel.Location = new System.Drawing.Point(45, 129);
+            this.problemAreasLabel.Location = new System.Drawing.Point(45, 151);
             this.problemAreasLabel.Name = "problemAreasLabel";
             this.problemAreasLabel.Size = new System.Drawing.Size(544, 23);
             this.problemAreasLabel.TabIndex = 118;
@@ -210,7 +198,7 @@
             // 
             // snackPicture
             // 
-            this.snackPicture.Location = new System.Drawing.Point(483, 300);
+            this.snackPicture.Location = new System.Drawing.Point(483, 322);
             this.snackPicture.Name = "snackPicture";
             this.snackPicture.Size = new System.Drawing.Size(94, 72);
             this.snackPicture.TabIndex = 117;
@@ -219,7 +207,7 @@
             // 
             // dinnerPicture
             // 
-            this.dinnerPicture.Location = new System.Drawing.Point(339, 300);
+            this.dinnerPicture.Location = new System.Drawing.Point(339, 322);
             this.dinnerPicture.Name = "dinnerPicture";
             this.dinnerPicture.Size = new System.Drawing.Size(94, 72);
             this.dinnerPicture.TabIndex = 116;
@@ -228,7 +216,7 @@
             // 
             // lunchPicture
             // 
-            this.lunchPicture.Location = new System.Drawing.Point(195, 300);
+            this.lunchPicture.Location = new System.Drawing.Point(195, 322);
             this.lunchPicture.Name = "lunchPicture";
             this.lunchPicture.Size = new System.Drawing.Size(94, 72);
             this.lunchPicture.TabIndex = 115;
@@ -237,7 +225,7 @@
             // 
             // breakfastPicture
             // 
-            this.breakfastPicture.Location = new System.Drawing.Point(51, 300);
+            this.breakfastPicture.Location = new System.Drawing.Point(51, 322);
             this.breakfastPicture.Name = "breakfastPicture";
             this.breakfastPicture.Size = new System.Drawing.Size(94, 72);
             this.breakfastPicture.TabIndex = 114;
@@ -249,7 +237,7 @@
             this.snackLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.snackLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.snackLabel.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.snackLabel.Location = new System.Drawing.Point(479, 268);
+            this.snackLabel.Location = new System.Drawing.Point(479, 290);
             this.snackLabel.Name = "snackLabel";
             this.snackLabel.Size = new System.Drawing.Size(97, 29);
             this.snackLabel.TabIndex = 108;
@@ -261,7 +249,7 @@
             this.lunchLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lunchLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lunchLabel.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lunchLabel.Location = new System.Drawing.Point(195, 268);
+            this.lunchLabel.Location = new System.Drawing.Point(195, 290);
             this.lunchLabel.Name = "lunchLabel";
             this.lunchLabel.Size = new System.Drawing.Size(94, 29);
             this.lunchLabel.TabIndex = 105;
@@ -273,7 +261,7 @@
             this.dinnerLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dinnerLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dinnerLabel.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.dinnerLabel.Location = new System.Drawing.Point(336, 268);
+            this.dinnerLabel.Location = new System.Drawing.Point(336, 290);
             this.dinnerLabel.Name = "dinnerLabel";
             this.dinnerLabel.Size = new System.Drawing.Size(97, 29);
             this.dinnerLabel.TabIndex = 107;
@@ -285,7 +273,7 @@
             this.breakfastLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.breakfastLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.breakfastLabel.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.breakfastLabel.Location = new System.Drawing.Point(41, 268);
+            this.breakfastLabel.Location = new System.Drawing.Point(41, 290);
             this.breakfastLabel.Name = "breakfastLabel";
             this.breakfastLabel.Size = new System.Drawing.Size(111, 29);
             this.breakfastLabel.TabIndex = 104;
@@ -295,7 +283,7 @@
             // mealPlanLabel
             // 
             this.mealPlanLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mealPlanLabel.Location = new System.Drawing.Point(45, 208);
+            this.mealPlanLabel.Location = new System.Drawing.Point(45, 230);
             this.mealPlanLabel.Name = "mealPlanLabel";
             this.mealPlanLabel.Size = new System.Drawing.Size(537, 23);
             this.mealPlanLabel.TabIndex = 113;
@@ -305,7 +293,7 @@
             // waterIntakeMessageLabel
             // 
             this.waterIntakeMessageLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.waterIntakeMessageLabel.Location = new System.Drawing.Point(339, 494);
+            this.waterIntakeMessageLabel.Location = new System.Drawing.Point(339, 516);
             this.waterIntakeMessageLabel.Name = "waterIntakeMessageLabel";
             this.waterIntakeMessageLabel.Size = new System.Drawing.Size(239, 23);
             this.waterIntakeMessageLabel.TabIndex = 112;
@@ -315,7 +303,7 @@
             // addWaterTextBox
             // 
             this.addWaterTextBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addWaterTextBox.Location = new System.Drawing.Point(53, 498);
+            this.addWaterTextBox.Location = new System.Drawing.Point(53, 520);
             this.addWaterTextBox.Name = "addWaterTextBox";
             this.addWaterTextBox.Size = new System.Drawing.Size(163, 24);
             this.addWaterTextBox.TabIndex = 111;
@@ -323,7 +311,7 @@
             // addWaterButton
             // 
             this.addWaterButton.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addWaterButton.Location = new System.Drawing.Point(242, 495);
+            this.addWaterButton.Location = new System.Drawing.Point(242, 517);
             this.addWaterButton.Name = "addWaterButton";
             this.addWaterButton.Size = new System.Drawing.Size(75, 25);
             this.addWaterButton.TabIndex = 110;
@@ -335,7 +323,7 @@
             // waterIntakeLabel
             // 
             this.waterIntakeLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.waterIntakeLabel.Location = new System.Drawing.Point(45, 416);
+            this.waterIntakeLabel.Location = new System.Drawing.Point(45, 438);
             this.waterIntakeLabel.Name = "waterIntakeLabel";
             this.waterIntakeLabel.Size = new System.Drawing.Size(532, 23);
             this.waterIntakeLabel.TabIndex = 109;
@@ -346,7 +334,7 @@
             // 
             this.waterIntakeBar.BackColor = System.Drawing.SystemColors.Control;
             this.waterIntakeBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.waterIntakeBar.Location = new System.Drawing.Point(45, 451);
+            this.waterIntakeBar.Location = new System.Drawing.Point(45, 473);
             this.waterIntakeBar.Maximum = 3000;
             this.waterIntakeBar.Name = "waterIntakeBar";
             this.waterIntakeBar.Size = new System.Drawing.Size(536, 23);
@@ -361,94 +349,6 @@
             // 
             this.nutritionHistoryDataSetBindingSource.DataSource = this.nutritionHistoryDataSet;
             this.nutritionHistoryDataSetBindingSource.Position = 0;
-            // 
-            // nutritionAnswersDataGridView
-            // 
-            this.nutritionAnswersDataGridView.AutoGenerateColumns = false;
-            this.nutritionAnswersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.nutritionAnswersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11});
-            this.nutritionAnswersDataGridView.DataSource = this.nutritionAnswersBindingSource;
-            this.nutritionAnswersDataGridView.Location = new System.Drawing.Point(488, 57);
-            this.nutritionAnswersDataGridView.Name = "nutritionAnswersDataGridView";
-            this.nutritionAnswersDataGridView.Size = new System.Drawing.Size(101, 78);
-            this.nutritionAnswersDataGridView.TabIndex = 131;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "username";
-            this.dataGridViewTextBoxColumn1.HeaderText = "username";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "general_health";
-            this.dataGridViewTextBoxColumn2.HeaderText = "general_health";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "question1";
-            this.dataGridViewTextBoxColumn3.HeaderText = "question1";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "question2";
-            this.dataGridViewTextBoxColumn4.HeaderText = "question2";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "question3";
-            this.dataGridViewTextBoxColumn5.HeaderText = "question3";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "question4";
-            this.dataGridViewTextBoxColumn6.HeaderText = "question4";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "question5";
-            this.dataGridViewTextBoxColumn7.HeaderText = "question5";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "question6";
-            this.dataGridViewTextBoxColumn8.HeaderText = "question6";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "question7";
-            this.dataGridViewTextBoxColumn9.HeaderText = "question7";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "question8";
-            this.dataGridViewTextBoxColumn10.HeaderText = "question8";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "question9";
-            this.dataGridViewTextBoxColumn11.HeaderText = "question9";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             // 
             // nutritionAnswersBindingSource
             // 
@@ -472,14 +372,24 @@
             this.tableAdapterManager.UpdateOrder = GitFit.UserDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UserTableAdapter = null;
             // 
+            // macrosLabel
+            // 
+            this.macrosLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.macrosLabel.Location = new System.Drawing.Point(49, 75);
+            this.macrosLabel.Name = "macrosLabel";
+            this.macrosLabel.Size = new System.Drawing.Size(534, 76);
+            this.macrosLabel.TabIndex = 132;
+            this.macrosLabel.Text = "Calories";
+            this.macrosLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // NutritionReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(625, 603);
-            this.Controls.Add(this.nutritionAnswersDataGridView);
+            this.ClientSize = new System.Drawing.Size(625, 618);
+            this.Controls.Add(this.macrosLabel);
             this.Controls.Add(this.tipLabel);
             this.Controls.Add(this.nextDinnerButton);
             this.Controls.Add(this.nextSnackButton);
@@ -516,7 +426,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.breakfastPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nutritionHistoryDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nutritionHistoryDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nutritionAnswersDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nutritionAnswersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userDataSet)).EndInit();
             this.ResumeLayout(false);
@@ -557,17 +466,6 @@
         private System.Windows.Forms.BindingSource nutritionAnswersBindingSource;
         private UserDataSetTableAdapters.NutritionAnswersTableAdapter nutritionAnswersTableAdapter;
         private UserDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridView nutritionAnswersDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.Label macrosLabel;
     }
 }
