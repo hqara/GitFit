@@ -150,7 +150,7 @@ namespace GitFit
 
         private void menuBtn_Click(object sender, EventArgs e)
         {
-            MenuForm menuForm = new MenuForm();
+            MenuForm menuForm = new MenuForm(login);
             menuForm.Show();
             Visible = false;
         }

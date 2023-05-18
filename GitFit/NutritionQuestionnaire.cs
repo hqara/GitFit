@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace GitFit
 {
+
     public enum FoodChoices
     {
         Unhealthy,
@@ -21,7 +22,9 @@ namespace GitFit
     public partial class NutritionQuestionnaire : Form
     {
         public FoodChoices[] choices = new FoodChoices[4];
-        LoginForm login { get; set; }
+
+        LoginForm login;
+
         public NutritionQuestionnaire(LoginForm login)
         {
             InitializeComponent();
@@ -79,7 +82,7 @@ namespace GitFit
 
         private void menuBtn_Click(object sender, EventArgs e)
         {
-            MenuForm menuForm = new MenuForm();
+            MenuForm menuForm = new MenuForm(login);
             menuForm.Show();
             Visible = false;
         }

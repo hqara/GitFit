@@ -12,16 +12,23 @@ namespace GitFit
 {
     public partial class HistoryForm : Form
     {
-        public LoginForm login { get; set; }
+        public LoginForm login;
         public HistoryForm(LoginForm login)
         {
             InitializeComponent();
             this.login = login;
+            this.userLabel.Text += " " + login.loginUsername;
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            base.OnFormClosing(e);
         }
 
         private void homeLabel_Click(object sender, EventArgs e)
         {
-            MenuForm menuForm = new MenuForm();
+            MenuForm menuForm = new MenuForm(login);
             menuForm.Show();
             Visible = false;
         }
@@ -29,7 +36,7 @@ namespace GitFit
         private void activityLabel_Click(object sender, EventArgs e)
         {
 
-            ActivityQuesionnaire a = new ActivityQuesionnaire();
+            ActivityQuestionnaire a = new ActivityQuestionnaire(login);
             a.Show();
             Visible = false;
         }
@@ -43,7 +50,7 @@ namespace GitFit
 
         private void settingLabel_Click(object sender, EventArgs e)
         {
-            SettingForm settingForm = new SettingForm();
+            SettingForm settingForm = new SettingForm(login);
             settingForm.Show();
             Visible = false;
         }

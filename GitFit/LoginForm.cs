@@ -82,7 +82,7 @@ namespace GitFit
                 MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.loginUsername = username;
                 this.loginPassword = password;
-                MenuForm dashboard = new MenuForm(login, username);
+                MenuForm dashboard = new MenuForm(login);
                 dashboard.Show();
                 this.Visible = false;
         

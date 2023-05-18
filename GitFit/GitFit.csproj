@@ -68,11 +68,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ActivityHistoryDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ActivityQuesionnaire.cs">
+    <Compile Include="ActivityQuestionnaire.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ActivityQuesionnaire.Designer.cs">
-      <DependentUpon>ActivityQuesionnaire.cs</DependentUpon>
+    <Compile Include="ActivityQuestionnaire.Designer.cs">
+      <DependentUpon>ActivityQuestionnaire.cs</DependentUpon>
     </Compile>
     <Compile Include="ActivityReport.cs">
       <SubType>Form</SubType>
@@ -164,8 +164,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UserDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ActivityQuesionnaire.resx">
-      <DependentUpon>ActivityQuesionnaire.cs</DependentUpon>
+    <EmbeddedResource Include="ActivityQuestionnaire.resx">
+      <DependentUpon>ActivityQuestionnaire.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ActivityReport.resx">
       <DependentUpon>ActivityReport.cs</DependentUpon>

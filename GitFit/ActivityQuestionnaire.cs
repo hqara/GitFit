@@ -10,12 +10,21 @@ using System.Windows.Forms;
 
 namespace GitFit
 {
-    public partial class ActivityQuesionnaire : Form
+    public partial class ActivityQuestionnaire : Form
     {
-        public ActivityQuesionnaire()
+        public LoginForm login;
+
+        public ActivityQuestionnaire()
         {
             InitializeComponent();
         }
+
+        public ActivityQuestionnaire(LoginForm login)
+        {
+            InitializeComponent();
+            this.login = login;
+        }
+
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             e.Cancel = true;
@@ -28,7 +37,7 @@ namespace GitFit
             DialogResult result = MessageBox.Show("Are you certain that you want to \nlose your current information?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
-                MenuForm m = new MenuForm();
+                MenuForm m = new MenuForm(login);
                 m.Show();
                 Visible = false;
             }

@@ -15,7 +15,7 @@ namespace GitFit
     {
         public FoodChoices[] foodContainer { get; set; }
         public int[] answers { get; set; }
-        public LoginForm login { get; set; }
+        public LoginForm login;
         public NutritionFollowUp(FoodChoices[] choices, LoginForm login)
         {
             InitializeComponent();
@@ -70,7 +70,7 @@ namespace GitFit
 
         private void menuBtn_Click(object sender, EventArgs e)
         {
-            MenuForm menuForm = new MenuForm();
+            MenuForm menuForm = new MenuForm(login);
             menuForm.Show();
             Visible = false;
         }

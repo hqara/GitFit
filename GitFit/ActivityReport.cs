@@ -14,8 +14,11 @@ using GitFit.UserDataSetTableAdapters;
 
 namespace GitFit
 {
+
     public partial class ActivityReport : Form
+
     {
+        public LoginForm login;
         public HistoryForm history;
         int id = 0;
         public ActivityReport()
@@ -152,18 +155,9 @@ namespace GitFit
 
         private void exitBtn_Click_1(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to leave?\nYour registration information will be lost.", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-            if (result == DialogResult.Yes)
-            {
-                this.Visible = false;
-                history.Show();
-                history.Visible = true;
-            }
-            else
-            {   //Do nothing
-                return;
-            }
+            MenuForm menuForm = new MenuForm(login);
+            menuForm.Show();
+            Visible = false;
         }
 
         private void ActivityReport_Load(object sender, EventArgs e)

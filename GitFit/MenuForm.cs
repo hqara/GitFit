@@ -19,12 +19,14 @@ namespace GitFit
         public MenuForm()
         {
             InitializeComponent();
+            
         }
 
-        public MenuForm(LoginForm login, string username)
+        public MenuForm(LoginForm login)
         {
             InitializeComponent();
             this.login = login;
+            this.userLabel.Text += " " + login.loginUsername;
 
         }
 
@@ -54,7 +56,7 @@ namespace GitFit
         }
         private void activityLabel_Click(object sender, EventArgs e)
         {
-            ActivityQuesionnaire a = new ActivityQuesionnaire();
+            ActivityQuestionnaire a = new ActivityQuestionnaire(login);
             a.Show();
             Visible = false;
         }
@@ -188,7 +190,7 @@ namespace GitFit
             try
             {
                 string username = this.login.loginUsername;
-                SettingForm settingForm = new SettingForm(login, username);
+                SettingForm settingForm = new SettingForm(login);
                 settingForm.Show();
                 Visible = false;
             }

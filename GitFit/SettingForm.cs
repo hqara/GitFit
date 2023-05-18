@@ -19,22 +19,20 @@ namespace GitFit
         public SettingForm()
         {
             InitializeComponent();
-            /*
-          * Hey Sarah, this is a test to changing pass, feel free to remove
-          * if (login.loginUsername.Equals("hqara")) {
-
-             this.testLabel.Text = "Old Password:" + GetPassword();
-             SetPassword("test");
-             this.testLabel.Text += "\nNew Password:"+GetPassword();
-         }
-         */
-
+          
         }
 
-        public SettingForm(LoginForm login, string username)
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            base.OnFormClosing(e);
+        }
+
+        public SettingForm(LoginForm login)
         {
             InitializeComponent();
             this.login = login;
+            string username= login.loginUsername;
             this.userLabel.Text = "Hello " + username;
             fNameLabel.Text = GetFirstName();
             lNameLabel.Text = GetLastName();
@@ -193,7 +191,7 @@ namespace GitFit
 
         private void activityLabel_Click(object sender, EventArgs e)
         {
-            ActivityQuesionnaire a = new ActivityQuesionnaire();
+            ActivityQuestionnaire a = new ActivityQuestionnaire();
             a.Show();
             Visible = false;
         }
