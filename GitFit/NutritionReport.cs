@@ -22,7 +22,7 @@ namespace GitFit
         public Meal[] Dinners = new Meal[4];
         public Meal[] Snacks = new Meal[4];
 
-        LoginForm login { get; set; }
+        LoginForm login;
         public int[] Answers { get; set; }
 
         private static int breakfastIterator = -1, lunchIterator = -1, dinnerIterator = -1, snackIterator = -1;
@@ -45,7 +45,7 @@ namespace GitFit
         public NutritionReport(FoodChoices[] choices, LoginForm login, int[] answers)
         {
             this.Answers = answers;
-
+            this.login= login;
             InitializeComponent();
             InitializeMeals();
             InitializeRecommendedMeals();
@@ -426,7 +426,7 @@ namespace GitFit
 
             currentStatsLabel2.Text += (totalProtein > GetProtein()) ?
                 "\nYou are " + (totalProtein - GetProtein()) + " proteins over your recommended amount." :
-                "\nYou are " + Math.Abs(totalProtein - GetProtein()) + " proteins under your recommended amount.";
+                "\nYou are " + Math.Round(Math.Abs(totalProtein - GetProtein()),2) + " proteins under your recommended amount.";
 
             currentStatsLabel2.Text += (totalCarbs > GetCarbs()) ?
                 "\nYou are " + (totalCarbs - GetCarbs()) + " carbs over your recommended amount." :
