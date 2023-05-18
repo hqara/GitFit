@@ -34,7 +34,7 @@ namespace GitFit
         public List<Meal> RecommendedDinners { get; set; }
         public List<Meal> RecommendedSnacks { get; set; }
 
-        public static Meal[] currentMeals; // 0=breakfast, 1=lunch, 2=dinner, 3=snacks
+        public static Meal[] currentMeals = new Meal[4]; // 0=breakfast, 1=lunch, 2=dinner, 3=snacks
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
@@ -44,6 +44,8 @@ namespace GitFit
 
         public NutritionReport(FoodChoices[] choices, LoginForm login, int[] answers)
         {
+            this.Answers = answers;
+
             InitializeComponent();
             InitializeMeals();
             InitializeRecommendedMeals();
@@ -62,8 +64,7 @@ namespace GitFit
             }
 
             this.login = login;
-            this.Answers = answers;
-            macrosLabel.Text += (answers[0] == 1 || answers[3] == 2 || answers[3] == 3) ? "Calories: " + Math.Round(GetCalories(true), 2) : "Calories: " + Math.Round(GetCalories(), 2);
+            macrosLabel.Text = (answers[0] == 1 || answers[3] == 2 || answers[3] == 3) ? "Calories: " + Math.Round(GetCalories(true), 2) : "Calories: " + Math.Round(GetCalories(), 2);
             macrosLabel.Text += (answers[0] == 0) ? "\nProtein: " + (Math.Round(GetProtein(), 2) + 50) : "\nProtein: " + (Math.Round(GetProtein(), 2));
             macrosLabel.Text += "\nCarbs: " + Math.Round(GetCarbs(), 2);
             macrosLabel.Text += "\nFats: " + Math.Round(GetFats(), 2);
@@ -251,6 +252,10 @@ namespace GitFit
 
         public void InitializeRecommendedMeals()
         {
+            RecommendedBreakfasts = new List<Meal>();
+            RecommendedLunches = new List<Meal>();
+            RecommendedDinners = new List<Meal>();
+            RecommendedSnacks = new List<Meal>();
             Boolean pass;
             foreach (Meal breakfast in Breakfasts)
             {

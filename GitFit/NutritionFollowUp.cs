@@ -29,6 +29,7 @@ namespace GitFit
             answer4ComboBox.SelectedIndex != -1 && answer5ComboBox.SelectedIndex != -1 && answer6ComboBox.SelectedIndex != -1 && 
             answer7ComboBox.SelectedIndex != -1 && answer8ComboBox.SelectedIndex != -1 && answer9ComboBox.SelectedIndex != -1)
             {
+                answers = new int[9];
                 answers[0] = answer1ComboBox.SelectedIndex;
                 answers[1] = answer2ComboBox.SelectedIndex;
                 answers[2] = answer3ComboBox.SelectedIndex;

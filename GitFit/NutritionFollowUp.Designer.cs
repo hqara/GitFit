@@ -70,7 +70,6 @@
             // 
             // answer8ComboBox
             // 
-            this.answer8ComboBox.Enabled = false;
             this.answer8ComboBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer8ComboBox.FormattingEnabled = true;
             this.answer8ComboBox.Items.AddRange(new object[] {
@@ -172,7 +171,6 @@
             // 
             // answer7ComboBox
             // 
-            this.answer7ComboBox.Enabled = false;
             this.answer7ComboBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer7ComboBox.FormattingEnabled = true;
             this.answer7ComboBox.Items.AddRange(new object[] {
@@ -188,7 +186,6 @@
             // 
             // answer3ComboBox
             // 
-            this.answer3ComboBox.Enabled = false;
             this.answer3ComboBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer3ComboBox.FormattingEnabled = true;
             this.answer3ComboBox.Items.AddRange(new object[] {
@@ -205,7 +202,6 @@
             // 
             // answer6ComboBox
             // 
-            this.answer6ComboBox.Enabled = false;
             this.answer6ComboBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer6ComboBox.FormattingEnabled = true;
             this.answer6ComboBox.Items.AddRange(new object[] {
@@ -221,7 +217,6 @@
             // 
             // answer4ComboBox
             // 
-            this.answer4ComboBox.Enabled = false;
             this.answer4ComboBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer4ComboBox.FormattingEnabled = true;
             this.answer4ComboBox.Items.AddRange(new object[] {
@@ -237,7 +232,6 @@
             // 
             // answer5ComboBox
             // 
-            this.answer5ComboBox.Enabled = false;
             this.answer5ComboBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer5ComboBox.FormattingEnabled = true;
             this.answer5ComboBox.Items.AddRange(new object[] {
@@ -270,7 +264,6 @@
             // 
             // answer1ComboBox
             // 
-            this.answer1ComboBox.Enabled = false;
             this.answer1ComboBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer1ComboBox.FormattingEnabled = true;
             this.answer1ComboBox.Items.AddRange(new object[] {
@@ -308,7 +301,6 @@
             // 
             // answer9ComboBox
             // 
-            this.answer9ComboBox.Enabled = false;
             this.answer9ComboBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer9ComboBox.FormattingEnabled = true;
             this.answer9ComboBox.Items.AddRange(new object[] {
@@ -339,7 +331,6 @@
             // 
             // answer2ComboBox
             // 
-            this.answer2ComboBox.Enabled = false;
             this.answer2ComboBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer2ComboBox.FormattingEnabled = true;
             this.answer2ComboBox.Items.AddRange(new object[] {

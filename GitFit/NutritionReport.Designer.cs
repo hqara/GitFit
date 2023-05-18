@@ -183,7 +183,6 @@
             this.problemAreasInformationLabel.Name = "problemAreasInformationLabel";
             this.problemAreasInformationLabel.Size = new System.Drawing.Size(544, 56);
             this.problemAreasInformationLabel.TabIndex = 119;
-            this.problemAreasInformationLabel.Text = resources.GetString("problemAreasInformationLabel.Text");
             this.problemAreasInformationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // problemAreasLabel
@@ -201,6 +200,7 @@
             this.snackPicture.Location = new System.Drawing.Point(483, 322);
             this.snackPicture.Name = "snackPicture";
             this.snackPicture.Size = new System.Drawing.Size(94, 72);
+            this.snackPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.snackPicture.TabIndex = 117;
             this.snackPicture.TabStop = false;
             this.snackPicture.Click += new System.EventHandler(this.snackPicture_Click);
@@ -210,6 +210,7 @@
             this.dinnerPicture.Location = new System.Drawing.Point(339, 322);
             this.dinnerPicture.Name = "dinnerPicture";
             this.dinnerPicture.Size = new System.Drawing.Size(94, 72);
+            this.dinnerPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dinnerPicture.TabIndex = 116;
             this.dinnerPicture.TabStop = false;
             this.dinnerPicture.Click += new System.EventHandler(this.dinnerPicture_Click);
@@ -219,6 +220,7 @@
             this.lunchPicture.Location = new System.Drawing.Point(195, 322);
             this.lunchPicture.Name = "lunchPicture";
             this.lunchPicture.Size = new System.Drawing.Size(94, 72);
+            this.lunchPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.lunchPicture.TabIndex = 115;
             this.lunchPicture.TabStop = false;
             this.lunchPicture.Click += new System.EventHandler(this.lunchPicture_Click);
@@ -228,6 +230,7 @@
             this.breakfastPicture.Location = new System.Drawing.Point(51, 322);
             this.breakfastPicture.Name = "breakfastPicture";
             this.breakfastPicture.Size = new System.Drawing.Size(94, 72);
+            this.breakfastPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.breakfastPicture.TabIndex = 114;
             this.breakfastPicture.TabStop = false;
             this.breakfastPicture.Click += new System.EventHandler(this.breakfastPicture_Click);
@@ -379,7 +382,6 @@
             this.macrosLabel.Name = "macrosLabel";
             this.macrosLabel.Size = new System.Drawing.Size(534, 76);
             this.macrosLabel.TabIndex = 132;
-            this.macrosLabel.Text = "Calories";
             this.macrosLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // NutritionReport
