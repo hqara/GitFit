@@ -68,8 +68,6 @@ namespace GitFit
             macrosLabel.Text += (answers[0] == 0) ? "\nProtein: " + (Math.Round(GetProtein(), 2) + 50) : "\nProtein: " + (Math.Round(GetProtein(), 2));
             macrosLabel.Text += "\nCarbs: " + Math.Round(GetCarbs(), 2);
             macrosLabel.Text += "\nFats: " + Math.Round(GetFats(), 2);
-            breakfastIterator = lunchIterator = dinnerIterator = snackIterator = 0;
-
         }
 
         private FoodChoices score(FoodChoices[] choices)
@@ -159,26 +157,38 @@ namespace GitFit
 
         private void breakfastPicture_Click(object sender, EventArgs e)
         {
-            MealDescription desc = new MealDescription(currentMeals[0]);
-            desc.Show();
+            if (currentMeals[0] != null)
+            {
+                MealDescription desc = new MealDescription(currentMeals[0]);
+                desc.Show();
+            }
         }
 
         private void lunchPicture_Click(object sender, EventArgs e)
         {
-            MealDescription desc = new MealDescription(currentMeals[1]);
-            desc.Show();
+            if (currentMeals[1] != null)
+            {
+                MealDescription desc = new MealDescription(currentMeals[1]);
+                desc.Show();
+            }
         }
 
         private void dinnerPicture_Click(object sender, EventArgs e)
         {
-            MealDescription desc = new MealDescription(currentMeals[2]);
-            desc.Show();
+            if (currentMeals[2] != null)
+            {
+                MealDescription desc = new MealDescription(currentMeals[2]);
+                desc.Show();
+            }
         }
 
         private void snackPicture_Click(object sender, EventArgs e)
         {
-            MealDescription desc = new MealDescription(currentMeals[3]);
-            desc.Show();
+            if (currentMeals[3] != null)
+            {
+                MealDescription desc = new MealDescription(currentMeals[3]);
+                desc.Show();
+            }
         }
 
         public void InitializeMeals()
@@ -217,6 +227,7 @@ namespace GitFit
                 breakfastIterator = (breakfastIterator + 1) % RecommendedBreakfasts.Count;
                 breakfastPicture.Image = RecommendedBreakfasts[breakfastIterator].image;
                 currentMeals[0] = RecommendedBreakfasts[breakfastIterator];
+                UpdateMealPlanStatus();
             }                                            
         }
 
@@ -227,6 +238,7 @@ namespace GitFit
                 lunchIterator = (lunchIterator + 1) % RecommendedLunches.Count;
                 lunchPicture.Image = RecommendedLunches[lunchIterator].image;
                 currentMeals[1] = RecommendedLunches[lunchIterator];
+                UpdateMealPlanStatus();
             }
         }
 
@@ -237,6 +249,7 @@ namespace GitFit
                 dinnerIterator = (dinnerIterator + 1) % RecommendedDinners.Count;
                 dinnerPicture.Image = RecommendedDinners[dinnerIterator].image;
                 currentMeals[2] = RecommendedDinners[dinnerIterator];
+                UpdateMealPlanStatus();
             }
         }
 
@@ -247,6 +260,7 @@ namespace GitFit
                 snackIterator = (snackIterator + 1) % RecommendedSnacks.Count;
                 snackPicture.Image = RecommendedSnacks[snackIterator].image;
                 currentMeals[3] = RecommendedSnacks[snackIterator];
+                UpdateMealPlanStatus();
             }
         }
 
@@ -311,7 +325,7 @@ namespace GitFit
                 }
             }
 
-            foreach (Meal dinner in Lunches)
+            foreach (Meal dinner in Dinners)
             {
                 // if the meal passes all tests, it will be recommended
                 pass = true;
@@ -338,7 +352,7 @@ namespace GitFit
                 }
             }
 
-            foreach (Meal snack in Lunches)
+            foreach (Meal snack in Snacks)
             {
                 // if the meal passes all tests, it will be recommended
                 pass = true;
@@ -364,6 +378,63 @@ namespace GitFit
                     RecommendedSnacks.Add(snack);
                 }
             }
+        }
+
+        public void UpdateMealPlanStatus()
+        {
+            double totalCal = 0, totalProtein = 0, totalCarbs = 0, totalFats = 0;
+            if (currentMeals[0] != null)
+            {
+                totalCal += currentMeals[0].Calories;
+                totalProtein += currentMeals[0].Proteins;
+                totalCarbs += currentMeals[0].Carbohydrates;
+                totalFats += currentMeals[0].Fats;
+            }
+
+            if (currentMeals[1] != null)
+            {
+                totalCal += currentMeals[1].Calories;
+                totalProtein += currentMeals[1].Proteins;
+                totalCarbs += currentMeals[1].Carbohydrates;
+                totalFats += currentMeals[1].Fats;
+            }
+
+            if (currentMeals[2] != null)
+            {
+                totalCal += currentMeals[2].Calories;
+                totalProtein += currentMeals[2].Proteins;
+                totalCarbs += currentMeals[2].Carbohydrates;
+                totalFats += currentMeals[2].Fats;
+            }
+
+            if (currentMeals[3] != null)
+            {
+                totalCal += currentMeals[3].Calories;
+                totalProtein += currentMeals[3].Proteins;
+                totalCarbs += currentMeals[3].Carbohydrates;
+                totalFats += currentMeals[3].Fats;
+            }
+
+            currentStatsLabel.Text = "\n" + totalCal + " calories.";
+            currentStatsLabel.Text += "\n" + totalProtein + " proteins.";
+            currentStatsLabel.Text += "\n" + totalCarbs + " carbs.";
+            currentStatsLabel.Text += "\n" + totalFats + " fats.";
+
+            currentStatsLabel2.Text = (totalCal > GetCalories()) ?
+                "\nYou are " + (totalCal - GetCalories()) + " calories over your recommended amount." :
+                "\nYou are " + Math.Abs(totalCal - GetCalories()) + " calories under your recommended amount.";
+
+            currentStatsLabel2.Text += (totalProtein > GetProtein()) ?
+                "\nYou are " + (totalProtein - GetProtein()) + " proteins over your recommended amount." :
+                "\nYou are " + Math.Abs(totalProtein - GetProtein()) + " proteins under your recommended amount.";
+
+            currentStatsLabel2.Text += (totalCarbs > GetCarbs()) ?
+                "\nYou are " + (totalCarbs - GetCarbs()) + " carbs over your recommended amount." :
+                "\nYou are " + Math.Abs(totalCarbs - GetCarbs()) + " carbs under your recommended amount.";
+
+            currentStatsLabel2.Text += (totalFats > GetFats()) ?
+                "\nYou are " + (totalFats - GetFats()) + " fats over your recommended amount." :
+                "\nYou are " + Math.Abs(totalFats - GetFats()) + " fats under your recommended amount.";
         }
 
         /* DATABSE RETRIEVAL */
