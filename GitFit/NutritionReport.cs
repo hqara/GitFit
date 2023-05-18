@@ -23,15 +23,16 @@ namespace GitFit
         public Meal[] Snacks = new Meal[4];
 
         LoginForm login { get; set; }
+        public int[] Answers { get; set; }
 
         private static int breakfastIterator = -1, lunchIterator = -1, dinnerIterator = -1, snackIterator = -1;
 
         /* ALL RECOMMENDED MEALS */
 
-        public List<Meal> RecommendedBreakfasts { get; }
-        public List<Meal> RecommendedLunches { get; }
-        public List<Meal> RecommendedDinners { get; }
-        public List<Meal> RecommendedSnacks { get; }
+        public List<Meal> RecommendedBreakfasts { get; set; }
+        public List<Meal> RecommendedLunches { get; set; }
+        public List<Meal> RecommendedDinners { get; set; }
+        public List<Meal> RecommendedSnacks { get; set; }
 
         public static Meal[] currentMeals; // 0=breakfast, 1=lunch, 2=dinner, 3=snacks
 
@@ -41,10 +42,11 @@ namespace GitFit
             base.OnFormClosing(e);
         }
 
-        public NutritionReport(FoodChoices[] choices, LoginForm login)
+        public NutritionReport(FoodChoices[] choices, LoginForm login, int[] answers)
         {
             InitializeComponent();
             InitializeMeals();
+            InitializeRecommendedMeals();
             breakfastIterator = lunchIterator = dinnerIterator = snackIterator = 0;
             GeneralHealth = score(choices);
 
@@ -60,8 +62,9 @@ namespace GitFit
             }
 
             this.login = login;
-            macrosLabel.Text = "Calories: " + Math.Round(GetCalories(), 2);
-            macrosLabel.Text += "\nProtein: " + Math.Round(GetProtein(), 2);
+            this.Answers = answers;
+            macrosLabel.Text += (answers[0] == 1 || answers[3] == 2 || answers[3] == 3) ? "Calories: " + Math.Round(GetCalories(true), 2) : "Calories: " + Math.Round(GetCalories(), 2);
+            macrosLabel.Text += (answers[0] == 0) ? "\nProtein: " + (Math.Round(GetProtein(), 2) + 50) : "\nProtein: " + (Math.Round(GetProtein(), 2));
             macrosLabel.Text += "\nCarbs: " + Math.Round(GetCarbs(), 2);
             macrosLabel.Text += "\nFats: " + Math.Round(GetFats(), 2);
             breakfastIterator = lunchIterator = dinnerIterator = snackIterator = 0;
@@ -144,6 +147,8 @@ namespace GitFit
             }
         }
 
+        /* CONTROLS */
+
         private void menuBtn_Click(object sender, EventArgs e)
         {
             MenuForm menuForm = new MenuForm();
@@ -198,46 +203,161 @@ namespace GitFit
             Snacks[3] = new Meal(true, true, false, true, true, "Granola bar", "Granola bar", 140, 5, 19, 3, "granola");
         }
 
+        private void NutritionReport_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'userDataSet.NutritionAnswers' table. You can move, or remove it, as needed.
+            this.nutritionAnswersTableAdapter.Fill(this.userDataSet.NutritionAnswers);
+        }
+
         private void nextBreakfastButton_Click(object sender, EventArgs e)
         {
-            if (RecommendedBreakfasts.Count > 0)
+            if (RecommendedBreakfasts.Count > 0 && RecommendedBreakfasts != null)
             {
                 breakfastIterator = (breakfastIterator + 1) % RecommendedBreakfasts.Count;
                 breakfastPicture.Image = RecommendedBreakfasts[breakfastIterator].image;
+                currentMeals[0] = RecommendedBreakfasts[breakfastIterator];
             }                                            
         }
 
         private void nextLunchButton_Click(object sender, EventArgs e)
         {
-            if (RecommendedLunches.Count > 0)
+            if (RecommendedLunches.Count > 0 && RecommendedLunches != null)
             {
                 lunchIterator = (lunchIterator + 1) % RecommendedLunches.Count;
                 lunchPicture.Image = RecommendedLunches[lunchIterator].image;
+                currentMeals[1] = RecommendedLunches[lunchIterator];
             }
-        }
-
-        private void NutritionReport_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'userDataSet.NutritionAnswers' table. You can move, or remove it, as needed.
-            this.nutritionAnswersTableAdapter.Fill(this.userDataSet.NutritionAnswers);
-
         }
 
         private void nextDinnerButton_Click(object sender, EventArgs e)
         {
-            if (RecommendedDinners.Count > 0)
+            if (RecommendedDinners.Count > 0 && RecommendedDinners != null)
             {
                 dinnerIterator = (dinnerIterator + 1) % RecommendedDinners.Count;
                 dinnerPicture.Image = RecommendedDinners[dinnerIterator].image;
+                currentMeals[2] = RecommendedDinners[dinnerIterator];
             }
         }
 
         private void nextSnackButton_Click(object sender, EventArgs e)
         {
-            if (RecommendedSnacks.Count > 0)
+            if (RecommendedSnacks.Count > 0 && RecommendedSnacks != null)
             {
                 snackIterator = (snackIterator + 1) % RecommendedSnacks.Count;
                 snackPicture.Image = RecommendedSnacks[snackIterator].image;
+                currentMeals[3] = RecommendedSnacks[snackIterator];
+            }
+        }
+
+        public void InitializeRecommendedMeals()
+        {
+            Boolean pass;
+            foreach (Meal breakfast in Breakfasts)
+            {
+                // if the meal passes all tests, it will be recommended
+                pass = true;
+
+                // if meal isnt vegan and user is vegan
+                if (Answers[1] == 1 && breakfast.IsVegan == false)
+                    pass = false;
+                
+                // if meal is pescatarian and meal includes non-fish meat
+                if (Answers[1] == 2 && breakfast.IsPescatarian == false)
+                    pass = false;
+
+                // if the meal is not budget friendly and user has tight budget
+                if ((Answers[4] == 0 || Answers[4] == 1) && breakfast.IsBudgetFriendly == false)
+                    pass = false;
+
+                // if meal is time consuming and user is busy
+                if ((Answers[5] == 0 || Answers[4] == 1) && breakfast.IsEasyToMake == false)
+                    pass = false;
+
+                if (pass)
+                {
+                    RecommendedBreakfasts.Add(breakfast);
+                }
+            }
+
+            foreach (Meal lunch in Lunches)
+            {
+                // if the meal passes all tests, it will be recommended
+                pass = true;
+
+                // if meal isnt vegan and user is vegan
+                if (Answers[1] == 1 && lunch.IsVegan == false)
+                    pass = false;
+
+                // if meal is pescatarian and meal includes non-fish meat
+                if (Answers[1] == 2 && lunch.IsPescatarian == false)
+                    pass = false;
+
+                // if the meal is not budget friendly and user has tight budget
+                if ((Answers[4] == 0 || Answers[4] == 1) && lunch.IsBudgetFriendly == false)
+                    pass = false;
+
+                // if meal is time consuming and user is busy
+                if ((Answers[5] == 0 || Answers[4] == 1) && lunch.IsEasyToMake == false)
+                    pass = false;
+
+                if (pass)
+                {
+                    RecommendedLunches.Add(lunch);
+                }
+            }
+
+            foreach (Meal dinner in Lunches)
+            {
+                // if the meal passes all tests, it will be recommended
+                pass = true;
+
+                // if meal isnt vegan and user is vegan
+                if (Answers[1] == 1 && dinner.IsVegan == false)
+                    pass = false;
+
+                // if meal is pescatarian and meal includes non-fish meat
+                if (Answers[1] == 2 && dinner.IsPescatarian == false)
+                    pass = false;
+
+                // if the meal is not budget friendly and user has tight budget
+                if ((Answers[4] == 0 || Answers[4] == 1) && dinner.IsBudgetFriendly == false)
+                    pass = false;
+
+                // if meal is time consuming and user is busy
+                if ((Answers[5] == 0 || Answers[4] == 1) && dinner.IsEasyToMake == false)
+                    pass = false;
+
+                if (pass)
+                {
+                    RecommendedDinners.Add(dinner);
+                }
+            }
+
+            foreach (Meal snack in Lunches)
+            {
+                // if the meal passes all tests, it will be recommended
+                pass = true;
+
+                // if meal isnt vegan and user is vegan
+                if (Answers[1] == 1 && snack.IsVegan == false)
+                    pass = false;
+
+                // if meal is pescatarian and meal includes non-fish meat
+                if (Answers[1] == 2 && snack.IsPescatarian == false)
+                    pass = false;
+
+                // if the meal is not budget friendly and user has tight budget
+                if ((Answers[4] == 0 || Answers[4] == 1) && snack.IsBudgetFriendly == false)
+                    pass = false;
+
+                // if meal is time consuming and user is busy
+                if ((Answers[5] == 0 || Answers[4] == 1) && snack.IsEasyToMake == false)
+                    pass = false;
+
+                if (pass)
+                {
+                    RecommendedSnacks.Add(snack);
+                }
             }
         }
 

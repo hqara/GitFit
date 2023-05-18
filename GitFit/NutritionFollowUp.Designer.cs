@@ -70,13 +70,14 @@
             // 
             // answer8ComboBox
             // 
+            this.answer8ComboBox.Enabled = false;
             this.answer8ComboBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer8ComboBox.FormattingEnabled = true;
             this.answer8ComboBox.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.answer8ComboBox.Location = new System.Drawing.Point(13, 283);
-            this.answer8ComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.answer8ComboBox.Location = new System.Drawing.Point(13, 276);
+            this.answer8ComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.answer8ComboBox.Name = "answer8ComboBox";
             this.answer8ComboBox.Size = new System.Drawing.Size(212, 27);
             this.answer8ComboBox.TabIndex = 101;
@@ -171,6 +172,7 @@
             // 
             // answer7ComboBox
             // 
+            this.answer7ComboBox.Enabled = false;
             this.answer7ComboBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer7ComboBox.FormattingEnabled = true;
             this.answer7ComboBox.Items.AddRange(new object[] {
@@ -178,14 +180,15 @@
             "Once a month",
             "Once a week",
             "Multiple times a week"});
-            this.answer7ComboBox.Location = new System.Drawing.Point(13, 245);
-            this.answer7ComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.answer7ComboBox.Location = new System.Drawing.Point(13, 238);
+            this.answer7ComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.answer7ComboBox.Name = "answer7ComboBox";
             this.answer7ComboBox.Size = new System.Drawing.Size(212, 27);
             this.answer7ComboBox.TabIndex = 100;
             // 
             // answer3ComboBox
             // 
+            this.answer3ComboBox.Enabled = false;
             this.answer3ComboBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer3ComboBox.FormattingEnabled = true;
             this.answer3ComboBox.Items.AddRange(new object[] {
@@ -194,14 +197,15 @@
             "Moderately",
             "As often as possible",
             "With every meal"});
-            this.answer3ComboBox.Location = new System.Drawing.Point(13, 92);
-            this.answer3ComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.answer3ComboBox.Location = new System.Drawing.Point(13, 85);
+            this.answer3ComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.answer3ComboBox.Name = "answer3ComboBox";
             this.answer3ComboBox.Size = new System.Drawing.Size(212, 27);
             this.answer3ComboBox.TabIndex = 96;
             // 
             // answer6ComboBox
             // 
+            this.answer6ComboBox.Enabled = false;
             this.answer6ComboBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer6ComboBox.FormattingEnabled = true;
             this.answer6ComboBox.Items.AddRange(new object[] {
@@ -209,14 +213,15 @@
             "2-4 hours ",
             "4-8 hours ",
             "8+ hours"});
-            this.answer6ComboBox.Location = new System.Drawing.Point(13, 206);
-            this.answer6ComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.answer6ComboBox.Location = new System.Drawing.Point(13, 199);
+            this.answer6ComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.answer6ComboBox.Name = "answer6ComboBox";
             this.answer6ComboBox.Size = new System.Drawing.Size(212, 27);
             this.answer6ComboBox.TabIndex = 99;
             // 
             // answer4ComboBox
             // 
+            this.answer4ComboBox.Enabled = false;
             this.answer4ComboBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer4ComboBox.FormattingEnabled = true;
             this.answer4ComboBox.Items.AddRange(new object[] {
@@ -224,14 +229,15 @@
             "Light activity",
             "Regular activity",
             "Daily activity"});
-            this.answer4ComboBox.Location = new System.Drawing.Point(13, 130);
-            this.answer4ComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.answer4ComboBox.Location = new System.Drawing.Point(13, 123);
+            this.answer4ComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.answer4ComboBox.Name = "answer4ComboBox";
             this.answer4ComboBox.Size = new System.Drawing.Size(212, 27);
             this.answer4ComboBox.TabIndex = 97;
             // 
             // answer5ComboBox
             // 
+            this.answer5ComboBox.Enabled = false;
             this.answer5ComboBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer5ComboBox.FormattingEnabled = true;
             this.answer5ComboBox.Items.AddRange(new object[] {
@@ -239,8 +245,8 @@
             "$40 - $60",
             "$60 - $80",
             "$80+"});
-            this.answer5ComboBox.Location = new System.Drawing.Point(13, 168);
-            this.answer5ComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.answer5ComboBox.Location = new System.Drawing.Point(13, 161);
+            this.answer5ComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.answer5ComboBox.Name = "answer5ComboBox";
             this.answer5ComboBox.Size = new System.Drawing.Size(212, 27);
             this.answer5ComboBox.TabIndex = 98;
@@ -254,7 +260,7 @@
             this.resultsButton.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultsButton.ForeColor = System.Drawing.Color.White;
             this.resultsButton.Location = new System.Drawing.Point(571, 468);
-            this.resultsButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.resultsButton.Margin = new System.Windows.Forms.Padding(4);
             this.resultsButton.Name = "resultsButton";
             this.resultsButton.Size = new System.Drawing.Size(112, 59);
             this.resultsButton.TabIndex = 105;
@@ -264,14 +270,15 @@
             // 
             // answer1ComboBox
             // 
+            this.answer1ComboBox.Enabled = false;
             this.answer1ComboBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer1ComboBox.FormattingEnabled = true;
             this.answer1ComboBox.Items.AddRange(new object[] {
             "Losing weight",
             "Gaining weight",
             "Maintaining weight"});
-            this.answer1ComboBox.Location = new System.Drawing.Point(13, 15);
-            this.answer1ComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.answer1ComboBox.Location = new System.Drawing.Point(13, 8);
+            this.answer1ComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.answer1ComboBox.Name = "answer1ComboBox";
             this.answer1ComboBox.Size = new System.Drawing.Size(212, 27);
             this.answer1ComboBox.TabIndex = 94;
@@ -301,13 +308,14 @@
             // 
             // answer9ComboBox
             // 
+            this.answer9ComboBox.Enabled = false;
             this.answer9ComboBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer9ComboBox.FormattingEnabled = true;
             this.answer9ComboBox.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.answer9ComboBox.Location = new System.Drawing.Point(13, 321);
-            this.answer9ComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.answer9ComboBox.Location = new System.Drawing.Point(13, 314);
+            this.answer9ComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.answer9ComboBox.Name = "answer9ComboBox";
             this.answer9ComboBox.Size = new System.Drawing.Size(212, 27);
             this.answer9ComboBox.TabIndex = 102;
@@ -321,7 +329,7 @@
             this.menuBtn.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuBtn.ForeColor = System.Drawing.Color.White;
             this.menuBtn.Location = new System.Drawing.Point(441, 468);
-            this.menuBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.menuBtn.Margin = new System.Windows.Forms.Padding(4);
             this.menuBtn.Name = "menuBtn";
             this.menuBtn.Size = new System.Drawing.Size(112, 59);
             this.menuBtn.TabIndex = 104;
@@ -331,15 +339,15 @@
             // 
             // answer2ComboBox
             // 
+            this.answer2ComboBox.Enabled = false;
             this.answer2ComboBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answer2ComboBox.FormattingEnabled = true;
             this.answer2ComboBox.Items.AddRange(new object[] {
             "None (typical)",
             "Vegan/Vegetarian",
-            "Pescatarian",
-            "Halal/Kosher"});
-            this.answer2ComboBox.Location = new System.Drawing.Point(13, 54);
-            this.answer2ComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            "Pescatarian"});
+            this.answer2ComboBox.Location = new System.Drawing.Point(13, 47);
+            this.answer2ComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.answer2ComboBox.Name = "answer2ComboBox";
             this.answer2ComboBox.Size = new System.Drawing.Size(212, 27);
             this.answer2ComboBox.TabIndex = 95;
@@ -356,7 +364,7 @@
             this.answersPanel.Controls.Add(this.answer4ComboBox);
             this.answersPanel.Controls.Add(this.answer5ComboBox);
             this.answersPanel.Location = new System.Drawing.Point(441, 104);
-            this.answersPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.answersPanel.Margin = new System.Windows.Forms.Padding(2);
             this.answersPanel.Name = "answersPanel";
             this.answersPanel.Size = new System.Drawing.Size(242, 354);
             this.answersPanel.TabIndex = 117;

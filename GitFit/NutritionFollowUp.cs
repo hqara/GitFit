@@ -13,7 +13,8 @@ namespace GitFit
 {
     public partial class NutritionFollowUp : Form
     {
-        public FoodChoices[] foodContainer { get; set; }   
+        public FoodChoices[] foodContainer { get; set; }
+        public int[] answers { get; set; }
         public LoginForm login { get; set; }
         public NutritionFollowUp(FoodChoices[] choices, LoginForm login)
         {
@@ -28,7 +29,17 @@ namespace GitFit
             answer4ComboBox.SelectedIndex != -1 && answer5ComboBox.SelectedIndex != -1 && answer6ComboBox.SelectedIndex != -1 && 
             answer7ComboBox.SelectedIndex != -1 && answer8ComboBox.SelectedIndex != -1 && answer9ComboBox.SelectedIndex != -1)
             {
-                NutritionReport report = new NutritionReport(foodContainer, login); // change with db param
+                answers[0] = answer1ComboBox.SelectedIndex;
+                answers[1] = answer2ComboBox.SelectedIndex;
+                answers[2] = answer3ComboBox.SelectedIndex;
+                answers[3] = answer4ComboBox.SelectedIndex;
+                answers[4] = answer5ComboBox.SelectedIndex;
+                answers[5] = answer6ComboBox.SelectedIndex;
+                answers[6] = answer7ComboBox.SelectedIndex;
+                answers[7] = answer8ComboBox.SelectedIndex;
+                answers[8] = answer9ComboBox.SelectedIndex;
+                
+                NutritionReport report = new NutritionReport(foodContainer, login, answers); // change with db param
                 report.Show();
                 Visible = false;
             }
